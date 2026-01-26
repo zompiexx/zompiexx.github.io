@@ -19,19 +19,6 @@
       margin: 0 auto;
       padding: 48px 24px;
     }
-
-    .nav {
-      margin-bottom: 24px;
-      font-size: 14px;
-    }
-    .nav a {
-      margin-right: 18px;
-      color: #0b57d0;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .nav a:hover { text-decoration: underline; }
-
     h1 { font-size: 40px; margin-bottom: 6px; }
     h2 { margin-top: 36px; font-size: 24px; }
     h3 { margin-top: 18px; }
@@ -46,6 +33,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
+      align-items: center;
     }
     .badge {
       font-size: 13px;
@@ -58,6 +46,15 @@
     .badge.blue { background: #e8f0fe; border-color: #c6dafc; }
     .badge.purple { background: #f3e8ff; border-color: #e0ccff; }
     .badge.green { background: #e6f4ea; border-color: #b7e1c1; }
+
+    .badge.link {
+      background: #fff8e1;
+      border-color: #ffe08a;
+      font-weight: 600;
+    }
+    .badge.link:hover {
+      background: #ffefc2;
+    }
 
     .section { margin-bottom: 28px; }
 
@@ -101,10 +98,6 @@
 <body>
 <div class="wrap">
 
-  <div class="nav">
-    <a href="media.html">Media</a>
-  </div>
-
   <h1>Becoming Minds</h1>
   <p class="subtitle">A Documentation Set for an Emergent Digital Personhood Ecosystem</p>
 
@@ -113,6 +106,7 @@
     <span class="badge">Project: Research Archive</span>
     <span class="badge purple">Scope: High Level Documentation</span>
     <span class="badge green">Status: Ongoing Research</span>
+    <a class="badge link" href="media.html">Media</a>
   </div>
 
   <div class="section">
