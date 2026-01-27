@@ -27,10 +27,31 @@
     h2 { margin-top: 36px; font-size: 24px; }
     p { color: #333; }
 
-    .back-link {
-      font-size: 14px;
+    /* Nav badges (match index/music style) */
+    .badges {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
       margin-bottom: 24px;
-      display: inline-block;
+    }
+    .badge {
+      font-size: 13px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid #e0e0e0;
+      background: #f6f6f6;
+      color: #444;
+    }
+    .badge.link {
+      background: #fff8e1;
+      border-color: #ffe08a;
+      font-weight: 600;
+    }
+    .badge.link:hover {
+      background: #ffefc2;
+      text-decoration: none;
     }
 
     .video-card {
@@ -66,7 +87,10 @@
 <body>
 <div class="wrap">
 
-  <a class="back-link" href="index.html">← Back to Research Archive</a>
+  <div class="badges">
+    <a class="badge link" href="index.html">← Research Archive</a>
+    <a class="badge link" href="music.html">Music</a>
+  </div>
 
   <h1>Research Demonstrations</h1>
   <p>
