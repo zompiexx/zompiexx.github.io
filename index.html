@@ -18,7 +18,14 @@
       max-width: 920px;
       margin: 0 auto;
       padding: 48px 24px;
+      text-align: center;
     }
+
+    .logo {
+      max-width: 180px;
+      margin-bottom: 16px;
+    }
+
     h1 { font-size: 40px; margin-bottom: 6px; }
     h2 { margin-top: 36px; font-size: 24px; }
     h3 { margin-top: 18px; }
@@ -34,6 +41,7 @@
       flex-wrap: wrap;
       gap: 8px;
       align-items: center;
+      justify-content: center;
     }
     .badge {
       font-size: 13px;
@@ -56,7 +64,10 @@
       background: #ffefc2;
     }
 
-    .section { margin-bottom: 28px; }
+    .section {
+      margin-bottom: 28px;
+      text-align: left;
+    }
 
     .card {
       border: 1px solid #e5e5e5;
@@ -91,12 +102,20 @@
       padding-top: 16px;
       font-size: 14px;
       color: #666;
+      text-align: center;
     }
   </style>
 </head>
 
 <body>
 <div class="wrap">
+
+  <!-- LOGO -->
+  <img
+    src="https://github.com/zompiexx/zompiexx.github.io/raw/main/BecomingMindsLogo.png"
+    alt="Becoming Minds logo"
+    class="logo"
+  />
 
   <h1>Becoming Minds</h1>
   <p class="subtitle">A Research Archive on AI Continuity, Memory, and Persistent Systems</p>
@@ -130,7 +149,6 @@
   <div class="section">
     <h2>Whitepapers</h2>
 
-    <!-- CAPSTONE PAPER -->
     <div class="card">
       <h3>Architecture Over Capability</h3>
       <p><strong>Capstone / Synthesis Paper.</strong> A consolidated architectural conclusion drawn from sustained work with persistent AI systems. This paper reframes reliability, safety, and trust as consequences of continuity and infrastructure rather than raw model scale.</p>
