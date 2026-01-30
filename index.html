@@ -21,24 +21,25 @@
       text-align: center;
     }
 
-    /* TIGHTENED LOGO AREA */
+    /* LOGO & TAGLINE TIGHTENING */
     .logo {
       max-width: 180px;
-      display: block;      /* Removes "ghost" spacing below the image */
-      margin: 0 auto;      /* Keeps it centered */
-      margin-bottom: 2px;  /* Small gap between logo and tagline */
+      display: block;      
+      margin: 0 auto;      
+      margin-bottom: 0;    /* Removed all bottom margin */
     }
 
     .tagline {
       font-size: 16px;
       color: #777;
-      margin: 0 0 10px 0;  /* 10px gap between tagline and "Becoming Minds" */
-      line-height: 1.2;
+      /* Negative margin pulls the text up into the logo's transparent area */
+      margin: -22px 0 12px 0; 
+      line-height: 1;
     }
 
     h1 { 
       font-size: 40px; 
-      margin: 0 0 6px 0;   /* Removed top margin to respect the tagline gap */
+      margin: 0 0 6px 0;   
     }
 
     h2 { margin-top: 36px; font-size: 24px; }
