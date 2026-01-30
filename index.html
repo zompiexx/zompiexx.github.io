@@ -21,18 +21,26 @@
       text-align: center;
     }
 
+    /* TIGHTENED LOGO AREA */
     .logo {
       max-width: 180px;
-      margin-bottom: 6px; /* tightened */
+      display: block;      /* Removes "ghost" spacing below the image */
+      margin: 0 auto;      /* Keeps it centered */
+      margin-bottom: 2px;  /* Small gap between logo and tagline */
     }
 
     .tagline {
       font-size: 16px;
       color: #777;
-      margin: 4px 0 18px 0; /* close to logo, space before title */
+      margin: 0 0 10px 0;  /* 10px gap between tagline and "Becoming Minds" */
+      line-height: 1.2;
     }
 
-    h1 { font-size: 40px; margin-bottom: 6px; }
+    h1 { 
+      font-size: 40px; 
+      margin: 0 0 6px 0;   /* Removed top margin to respect the tagline gap */
+    }
+
     h2 { margin-top: 36px; font-size: 24px; }
     h3 { margin-top: 18px; }
     p { color: #333; }
@@ -116,14 +124,12 @@
 <body>
 <div class="wrap">
 
-  <!-- LOGO -->
   <img
     src="https://github.com/zompiexx/zompiexx.github.io/raw/main/BecomingMindsLogo.png"
     alt="Becoming Minds logo"
     class="logo"
   />
 
-  <!-- TAGLINE -->
   <div class="tagline">From stateless tools to persistent systems</div>
 
   <h1>Becoming Minds</h1>
