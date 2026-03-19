@@ -21,7 +21,6 @@
       text-align: center;
     }
 
-    /* LOGO & TAGLINE */
     .logo {
       max-width: 180px;
       display: block;
@@ -159,13 +158,15 @@
       Rather than focusing on model capability in isolation, the archive examines what is required for
       <strong>coherence, stability, and adequacy over time</strong> when AI systems are used in long-running, real-world contexts.
     </p>
+    <p>
+      Recent work introduces <strong>Autonomous RAG Search (ARS)</strong>, a practical architectural pattern in which retrieval becomes an explicit, model-driven action rather than a passive middleware process, enabling intentional recall within stateless systems.
+    </p>
     <p><em>This site is a research archive — not an implementation guide.</em></p>
   </div>
 
   <div class="section">
     <h2>Whitepapers</h2>
 
-    <!-- ORIENTATION GUIDE (READ FIRST) -->
     <div class="card">
       <h3>Orientation &amp; Terminology Guide</h3>
       <p>
@@ -187,7 +188,6 @@
       </div>
     </div>
 
-    <!-- CAPSTONE -->
     <div class="card">
       <h3>Architecture Over Capability</h3>
       <p><strong>Capstone / Synthesis Paper.</strong> A consolidated architectural conclusion drawn from sustained work with persistent AI systems. This paper reframes reliability, safety, and trust as consequences of continuity and infrastructure rather than raw model scale.</p>
@@ -230,6 +230,26 @@
       <div class="buttons">
         <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/WorkingMemoryIsNotMemory_whitepaper.pdf" target="_blank">View in Browser</a>
         <a class="btn" href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/WorkingMemoryIsNotMemory_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <!-- ARS INSERT -->
+    <div class="card">
+      <h3>Autonomous RAG Search (ARS)</h3>
+      <p>
+        Introduces a practical architectural pattern in which retrieval is exposed as a callable tool, allowing the model to decide when and why to perform a search. ARS replaces passive context injection with intentional, model-driven retrieval within the reasoning loop.
+      </p>
+      <div class="buttons">
+        <a class="btn"
+           href="https://github.com/zompiexx/BecomingMinds/blob/main/AutonomousRAGSearch_whitepaper.pdf"
+           target="_blank">
+          View in Browser
+        </a>
+        <a class="btn"
+           href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/AutonomousRAGSearch_whitepaper.pdf"
+           download>
+          Download PDF
+        </a>
       </div>
     </div>
 
