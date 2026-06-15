@@ -80,6 +80,16 @@
   </style>
 </head>
 
+<script>
+  document.addEventListener("click", function (event) {
+    const link = event.target.closest("a");
+    if (!link || !link.href) return;
+
+    event.preventDefault();
+    window.location.href = link.href;
+  });
+</script>
+
 <body>
 
 <h1>Research Index</h1>
