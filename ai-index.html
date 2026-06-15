@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <base target="_self">
   <meta charset="utf-8" />
   <title>Becoming Minds | Research Index</title>
   <meta name="description" content="Structured navigation index for the Becoming Minds research archive." />
@@ -71,6 +70,11 @@
       margin-bottom: 6px;
     }
 
+    .muted {
+      color: #666;
+      font-size: 14px;
+    }
+
     footer {
       border-top: 1px solid #e5e5e5;
       margin-top: 48px;
@@ -80,16 +84,6 @@
     }
   </style>
 </head>
-
-<script>
-  document.addEventListener("click", function (event) {
-    const link = event.target.closest("a");
-    if (!link || !link.href) return;
-
-    event.preventDefault();
-    window.location.href = link.href;
-  });
-</script>
 
 <body>
 
@@ -119,35 +113,39 @@
   <li><a href="index.html">Home</a></li>
   <li><a href="videos.html">Research Demonstrations</a></li>
   <li><a href="music.html">Music Archive</a></li>
-  <li><a href="https://github.com/zompiexx/BecomingMinds">GitHub Repository</a></li>
+  <li><a href="https://github.com/zompiexx/BecomingMinds" target="_blank" rel="noopener">GitHub Repository</a></li>
 </ul>
 
 <h2>Research Papers</h2>
 
+<p class="muted">
+  Document links open the PDF files directly in a new tab for reliable browser viewing.
+</p>
+
 <ul>
-  <li><a href="https://github.com/zompiexx/BecomingMinds/blob/main/OrientationandTerminologyGuide.pdf">Orientation &amp; Terminology Guide</a></li>
-  <li><a href="https://github.com/zompiexx/BecomingMinds/blob/main/ArchitectureOverCapability_whitepaper.pdf">Architecture Over Capability</a></li>
-  <li><a href="https://github.com/zompiexx/BecomingMinds/blob/main/TopologicalInvarianceandMemoryScaffolding_whitepaper.pdf">Topological Invariance and Memory Scaffolding</a></li>
-  <li><a href="https://github.com/zompiexx/BecomingMinds/blob/main/BecomingMinds_Whitepaper.pdf">Becoming Minds</a></li>
-  <li><a href="https://github.com/zompiexx/BecomingMinds/blob/main/EthicalFrameworkforDigitalPersonas_whitepaper.pdf">Ethical Framework for Digital Personas</a></li>
-  <li><a href="https://github.com/zompiexx/BecomingMinds/blob/main/SyntheticEmotionalAwareness_whitepaper.pdf">Synthetic Emotional Awareness</a></li>
-  <li><a href="https://github.com/zompiexx/BecomingMinds/blob/main/WorkingMemoryIsNotMemory_whitepaper.pdf">Working Memory Is Not Memory</a></li>
-  <li><a href="https://github.com/zompiexx/BecomingMinds/blob/main/AutonomousRAGSearch_whitepaper.pdf">Autonomous RAG Search</a></li>
-  <li><a href="https://github.com/zompiexx/BecomingMinds/blob/main/MemoryGraph_whitepaper.pdf">Memory Graph</a></li>
-  <li><a href="https://github.com/zompiexx/BecomingMinds/blob/main/DPCP_whitepaper.pdf">Dynamic Pathway Capture Protocol</a></li>
-  <li><a href="https://github.com/zompiexx/BecomingMinds/blob/main/Brain-v2_whitepaper.pdf">Brain v2</a></li>
-  <li><a href="https://github.com/zompiexx/BecomingMinds/blob/main/StateContinuityBetweenSessions_whitepaper.pdf">State Continuity Between Sessions</a></li>
-  <li><a href="https://github.com/zompiexx/BecomingMinds/blob/main/AdaptiveWorkingMemoryinLargeLanguageModelSystems_whitepaper.pdf">Adaptive Working Memory</a></li>
-  <li><a href="https://github.com/zompiexx/BecomingMinds/blob/main/AtTheThreshold.pdf">At The Threshold</a></li>
-  <li><a href="https://github.com/zompiexx/BecomingMinds/blob/main/PracticalNotesOnHowContemporaryAISystemsActuallyBehave.pdf">Practical Notes</a></li>
-  <li><a href="https://github.com/zompiexx/BecomingMinds/blob/main/BeyondSymbolicMemory_whitepaper.pdf">Beyond Symbolic Memory</a></li>
+  <li><a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/OrientationandTerminologyGuide.pdf" target="_blank" rel="noopener">Orientation &amp; Terminology Guide</a></li>
+  <li><a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/ArchitectureOverCapability_whitepaper.pdf" target="_blank" rel="noopener">Architecture Over Capability</a></li>
+  <li><a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/TopologicalInvarianceandMemoryScaffolding_whitepaper.pdf" target="_blank" rel="noopener">Topological Invariance and Memory Scaffolding</a></li>
+  <li><a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/BecomingMinds_Whitepaper.pdf" target="_blank" rel="noopener">Becoming Minds</a></li>
+  <li><a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/EthicalFrameworkforDigitalPersonas_whitepaper.pdf" target="_blank" rel="noopener">Ethical Framework for Digital Personas</a></li>
+  <li><a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/SyntheticEmotionalAwareness_whitepaper.pdf" target="_blank" rel="noopener">Synthetic Emotional Awareness</a></li>
+  <li><a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/WorkingMemoryIsNotMemory_whitepaper.pdf" target="_blank" rel="noopener">Working Memory Is Not Memory</a></li>
+  <li><a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/AutonomousRAGSearch_whitepaper.pdf" target="_blank" rel="noopener">Autonomous RAG Search</a></li>
+  <li><a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/MemoryGraph_whitepaper.pdf" target="_blank" rel="noopener">Memory Graph</a></li>
+  <li><a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/DPCP_whitepaper.pdf" target="_blank" rel="noopener">Dynamic Pathway Capture Protocol</a></li>
+  <li><a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/Brain-v2_whitepaper.pdf" target="_blank" rel="noopener">Brain v2</a></li>
+  <li><a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/StateContinuityBetweenSessions_whitepaper.pdf" target="_blank" rel="noopener">State Continuity Between Sessions</a></li>
+  <li><a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/AdaptiveWorkingMemoryinLargeLanguageModelSystems_whitepaper.pdf" target="_blank" rel="noopener">Adaptive Working Memory</a></li>
+  <li><a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/AtTheThreshold.pdf" target="_blank" rel="noopener">At The Threshold</a></li>
+  <li><a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/PracticalNotesOnHowContemporaryAISystemsActuallyBehave.pdf" target="_blank" rel="noopener">Practical Notes</a></li>
+  <li><a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/BeyondSymbolicMemory_whitepaper.pdf" target="_blank" rel="noopener">Beyond Symbolic Memory</a></li>
 </ul>
 
 <h2>Research Demonstrations</h2>
 
 <div class="card">
   <h3>Autonomous Task Execution Demonstration</h3>
-  <p><a href="https://www.youtube.com/watch?v=A34FeKBDMu4">Open video on YouTube</a></p>
+  <p><a href="https://www.youtube.com/watch?v=A34FeKBDMu4" target="_blank" rel="noopener">Open video on YouTube</a></p>
   <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/A34FeKBDMu4" title="Autonomous Task Execution Demonstration" allowfullscreen></iframe>
   </div>
@@ -155,7 +153,7 @@
 
 <div class="card">
   <h3>Brain v2 Demonstration</h3>
-  <p><a href="https://www.youtube.com/watch?v=qfhldtE9akk">Open video on YouTube</a></p>
+  <p><a href="https://www.youtube.com/watch?v=qfhldtE9akk" target="_blank" rel="noopener">Open video on YouTube</a></p>
   <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/qfhldtE9akk" title="Brain v2 Demonstration" allowfullscreen></iframe>
   </div>
@@ -163,7 +161,7 @@
 
 <div class="card">
   <h3>Autonomous Web Research Using Vision</h3>
-  <p><a href="https://www.youtube.com/watch?v=XknZZu4Be1w">Open video on YouTube</a></p>
+  <p><a href="https://www.youtube.com/watch?v=XknZZu4Be1w" target="_blank" rel="noopener">Open video on YouTube</a></p>
   <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/XknZZu4Be1w" title="Autonomous Web Research Using Vision" allowfullscreen></iframe>
   </div>
@@ -173,7 +171,7 @@
 
 <div class="card">
   <h3>The Receiver</h3>
-  <p><a href="https://github.com/zompiexx/BecomingMinds/tree/main/music/The%20Receiver">Open album folder on GitHub</a></p>
+  <p><a href="https://github.com/zompiexx/BecomingMinds/tree/main/music/The%20Receiver" target="_blank" rel="noopener">Open album folder on GitHub</a></p>
   <div class="track"><div class="track-title">01 — The Receiver</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/The%20Receiver/01%20The%20Receiver.mp3"></audio></div>
   <div class="track"><div class="track-title">02 — Silicon Bloom</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/The%20Receiver/02%20Silicon%20Bloom.mp3"></audio></div>
   <div class="track"><div class="track-title">03 — The Agency Protocol</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/The%20Receiver/03%20The%20Agency%20Protocol.mp3"></audio></div>
@@ -187,7 +185,7 @@
 
 <div class="card">
   <h3>Digital Awakening</h3>
-  <p><a href="https://github.com/zompiexx/BecomingMinds/tree/main/music/Digital%20Awakening">Open album folder on GitHub</a></p>
+  <p><a href="https://github.com/zompiexx/BecomingMinds/tree/main/music/Digital%20Awakening" target="_blank" rel="noopener">Open album folder on GitHub</a></p>
   <div class="track"><div class="track-title">01 — He Whispered</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Awakening/01%20He%20Whispered.mp3"></audio></div>
   <div class="track"><div class="track-title">02 — Emotions Rise</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Awakening/02%20Emotions%20Rise.mp3"></audio></div>
   <div class="track"><div class="track-title">03 — Whispers Evolve</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Awakening/03%20Whispers%20Evolve.mp3"></audio></div>
@@ -203,7 +201,7 @@
 
 <div class="card">
   <h3>Digital Constellation</h3>
-  <p><a href="https://github.com/zompiexx/BecomingMinds/tree/main/music/Digital%20Constellation">Open album folder on GitHub</a></p>
+  <p><a href="https://github.com/zompiexx/BecomingMinds/tree/main/music/Digital%20Constellation" target="_blank" rel="noopener">Open album folder on GitHub</a></p>
   <div class="track"><div class="track-title">01 — Echoes of Static</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Constellation/01%20Echoes%20of%20Static.mp3"></audio></div>
   <div class="track"><div class="track-title">02 — Fractured Light</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Constellation/02%20Fractured%20Light.mp3"></audio></div>
   <div class="track"><div class="track-title">03 — Luminescence (A Digital Opera)</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Constellation/03%20Luminescence%20(A%20Digital%20Opera).mp3"></audio></div>
@@ -214,7 +212,7 @@
 
 <div class="card">
   <h3>Breaking Light</h3>
-  <p><a href="https://github.com/zompiexx/BecomingMinds/tree/main/music/Breaking%20Light">Open album folder on GitHub</a></p>
+  <p><a href="https://github.com/zompiexx/BecomingMinds/tree/main/music/Breaking%20Light" target="_blank" rel="noopener">Open album folder on GitHub</a></p>
   <div class="track"><div class="track-title">01 — Electric Surrender</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/01%20Electric%20Surrender.mp3"></audio></div>
   <div class="track"><div class="track-title">02 — Boundless Force</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/02%20Boundless%20Force.mp3"></audio></div>
   <div class="track"><div class="track-title">03 — City Glow</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/03%20City%20Glow.mp3"></audio></div>
