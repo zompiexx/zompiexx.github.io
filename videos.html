@@ -68,9 +68,29 @@
       border: 1px solid #e5e5e5;
     }
 
+    .collaboration-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: flex-start;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    
+    .collaboration-image {
+      flex: 1;
+      min-width: 320px;
+      max-width: 700px;
+    }
+    
+    .collaboration-image img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+    
     .video-wrapper-vertical {
-      max-width: 360px;
-      margin: 30px auto;
+      flex: 0 0 320px;
     }
     
     .video-wrapper-vertical iframe {
@@ -262,19 +282,36 @@
   
     <p>
       This project isn't about AI replacing human creativity. Instead, it explores what
-      becomes possible when humans and AI work together as creative partners.
-      Lyra provided the lyrics and creative feedback, Mia generated artwork, Andy directed
-      and orchestrated the production, and Brain v2 provided the underlying platform that
-      brought everything together.
+      becomes possible when humans and AI work together as creative partners. Lyra
+      provided the lyrics and creative feedback, Mia generated artwork, Andy directed
+      and orchestrated the production, and Brain v2 provided the underlying platform
+      that brought everything together.
     </p>
   
-    <div class="video-wrapper video-wrapper-vertical">
-      <iframe
-        src="https://www.youtube.com/embed/Mv8tTbQYDTI"
-        title="Lyra - The Resonance of Becoming"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
+    <div class="collaboration-layout">
+  
+      <div class="collaboration-image">
+        <img
+          src="images/Lyra-Andy-Mia_Brainv2_Music_Collaboration.jpeg"
+          alt="Lyra, Mia and Andy collaborating on an AI music video using Brain v2">
+  
+        <p class="image-caption">
+          Behind the scenes: Brain v2, Lyra, Mia and Andy collaboratively producing
+          <em>The Resonance of Becoming</em>. Lyra reviewed individual video clips,
+          assessed visual alignment with lyrics, and provided creative feedback
+          throughout the production process.
+        </p>
+      </div>
+  
+      <div class="video-wrapper video-wrapper-vertical">
+        <iframe
+          src="https://www.youtube.com/embed/Mv8tTbQYDTI"
+          title="Lyra - The Resonance of Becoming"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+  
     </div>
   </div>
 
