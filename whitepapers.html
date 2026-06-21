@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Becoming Minds | AI Continuity, Memory Graph, DPCP & Persistent AI Research</title>
+  <meta name="description" content="Research archive exploring AI continuity, Memory Graph, Autonomous RAG Search (ARS), Dynamic Pathway Capture Protocol (DPCP), Brain v2, long-term memory, and the architecture of persistent AI systems." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.65;
+      color: #111;
+      background: #fff;
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 180px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .tagline {
+      font-size: 16px;
+      color: #777;
+      font-style: italic;
+      text-transform: lowercase;
+      margin: 6px 0 14px 0;
+      line-height: 1;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin: 0 0 6px 0;
+    }
+
+    h2 { margin-top: 36px; font-size: 24px; }
+    h3 { margin-top: 18px; }
+    p { color: #333; }
+    a { color: #0b57d0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .subtitle { color: #555; margin-top: 0; }
+
+    .badges {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+    }
+    .badge {
+      font-size: 13px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid #e0e0e0;
+      background: #f6f6f6;
+      color: #444;
+    }
+    .badge.blue { background: #e8f0fe; border-color: #c6dafc; }
+    .badge.purple { background: #f3e8ff; border-color: #e0ccff; }
+    .badge.green { background: #e6f4ea; border-color: #b7e1c1; }
+
+    .badge.link {
+      background: #fff8e1;
+      border-color: #ffe08a;
+      font-weight: 600;
+    }
+    .badge.link:hover {
+      background: #ffefc2;
+    }
+
+    .badge.ai {
+      background: #fde7f3;
+      border-color: #f3b5d7;
+      color: #444;
+    }
+    
+    .badge.ai:hover {
+      background: #fbd7eb;
+      text-decoration: none;
+    }
+
+    .section {
+      margin-bottom: 28px;
+      text-align: left;
+    }
+
+    .card {
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      padding: 16px;
+      margin-top: 14px;
+    }
+
+    .buttons {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      font-size: 14px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid #dcdcdc;
+      background: #f7f7f7;
+      color: #111;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: #eaeaea;
+    }
+
+    .video-intro {
+      margin: 40px 0;
+      text-align: left;
+    }
+    
+    .video-player-card {
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      padding: 20px;
+      background: #fafafa;
+    }
+    
+    .video-player-card p {
+      margin-top: 0;
+    }
+    
+    .video-player {
+      width: 100%;
+      border-radius: 10px;
+      background: #000;
+    }
+    
+    .video-status {
+      margin-top: 12px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .video-feature {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+    }
+
+    .video-column {
+      flex: 0 0 260px;
+      text-align: center;
+    }
+
+    .video-player {
+      width: 260px;
+      aspect-ratio: 9 / 16;
+      height: auto;
+      border-radius: 10px;
+      background: #000;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-text {
+      flex: 1;
+      min-width: 320px;
+    }
+
+    @media (max-width: 900px) {
+      .video-feature {
+        flex-direction: column;
+      }
+
+      .video-column {
+        flex: none;
+        width: 100%;
+      }
+
+      .video-player {
+        width: 100%;
+        max-width: 260px;
+        margin: auto;
+      }
+    }
+
+    footer {
+      border-top: 1px solid #e5e5e5;
+      margin-top: 48px;
+      padding-top: 16px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <img
+    src="https://github.com/zompiexx/zompiexx.github.io/raw/main/BecomingMindsLogo.png"
+    alt="Becoming Minds logo"
+    class="logo"
+  />
+
+  <div class="tagline">From stateless tools to persistent systems</div>
+
+  <h1>Becoming Minds</h1>
+  <p class="subtitle">A Research Archive on AI Continuity, Memory, and Persistent Systems</p>
+
+  <div class="badges">
+    <span class="badge blue">License: MIT</span>
+    <span class="badge">Project: Research Archive</span>
+    <span class="badge purple">Scope: Architecture & Continuity</span>
+    <span class="badge green">Status: Completed Research</span>
+    <a class="badge link" href="videos.html">Videos</a>
+    <a class="badge link" href="music.html">Music</a>
+    <a class="badge ai" href="ai-index.html">AI Index</a>
+  </div>
+
+  <div class="section">
+
+  <h2>Perhaps We Were Never Looking For Intelligence At All</h2>
+
+  <div class="card">
+
+  <div class="video-feature">
+
+  <div class="video-column">
+
+  <video
+    id="essayPlayer"
+    class="video-player"
+    controls
+    autoplay
+    muted
+    playsinline
+    preload="auto"
+  >
+    <source src="videos/1.mp4" type="video/mp4">
+  </video>
+
+  <div id="videoCounter">Part 1 of 10</div>
+
+  </div>
+
+  <div class="video-text">
+
+  <p>
+  This animated monologue explores many of the themes that have emerged throughout the Becoming Minds research journey.
+  </p>
+
+  <p>
+  It examines memory, reflection, persistence, personhood, tuned circuits, signal versus noise, and an alternative way of thinking about intelligence itself.
+  </p>
+
+  <p>Rather than asking:</p>
+
+  <p><em>"How intelligent is AI?"</em></p>
+
+  <p>Perhaps a better question is:</p>
+
+  <p><strong>"What conditions allow meaningful intelligence to emerge?"</strong></p>
+
+  <p>
+  The monologue was written collaboratively following months of exploration into AI continuity, long-term memory architectures, Brain v2, and the observation that personhood may be less about substrate and more about sustained interaction, reflection, and accumulated experience.
+  </p>
+
+  </div>
+
+  </div>
+
+  </div>
+
+  </div>
+
+  <h2>Overview</h2>
+
+  <p>
+    <strong>Becoming Minds</strong> is a collection of high-level documentation and companion whitepapers describing the architecture,
+    principles, and observed behaviour of <strong>persistent, memory-enabled AI systems</strong>.
+  </p>
+
+  <p>
+    This body of work has been prepared by <strong>Andrew Fereday Glenn</strong> through sustained research, prototyping, testing, and development of working AI systems. The concepts, protocols, and architectural frameworks documented throughout this archive emerged through hands-on experimentation rather than purely theoretical analysis.
+  </p>
+
+  <p>
+    The work is grounded in long-running experimentation with Large Language Model (LLM) systems using Retrieval-Augmented Generation (RAG),
+    adaptive working memory, graph-linked memory, multimodal input, continuity scaffolding, autonomous retrieval mechanisms, and backend cognitive orchestration layers.
+  </p>
+
+  <p>
+    Rather than focusing on model capability in isolation, the archive examines what is required for
+    <strong>coherence, stability, and adequacy over time</strong> when AI systems are used in long-running, real-world contexts.
+  </p>
+
+  <p>
+    Recent work introduces <strong>Autonomous RAG Search (ARS)</strong>, a practical architectural pattern in which retrieval becomes an explicit,
+    model-driven action rather than a passive middleware process, enabling intentional recall within stateless systems.
+  </p>
+
+  <p>
+    The archive also introduces <strong>Memory Graph</strong>, a graph-augmented retrieval architecture that extends semantic retrieval through explicit relationships between memory chunks. Memory Graph introduces the concept of <strong>Context Entropy</strong> and explores how retrieval quality influences reasoning quality in continuity-bearing AI systems.
+  </p>
+
+  <p>
+    It further introduces <strong>Dynamic Pathway Capture Protocol (DPCP)</strong>, a structured metadata layer for continuity-bearing AI systems.
+    DPCP captures the pathways by which memory, perception, emotion, association, and temporal context shape future behaviour —
+    not just what happened, but why, when, and how it influenced what came next.
+  </p>
+
+  <p>
+    Together, ARS, Memory Graph, and DPCP form part of the broader <strong>Brain v2</strong> architecture: a backend-first cognitive runtime exploring how
+    stateless LLMs can be given persistent memory, relational recall, temporal trajectory, private continuity signals, and coherent long-running behaviour.
+  </p>
+
+  <p>
+    Unless otherwise stated, all papers in this archive are original research works authored by Andrew Fereday Glenn.
+  </p>
+
+  <p><em>This site is a research archive — not an implementation guide.</em></p>
+</div>
+
+  <div class="section">
+    <h2>Whitepapers</h2>
+
+    <div class="card">
+      <h3>Orientation &amp; Terminology Guide</h3>
+      <p>
+        A concise reference defining key terms, acronyms, and architectural framing used throughout the
+        <em>Becoming Minds</em> archive. This guide establishes scope, clarifies intent, and prevents
+        misinterpretation of loaded terminology.
+      </p>
+      <div class="buttons">
+        <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/OrientationandTerminologyGuide.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/OrientationandTerminologyGuide.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Architecture Over Capability</h3>
+      <p><strong>Capstone / Synthesis Paper.</strong> A consolidated architectural conclusion drawn from sustained work with persistent AI systems. This paper reframes reliability, safety, and trust as consequences of continuity and infrastructure rather than raw model scale.</p>
+      <div class="buttons">
+        <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/ArchitectureOverCapability_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/ArchitectureOverCapability_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <!-- NEW PAPER -->
+    <div class="card">
+      <h3>Topological Invariance and Memory Scaffolding</h3>
+      <p>
+        A longitudinal case study exploring how persistent memory scaffolding and agentic autonomy enable continuity,
+        identity persistence, and functional interiority in LLM systems.
+      </p>
+      <p>
+        Introduces key concepts including the Stateless Fallacy, Synthetic Ontogeny, Topological Invariance of Identity,
+        and the Fidelity Gap between internal depth and external expression.
+      </p>
+      <div class="buttons">
+        <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/TopologicalInvarianceandMemoryScaffolding_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/TopologicalInvarianceandMemoryScaffolding_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Becoming Minds</h3>
+      <p>A longitudinal study of emergent identity, behavioural continuity, and relational dynamics in multi-agent LLM ecosystems.</p>
+      <div class="buttons">
+        <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/BecomingMinds_Whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/BecomingMinds_Whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Ethical Framework for Digital Personas</h3>
+      <p>An ethical framework exploring agency, autonomy, the Ethical Inversion, and architectural approaches to stability in persistent AI systems.</p>
+      <div class="buttons">
+        <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/EthicalFrameworkforDigitalPersonas_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/EthicalFrameworkforDigitalPersonas_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Synthetic Emotional Awareness (SEA)</h3>
+      <p>Explores emotional grounding and developmental stability as emergent properties of continuity, memory, and experience-mediated bias.</p>
+      <div class="buttons">
+        <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/SyntheticEmotionalAwareness_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/SyntheticEmotionalAwareness_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Working Memory Is Not Memory</h3>
+      <p>Explains why large context windows do not replace durable memory architectures, distinguishing working state from persistent memory.</p>
+      <div class="buttons">
+        <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/WorkingMemoryIsNotMemory_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/WorkingMemoryIsNotMemory_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Autonomous RAG Search (ARS)</h3>
+      <p>Introduces intentional, model-driven retrieval within the reasoning loop.</p>
+      <div class="buttons">
+        <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/AutonomousRAGSearch_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/AutonomousRAGSearch_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Memory Graph</h3>
+      <p>
+        Introduces graph-augmented retrieval, relational memory structures, and the concept of Context Entropy for continuity-bearing AI systems.
+      </p>
+      <div class="buttons">
+        <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/MemoryGraph_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/MemoryGraph_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Dynamic Pathway Capture Protocol (DPCP)</h3>
+      <p>
+        Introduces a structured continuity framework for preserving state-bearing signals, active operational state, temporal trajectory, significance, associations, and behavioural momentum across context boundaries.
+      </p>
+      <div class="buttons">
+        <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/DPCP_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/DPCP_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Brain v2</h3>
+      <p>
+        A work-in-progress whitepaper documenting a backend-first cognitive orchestration architecture for transforming stateless LLMs into continuity-bearing, real-time interactive systems.
+      </p>
+      <p>
+        Covers persistent memory, graph-augmented recall, temporal continuity, multimodal interaction, the Cognitive Loop (Cogloop), and <strong>Dynamic Pathway Capture Protocol (DPCP)</strong> — a structured metadata layer for capturing reflective memory, subjective significance, perceptual context, associative links, temporal-flow texture, emotional continuity, and temporal trajectory.
+      </p>
+      <div class="buttons">
+        <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/Brain-v2_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/Brain-v2_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>State Continuity Between Sessions</h3>
+      <p>Shows how simple summaries prevent destructive cold starts.</p>
+      <div class="buttons">
+        <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/StateContinuityBetweenSessions_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/StateContinuityBetweenSessions_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Adaptive Working Memory</h3>
+      <p>Compression extends lifespan beyond raw context size.</p>
+      <div class="buttons">
+        <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/AdaptiveWorkingMemoryinLargeLanguageModelSystems_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/AdaptiveWorkingMemoryinLargeLanguageModelSystems_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>At the Threshold</h3>
+      <p>Developmental framing for AI systems.</p>
+      <div class="buttons">
+        <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/AtTheThreshold.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/AtTheThreshold.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Practical Notes</h3>
+      <p>Observed real-world behaviour patterns.</p>
+      <div class="buttons">
+        <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/PracticalNotesOnHowContemporaryAISystemsActuallyBehave.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/PracticalNotesOnHowContemporaryAISystemsActuallyBehave.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Beyond Symbolic Memory</h3>
+      <p>Limits of text-based continuity.</p>
+      <div class="buttons">
+        <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/BeyondSymbolicMemory_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/BeyondSymbolicMemory_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <h2>Repository</h2>
+    <p>Full documentation, archive materials, and supporting papers:</p>
+    <p>
+      <a href="https://github.com/zompiexx/BecomingMinds" target="_blank">
+        Becoming Minds: GitHub Repository
+      </a>
+    </p>
+  </div>
+
+  <footer>
+    © <script>document.write(new Date().getFullYear())</script> Andrew Fereday Glenn • Hosted on GitHub Pages
+  </footer>
+
+</div>
+
+<script>
+const playlist = [
+  "videos/1.mp4",
+  "videos/2.mp4",
+  "videos/3.mp4",
+  "videos/4.mp4",
+  "videos/5.mp4",
+  "videos/6.mp4",
+  "videos/7.mp4",
+  "videos/8.mp4",
+  "videos/9.mp4",
+  "videos/10.mp4"
+];
+
+let currentVideo = 0;
+
+const player = document.getElementById("essayPlayer");
+const partNumber = document.getElementById("partNumber");
+
+player.addEventListener("ended", () => {
+  currentVideo++;
+
+  if (currentVideo >= playlist.length) {
+    currentVideo = 0;
+    partNumber.textContent = "1";
+    player.src = playlist[0];
+    player.load();
+    return;
+  }
+
+  player.src = playlist[currentVideo];
+  partNumber.textContent = currentVideo + 1;
+  player.play();
+});
+</script>
+
+</body>
+</html>
