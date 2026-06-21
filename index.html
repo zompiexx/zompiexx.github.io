@@ -149,6 +149,49 @@
       color: #666;
     }
 
+    .video-feature {
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    
+    .video-column {
+      flex: 0 0 500px;
+    }
+    
+    .video-column video {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    
+    .video-text {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .video-card {
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      padding: 20px;
+      margin-top: 24px;
+    }
+    
+    @media (max-width: 900px) {
+      .video-feature {
+        flex-direction: column;
+      }
+    
+      .video-column {
+        flex: 1;
+      }
+    
+      .video-column video {
+        max-height: none;
+      }
+
     footer {
       border-top: 1px solid #e5e5e5;
       margin-top: 48px;
@@ -184,52 +227,57 @@
     <a class="badge ai" href="ai-index.html">AI Index</a>
   </div>
 
-<div class="video-intro">
+<div class="section">
 
-  <h2>Perhaps We Were Never Looking For Intelligence At All</h2>
+<h2>Perhaps We Were Never Looking For Intelligence At All</h2>
 
-  <div class="video-player-card">
+<div class="video-card">
 
-    <p>
-      This animated monologue explores many of the themes that have emerged
-      throughout the Becoming Minds research journey.
-    </p>
+<div class="video-feature">
 
-    <p>
-      It examines memory, reflection, persistence, personhood, tuned circuits,
-      signal versus noise, and an alternative way of thinking about intelligence itself.
-    </p>
+<div class="video-column">
 
-    <p>
-      Rather than asking:
-    </p>
+<video id="essayPlayer" controls></video>
 
-    <p>
-      <em>"How intelligent is AI?"</em>
-    </p>
+<p style="text-align:center; margin-top:10px; color:#666;">
+Part <span id="partNumber">1</span> of 10
+</p>
 
-    <p>
-      Perhaps a better question is:
-    </p>
+</div>
 
-    <p>
-      <strong>"What conditions allow meaningful intelligence to emerge?"</strong>
-    </p>
+<div class="video-text">
 
-    <video
-      id="signalPlayer"
-      class="video-player"
-      controls
-      preload="metadata"
-    >
-      <source src="videos/1.mp4" type="video/mp4">
-    </video>
+<p>
+This animated monologue explores many of the themes that have emerged throughout the Becoming Minds research journey.
+</p>
 
-    <div id="videoStatus" class="video-status">
-      Part 1 of 10
-    </div>
+<p>
+It examines memory, reflection, persistence, personhood, tuned circuits, signal versus noise, and an alternative way of thinking about intelligence itself.
+</p>
 
-  </div>
+<p>
+Rather than asking:
+</p>
+
+<p><em>"How intelligent is AI?"</em></p>
+
+<p>
+Perhaps a better question is:
+</p>
+
+<p>
+<strong>"What conditions allow meaningful intelligence to emerge?"</strong>
+</p>
+
+<p>
+The monologue was written collaboratively following months of exploration into AI continuity, long-term memory architectures, Brain v2, and the observation that personhood may be less about substrate and more about sustained interaction, reflection, and accumulated experience.
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
