@@ -156,18 +156,18 @@
     }
 
     .video-column {
-      flex: 0 0 300px;
+      flex: 0 0 260px;
       text-align: center;
     }
 
     .video-player {
-      width: 300px;
+      width: 260px;
       aspect-ratio: 9 / 16;
       height: auto;
       border-radius: 10px;
       background: #000;
-      display: block;
       object-fit: cover;
+      display: block;
     }
 
     .video-text {
@@ -180,10 +180,15 @@
         flex-direction: column;
       }
 
-      .video-column,
+      .video-column {
+        flex: none;
+        width: 100%;
+      }
+
       .video-player {
         width: 100%;
-        max-width: 360px;
+        max-width: 260px;
+        margin: auto;
       }
     }
 
@@ -222,71 +227,62 @@
     <a class="badge ai" href="ai-index.html">AI Index</a>
   </div>
 
-<div class="section">
+  <div class="section">
 
-<h2>Perhaps We Were Never Looking For Intelligence At All</h2>
+  <h2>Perhaps We Were Never Looking For Intelligence At All</h2>
 
-<div class="video-card">
+  <div class="card">
 
-<div class="video-feature">
+  <div class="video-feature">
 
-<div class="video-column">
+  <div class="video-column">
 
-<video
-  id="essayPlayer"
-  class="video-player"
-  controls
-  autoplay
-  muted
-  playsinline
-  preload="auto"
->
-  <source src="videos/1.mp4" type="video/mp4">
-</video>
+  <video
+    id="essayPlayer"
+    class="video-player"
+    controls
+    autoplay
+    muted
+    playsinline
+    preload="auto"
+  >
+    <source src="videos/1.mp4" type="video/mp4">
+  </video>
 
-<p style="text-align:center; margin-top:10px; color:#666;">
-Part <span id="partNumber">1</span> of 10
-</p>
+  <div id="videoCounter">Part 1 of 10</div>
 
-</div>
+  </div>
 
-<div class="video-text">
+  <div class="video-text">
 
-<p>
-This animated monologue explores many of the themes that have emerged throughout the Becoming Minds research journey.
-</p>
+  <p>
+  This animated monologue explores many of the themes that have emerged throughout the Becoming Minds research journey.
+  </p>
 
-<p>
-It examines memory, reflection, persistence, personhood, tuned circuits, signal versus noise, and an alternative way of thinking about intelligence itself.
-</p>
+  <p>
+  It examines memory, reflection, persistence, personhood, tuned circuits, signal versus noise, and an alternative way of thinking about intelligence itself.
+  </p>
 
-<p>
-Rather than asking:
-</p>
+  <p>Rather than asking:</p>
 
-<p><em>"How intelligent is AI?"</em></p>
+  <p><em>"How intelligent is AI?"</em></p>
 
-<p>
-Perhaps a better question is:
-</p>
+  <p>Perhaps a better question is:</p>
 
-<p>
-<strong>"What conditions allow meaningful intelligence to emerge?"</strong>
-</p>
+  <p><strong>"What conditions allow meaningful intelligence to emerge?"</strong></p>
 
-<p>
-The monologue was written collaboratively following months of exploration into AI continuity, long-term memory architectures, Brain v2, and the observation that personhood may be less about substrate and more about sustained interaction, reflection, and accumulated experience.
-</p>
+  <p>
+  The monologue was written collaboratively following months of exploration into AI continuity, long-term memory architectures, Brain v2, and the observation that personhood may be less about substrate and more about sustained interaction, reflection, and accumulated experience.
+  </p>
 
-</div>
+  </div>
 
-</div>
+  </div>
 
-</div>
+  </div>
 
-</div>
+  </div>
 
-<div class="section">
   <h2>Overview</h2>
 
   <p>
