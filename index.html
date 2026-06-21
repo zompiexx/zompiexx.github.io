@@ -151,35 +151,28 @@
 
     .video-feature {
       display: flex;
-      gap: 28px;
+      gap: 32px;
       align-items: flex-start;
-      flex-wrap: wrap;
     }
 
     .video-column {
-      flex: 0 0 500px;
-      max-width: 100%;
+      flex: 0 0 300px;
+      text-align: center;
     }
 
     .video-player {
-      width: 100%;
-      aspect-ratio: 16 / 9;
+      width: 300px;
+      aspect-ratio: 9 / 16;
       height: auto;
       border-radius: 10px;
       background: #000;
       display: block;
+      object-fit: cover;
     }
 
     .video-text {
       flex: 1;
-      min-width: 300px;
-    }
-
-    .video-card {
-      border: 1px solid #e5e5e5;
-      border-radius: 14px;
-      padding: 20px;
-      margin-top: 24px;
+      min-width: 320px;
     }
 
     @media (max-width: 900px) {
@@ -187,9 +180,10 @@
         flex-direction: column;
       }
 
-      .video-column {
-        flex: 1 1 auto;
+      .video-column,
+      .video-player {
         width: 100%;
+        max-width: 360px;
       }
     }
 
@@ -242,7 +236,10 @@
   id="essayPlayer"
   class="video-player"
   controls
-  preload="metadata"
+  autoplay
+  muted
+  playsinline
+  preload="auto"
 >
   <source src="videos/1.mp4" type="video/mp4">
 </video>
