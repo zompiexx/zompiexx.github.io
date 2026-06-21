@@ -155,42 +155,43 @@
       align-items: flex-start;
       flex-wrap: wrap;
     }
-    
+
     .video-column {
       flex: 0 0 500px;
+      max-width: 100%;
     }
-    
-    .video-column video {
+
+    .video-player {
       width: 100%;
-      max-height: 300px;
-      object-fit: cover;
+      aspect-ratio: 16 / 9;
+      height: auto;
       border-radius: 10px;
+      background: #000;
+      display: block;
     }
-    
+
     .video-text {
       flex: 1;
       min-width: 300px;
     }
-    
+
     .video-card {
       border: 1px solid #e5e5e5;
       border-radius: 14px;
       padding: 20px;
       margin-top: 24px;
     }
-    
+
     @media (max-width: 900px) {
       .video-feature {
         flex-direction: column;
       }
-    
+
       .video-column {
-        flex: 1;
+        flex: 1 1 auto;
+        width: 100%;
       }
-    
-      .video-column video {
-        max-height: none;
-      }
+    }
 
     footer {
       border-top: 1px solid #e5e5e5;
@@ -237,7 +238,14 @@
 
 <div class="video-column">
 
-<video id="essayPlayer" controls></video>
+<video
+  id="essayPlayer"
+  class="video-player"
+  controls
+  preload="metadata"
+>
+  <source src="videos/1.mp4" type="video/mp4">
+</video>
 
 <p style="text-align:center; margin-top:10px; color:#666;">
 Part <span id="partNumber">1</span> of 10
@@ -516,8 +524,7 @@ The monologue was written collaboratively following months of exploration into A
 
 </div>
 
-  <script>
-
+<script>
 const playlist = [
   "videos/1.mp4",
   "videos/2.mp4",
@@ -533,32 +540,24 @@ const playlist = [
 
 let currentVideo = 0;
 
-const player = document.getElementById("signalPlayer");
-const status = document.getElementById("videoStatus");
+const player = document.getElementById("essayPlayer");
+const partNumber = document.getElementById("partNumber");
 
 player.addEventListener("ended", () => {
-
   currentVideo++;
 
   if (currentVideo >= playlist.length) {
-
     currentVideo = 0;
-
-    status.textContent =
-      "Finished. Press play to watch again.";
-
+    partNumber.textContent = "1";
+    player.src = playlist[0];
+    player.load();
     return;
   }
 
   player.src = playlist[currentVideo];
-
-  status.textContent =
-    `Part ${currentVideo + 1} of ${playlist.length}`;
-
+  partNumber.textContent = currentVideo + 1;
   player.play();
-
 });
-
 </script>
 
 </body>
