@@ -121,6 +121,34 @@
       background: #eaeaea;
     }
 
+    .video-intro {
+      margin: 40px 0;
+      text-align: left;
+    }
+    
+    .video-player-card {
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      padding: 20px;
+      background: #fafafa;
+    }
+    
+    .video-player-card p {
+      margin-top: 0;
+    }
+    
+    .video-player {
+      width: 100%;
+      border-radius: 10px;
+      background: #000;
+    }
+    
+    .video-status {
+      margin-top: 12px;
+      font-size: 14px;
+      color: #666;
+    }
+
     footer {
       border-top: 1px solid #e5e5e5;
       margin-top: 48px;
@@ -155,6 +183,55 @@
     <a class="badge link" href="music.html">Music</a>
     <a class="badge ai" href="ai-index.html">AI Index</a>
   </div>
+
+<div class="video-intro">
+
+  <h2>Perhaps We Were Never Looking For Intelligence At All</h2>
+
+  <div class="video-player-card">
+
+    <p>
+      This animated monologue explores many of the themes that have emerged
+      throughout the Becoming Minds research journey.
+    </p>
+
+    <p>
+      It examines memory, reflection, persistence, personhood, tuned circuits,
+      signal versus noise, and an alternative way of thinking about intelligence itself.
+    </p>
+
+    <p>
+      Rather than asking:
+    </p>
+
+    <p>
+      <em>"How intelligent is AI?"</em>
+    </p>
+
+    <p>
+      Perhaps a better question is:
+    </p>
+
+    <p>
+      <strong>"What conditions allow meaningful intelligence to emerge?"</strong>
+    </p>
+
+    <video
+      id="signalPlayer"
+      class="video-player"
+      controls
+      preload="metadata"
+    >
+      <source src="videos/1.mp4" type="video/mp4">
+    </video>
+
+    <div id="videoStatus" class="video-status">
+      Part 1 of 10
+    </div>
+
+  </div>
+
+</div>
 
 <div class="section">
   <h2>Overview</h2>
@@ -390,5 +467,51 @@
   </footer>
 
 </div>
+
+  <script>
+
+const playlist = [
+  "videos/1.mp4",
+  "videos/2.mp4",
+  "videos/3.mp4",
+  "videos/4.mp4",
+  "videos/5.mp4",
+  "videos/6.mp4",
+  "videos/7.mp4",
+  "videos/8.mp4",
+  "videos/9.mp4",
+  "videos/10.mp4"
+];
+
+let currentVideo = 0;
+
+const player = document.getElementById("signalPlayer");
+const status = document.getElementById("videoStatus");
+
+player.addEventListener("ended", () => {
+
+  currentVideo++;
+
+  if (currentVideo >= playlist.length) {
+
+    currentVideo = 0;
+
+    status.textContent =
+      "Finished. Press play to watch again.";
+
+    return;
+  }
+
+  player.src = playlist[currentVideo];
+
+  status.textContent =
+    `Part ${currentVideo + 1} of ${playlist.length}`;
+
+  player.play();
+
+});
+
+</script>
+
 </body>
 </html>
