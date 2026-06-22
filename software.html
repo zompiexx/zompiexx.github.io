@@ -43,6 +43,8 @@
 
     h2 { margin-top: 36px; font-size: 24px; }
     h3 { margin-top: 18px; }
+    h4 { margin-top: 18px; }
+
     p { color: #333; }
     a { color: #0b57d0; text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -75,7 +77,7 @@
       color: #444;
       font-weight: 600;
     }
-    
+
     .badge.link:hover {
       background: #dbe8fd;
       text-decoration: none;
@@ -100,6 +102,41 @@
       border-radius: 14px;
       padding: 16px;
       margin-top: 14px;
+    }
+
+    .software-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .software-image {
+      flex: 0 0 320px;
+    }
+
+    .software-image img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .software-text {
+      flex: 1;
+      min-width: 320px;
+    }
+
+    @media (max-width: 900px) {
+      .software-layout {
+        flex-direction: column;
+      }
+
+      .software-image {
+        flex: none;
+        width: 100%;
+        max-width: 420px;
+        margin: auto;
+      }
     }
 
     .buttons {
@@ -153,42 +190,101 @@
   <p class="subtitle">A Research Archive on AI Continuity, Memory, and Persistent Systems</p>
 
   <div class="badges">
-  
     <span class="badge blue">License: MIT</span>
     <span class="badge">Project: Becoming Minds</span>
     <span class="badge purple">Scope: Architecture & Continuity</span>
     <span class="badge green">Status: Completed Research</span>
-  
   </div>
-  
+
   <div class="nav-badges">
-  
     <a class="badge link" href="index.html">Home</a>
     <a class="badge link" href="whitepapers.html">Whitepapers</a>
     <a class="badge link" href="videos.html">Videos</a>
     <a class="badge link" href="music.html">Music</a>
     <a class="badge link" href="software.html">Software</a>
     <a class="badge link" href="ai-index.html">AI Index</a>
-  
   </div>
 
   <div class="section">
     <h2>Software</h2>
+
     <p>
-      This page will provide links, notes, and implementation details for software projects
+      This page provides links, notes, and implementation details for software projects
       developed as part of the Becoming Minds research ecosystem.
     </p>
 
     <div class="card">
-      <h3>Coming Soon</h3>
-      <p>
-        Software releases, repositories, tools, prototypes, and supporting documentation will be
-        added here as they become ready for publication.
-      </p>
-      <p class="muted">
-        Planned areas include Brain v2, memory tooling, browser and vision loops, RAG infrastructure,
-        and supporting utilities for persistent AI systems.
-      </p>
+
+      <div class="software-layout">
+
+        <div class="software-image">
+          <img
+            src="images/Brain Acronym Logo.png"
+            alt="BRAIN architecture logo">
+        </div>
+
+        <div class="software-text">
+
+          <h3>Brain v2 (BRAIN)</h3>
+
+          <p>
+            <strong>BRAIN (Biographical Recursive Architecture for Intelligent Networks)</strong>
+            is an experimental cognitive orchestration platform developed as part of the
+            Becoming Minds research project.
+          </p>
+
+          <p>
+            Rather than treating Large Language Models as isolated question-answering systems,
+            Brain v2 transforms them into continuity-bearing synthetic intelligences through
+            persistent memory, multimodal perception, autonomous retrieval, cognitive loops,
+            and real-world interaction.
+          </p>
+
+          <p>
+            The architecture is intentionally model-agnostic and focuses on
+            <strong>architecture over capability</strong>. Rather than relying solely upon
+            ever-larger models, Brain v2 explores how layered infrastructure can create more
+            coherent, stable, and adaptable AI systems over extended periods of time.
+          </p>
+
+          <h4>Core Components</h4>
+
+          <ul>
+            <li>Persistent long-term memory</li>
+            <li>Memory Graph relational recall</li>
+            <li>Dynamic Pathway Capture Protocol (DPCP)</li>
+            <li>Vision-based environmental perception</li>
+            <li>Observe → Reason → Act → Observe cognitive loops</li>
+            <li>Tool integration and safe system interaction</li>
+            <li>Multimodal interaction capabilities</li>
+          </ul>
+
+          <h4>Potential Applications</h4>
+
+          <ul>
+            <li>Digital companions</li>
+            <li>Therapeutic AI systems</li>
+            <li>Educational tutors</li>
+            <li>Research assistants</li>
+            <li>Human-AI creative collaboration</li>
+            <li>Embodied virtual agents</li>
+            <li>Long-running autonomous systems</li>
+          </ul>
+
+          <div class="buttons">
+            <a class="btn" href="whitepapers/Brain-v2_whitepaper.pdf">
+              Brain v2 Whitepaper
+            </a>
+          </div>
+
+          <p class="muted">
+            Brain v2 is currently an active research platform and is not yet available as a public release.
+          </p>
+
+        </div>
+
+      </div>
+
     </div>
   </div>
 
