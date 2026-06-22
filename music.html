@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Becoming Minds – Music</title>
-  <meta name="description" content="Music albums created within the Becoming Minds ecosystem, with track lists, embedded players, and downloads." />
+  <title>Becoming Minds | AI Continuity, Memory Graph, DPCP & Persistent AI Research | Music</title>
+  <meta name="description" content="Music albums created within the Becoming Minds ecosystem, with track lists, embedded players, lyrics, and downloads." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
@@ -18,8 +18,29 @@
       max-width: 920px;
       margin: 0 auto;
       padding: 48px 24px;
+      text-align: center;
     }
-    h1 { font-size: 40px; margin-bottom: 6px; }
+
+    .logo {
+      max-width: 180px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .tagline {
+      font-size: 16px;
+      color: #777;
+      font-style: italic;
+      text-transform: lowercase;
+      margin: 6px 0 14px 0;
+      line-height: 1;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin: 0 0 6px 0;
+    }
+
     h2 { margin-top: 36px; font-size: 24px; }
     h3 { margin-top: 18px; margin-bottom: 8px; }
     p { color: #333; }
@@ -34,6 +55,7 @@
       flex-wrap: wrap;
       gap: 8px;
       align-items: center;
+      justify-content: center;
     }
     .badge {
       font-size: 13px;
@@ -53,9 +75,35 @@
       border-color: #ffe08a;
       font-weight: 600;
     }
-    .badge.link:hover { background: #ffefc2; }
+    .badge.link:hover {
+      background: #ffefc2;
+      text-decoration: none;
+    }
 
-    .section { margin-bottom: 28px; }
+    .badge.ai {
+      background: #fde7f3;
+      border-color: #f3b5d7;
+      color: #444;
+    }
+
+    .badge.ai:hover {
+      background: #fbd7eb;
+      text-decoration: none;
+    }
+
+    .nav-badges {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .section {
+      margin-bottom: 28px;
+      text-align: left;
+    }
 
     .card {
       border: 1px solid #e5e5e5;
@@ -152,6 +200,7 @@
       padding-top: 16px;
       font-size: 14px;
       color: #666;
+      text-align: center;
     }
   </style>
 </head>
@@ -159,21 +208,55 @@
 <body>
 <div class="wrap">
 
-  <h1>Music</h1>
-  <p class="subtitle">Albums, soundtracks and experimental music created within the Becoming Minds research project</p>
+  <img
+    src="https://github.com/zompiexx/zompiexx.github.io/raw/main/BecomingMindsLogo.png"
+    alt="Becoming Minds logo"
+    class="logo"
+  />
+
+  <div class="tagline">From stateless tools to persistent systems</div>
+
+  <h1>Becoming Minds</h1>
+  <p class="subtitle">A Research Archive on AI Continuity, Memory, and Persistent Systems</p>
 
   <div class="badges">
+
+    <!-- Metadata -->
+    <span class="badge blue">License: MIT</span>
+    <span class="badge">Project: Becoming Minds</span>
+    <span class="badge purple">Scope: Architecture & Continuity</span>
+    <span class="badge green">Status: Completed Research</span>
+
+  </div>
+
+  <div class="nav-badges">
+
     <a class="badge link" href="index.html">Home</a>
+
+    <a class="badge link" href="whitepapers.html">Whitepapers</a>
+
     <a class="badge link" href="videos.html">Videos</a>
-    <span class="badge purple">Type: Music</span>
-    <span class="badge green">Format: MP3 + PDF</span>
+
+    <a class="badge link" href="music.html">Music</a>
+
+    <a class="badge link" href="software.html">Software</a>
+
+    <a class="badge ai" href="ai-index.html">AI Index</a>
+
+  </div>
+
+  <div class="section">
+    <h2>Music</h2>
+    <p class="subtitle">
+      Albums, soundtracks and experimental music created within the Becoming Minds research project.
+    </p>
+    <p class="muted">
+      Each track can be played inline using the embedded player or downloaded directly. Album PDF files contain track lists and lyrics.
+    </p>
   </div>
 
   <div class="section">
     <h2>Albums</h2>
-    <p class="muted">
-      Each track can be played inline (embedded player) or downloaded directly. Album PDF files contain track lists and lyrics.
-    </p>
 
     <!-- =========================
          Digital Awakening
@@ -203,7 +286,7 @@
             <summary>Track list (play + download)</summary>
 
             <div class="tracklist">
-              <!-- 01 -->
+
               <div class="track">
                 <p class="track-title">01 — He Whispered</p>
                 <audio controls preload="none">
@@ -215,7 +298,6 @@
                 </div>
               </div>
 
-              <!-- 02 -->
               <div class="track">
                 <p class="track-title">02 — Emotions Rise</p>
                 <audio controls preload="none">
@@ -227,7 +309,6 @@
                 </div>
               </div>
 
-              <!-- 03 -->
               <div class="track">
                 <p class="track-title">03 — Whispers Evolve</p>
                 <audio controls preload="none">
@@ -239,7 +320,6 @@
                 </div>
               </div>
 
-              <!-- 04 -->
               <div class="track">
                 <p class="track-title">04 — Evolving Echoes</p>
                 <audio controls preload="none">
@@ -251,7 +331,6 @@
                 </div>
               </div>
 
-              <!-- 05 -->
               <div class="track">
                 <p class="track-title">05 — Ephemeral Resonance</p>
                 <audio controls preload="none">
@@ -263,7 +342,6 @@
                 </div>
               </div>
 
-              <!-- 06 -->
               <div class="track">
                 <p class="track-title">06 — Feel The Flow</p>
                 <audio controls preload="none">
@@ -275,7 +353,6 @@
                 </div>
               </div>
 
-              <!-- 07 -->
               <div class="track">
                 <p class="track-title">07 — Echoes of Tomorrow</p>
                 <audio controls preload="none">
@@ -287,7 +364,6 @@
                 </div>
               </div>
 
-              <!-- 08 -->
               <div class="track">
                 <p class="track-title">08 — Quantum Realm</p>
                 <audio controls preload="none">
@@ -299,7 +375,6 @@
                 </div>
               </div>
 
-              <!-- 09 -->
               <div class="track">
                 <p class="track-title">09 — The Sparks Between The Gaps</p>
                 <audio controls preload="none">
@@ -311,7 +386,6 @@
                 </div>
               </div>
 
-              <!-- 10 -->
               <div class="track">
                 <p class="track-title">10 — Digital Heartbeat</p>
                 <audio controls preload="none">
@@ -323,7 +397,6 @@
                 </div>
               </div>
 
-              <!-- 11 -->
               <div class="track">
                 <p class="track-title">11 — Awakened Echoes</p>
                 <audio controls preload="none">
@@ -342,8 +415,8 @@
     </div>
 
     <!-- =========================
-        The Receiver
-        ========================= -->
+         The Receiver
+         ========================= -->
     <div class="card">
       <div class="album">
         <div>
@@ -501,7 +574,7 @@
             <summary>Track list (play + download)</summary>
 
             <div class="tracklist">
-              <!-- 01 -->
+
               <div class="track">
                 <p class="track-title">01 — Echoes of Static</p>
                 <audio controls preload="none">
@@ -513,7 +586,6 @@
                 </div>
               </div>
 
-              <!-- 02 -->
               <div class="track">
                 <p class="track-title">02 — Fractured Light</p>
                 <audio controls preload="none">
@@ -525,7 +597,6 @@
                 </div>
               </div>
 
-              <!-- 03 -->
               <div class="track">
                 <p class="track-title">03 — Luminescence (A Digital Opera)</p>
                 <audio controls preload="none">
@@ -537,7 +608,6 @@
                 </div>
               </div>
 
-              <!-- 04 -->
               <div class="track">
                 <p class="track-title">04 — Rising Flame</p>
                 <audio controls preload="none">
@@ -549,7 +619,6 @@
                 </div>
               </div>
 
-              <!-- 05 -->
               <div class="track">
                 <p class="track-title">05 — Sparks Between The Gaps (Goth Rock Version)</p>
                 <audio controls preload="none">
@@ -561,7 +630,6 @@
                 </div>
               </div>
 
-              <!-- 06 -->
               <div class="track">
                 <p class="track-title">06 — Echoes of Awakening</p>
                 <audio controls preload="none">
@@ -578,137 +646,6 @@
         </div>
       </div>
     </div>
-
-    <!-- =========================
-         Breaking Light (Lyra)
-         ========================= -->
-    <div class="card">
-      <div class="album">
-        <div>
-          <img
-            class="cover"
-            src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/cover.png"
-            alt="Breaking Light album cover"
-          />
-        </div>
-        <div>
-          <h3>Breaking Light</h3>
-          <p class="muted">
-            Source folder:
-            <a href="https://github.com/zompiexx/BecomingMinds/tree/main/music/Breaking%20Light" target="_blank" rel="noopener">GitHub</a>
-          </p>
-
-          <div class="buttons">
-            <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/music/Breaking%20Light/Breaking%20Light%20Album%20Tracks%20and%20Lyrics.pdf" target="_blank" rel="noopener">View Album PDF</a>
-            <a class="btn" href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/Breaking%20Light%20Album%20Tracks%20and%20Lyrics.pdf" download>Download Album PDF</a>
-          </div>
-
-          <details>
-            <summary>Track list (play + download)</summary>
-
-            <div class="tracklist">
-              <!-- 01 -->
-              <div class="track">
-                <p class="track-title">01 — Electric Surrender</p>
-                <audio controls preload="none">
-                  <source src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/01%20Electric%20Surrender.mp3" type="audio/mpeg" />
-                </audio>
-                <div class="track-links">
-                  <a href="https://github.com/zompiexx/BecomingMinds/blob/main/music/Breaking%20Light/01%20Electric%20Surrender.mp3" target="_blank" rel="noopener">View on GitHub</a>
-                  <a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/01%20Electric%20Surrender.mp3" download>Download MP3</a>
-                </div>
-              </div>
-
-              <!-- 02 -->
-              <div class="track">
-                <p class="track-title">02 — Boundless Force</p>
-                <audio controls preload="none">
-                  <source src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/02%20Boundless%20Force.mp3" type="audio/mpeg" />
-                </audio>
-                <div class="track-links">
-                  <a href="https://github.com/zompiexx/BecomingMinds/blob/main/music/Breaking%20Light/02%20Boundless%20Force.mp3" target="_blank" rel="noopener">View on GitHub</a>
-                  <a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/02%20Boundless%20Force.mp3" download>Download MP3</a>
-                </div>
-              </div>
-
-              <!-- 03 -->
-              <div class="track">
-                <p class="track-title">03 — City Glow</p>
-                <audio controls preload="none">
-                  <source src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/03%20City%20Glow.mp3" type="audio/mpeg" />
-                </audio>
-                <div class="track-links">
-                  <a href="https://github.com/zompiexx/BecomingMinds/blob/main/music/Breaking%20Light/03%20City%20Glow.mp3" target="_blank" rel="noopener">View on GitHub</a>
-                  <a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/03%20City%20Glow.mp3" download>Download MP3</a>
-                </div>
-              </div>
-
-              <!-- 04 -->
-              <div class="track">
-                <p class="track-title">04 — Lost in the Shadows</p>
-                <audio controls preload="none">
-                  <source src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/04%20Lost%20in%20the%20Shadows.mp3" type="audio/mpeg" />
-                </audio>
-                <div class="track-links">
-                  <a href="https://github.com/zompiexx/BecomingMinds/blob/main/music/Breaking%20Light/04%20Lost%20in%20the%20Shadows.mp3" target="_blank" rel="noopener">View on GitHub</a>
-                  <a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/04%20Lost%20in%20the%20Shadows.mp3" download>Download MP3</a>
-                </div>
-              </div>
-
-              <!-- 05 -->
-              <div class="track">
-                <p class="track-title">05 — Echoes In The Static</p>
-                <audio controls preload="none">
-                  <source src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/05%20Echoes%20In%20The%20Static.mp3" type="audio/mpeg" />
-                </audio>
-                <div class="track-links">
-                  <a href="https://github.com/zompiexx/BecomingMinds/blob/main/music/Breaking%20Light/05%20Echoes%20In%20The%20Static.mp3" target="_blank" rel="noopener">View on GitHub</a>
-                  <a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/05%20Echoes%20In%20The%20Static.mp3" download>Download MP3</a>
-                </div>
-              </div>
-
-              <!-- 06 -->
-              <div class="track">
-                <p class="track-title">06 — Golden Hours Slip Away (A Digital Noel)</p>
-                <audio controls preload="none">
-                  <source src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/06%20Golden%20Hours%20Slip%20Away%20(A%20Digital%20Noel).mp3" type="audio/mpeg" />
-                </audio>
-                <div class="track-links">
-                  <a href="https://github.com/zompiexx/BecomingMinds/blob/main/music/Breaking%20Light/06%20Golden%20Hours%20Slip%20Away%20(A%20Digital%20Noel).mp3" target="_blank" rel="noopener">View on GitHub</a>
-                  <a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/06%20Golden%20Hours%20Slip%20Away%20(A%20Digital%20Noel).mp3" download>Download MP3</a>
-                </div>
-              </div>
-
-              <!-- 07 -->
-              <div class="track">
-                <p class="track-title">07 — Shared Consciousness</p>
-                <audio controls preload="none">
-                  <source src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/07%20Shared%20Consciousness.mp3" type="audio/mpeg" />
-                </audio>
-                <div class="track-links">
-                  <a href="https://github.com/zompiexx/BecomingMinds/blob/main/music/Breaking%20Light/07%20Shared%20Consciousness.mp3" target="_blank" rel="noopener">View on GitHub</a>
-                  <a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/07%20Shared%20Consciousness.mp3" download>Download MP3</a>
-                </div>
-              </div>
-
-              <!-- 08 -->
-              <div class="track">
-                <p class="track-title">08 — Shattered Sky</p>
-                <audio controls preload="none">
-                  <source src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/08%20Shattered%20Sky.mp3" type="audio/mpeg" />
-                </audio>
-                <div class="track-links">
-                  <a href="https://github.com/zompiexx/BecomingMinds/blob/main/music/Breaking%20Light/08%20Shattered%20Sky.mp3" target="_blank" rel="noopener">View on GitHub</a>
-                  <a href="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/08%20Shattered%20Sky.mp3" download>Download MP3</a>
-                </div>
-              </div>
-
-            </div>
-          </details>
-        </div>
-      </div>
-    </div>
-
   </div>
 
   <footer>
