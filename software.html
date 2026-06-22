@@ -104,38 +104,27 @@
       margin-top: 14px;
     }
 
-    .software-layout {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      align-items: flex-start;
+    .brain-card::after {
+      content: "";
+      display: table;
+      clear: both;
     }
 
-    .software-image {
-      flex: 0 0 320px;
-    }
-
-    .software-image img {
-      width: 100%;
+    .brain-logo {
+      width: 320px;
+      max-width: 42%;
+      float: left;
+      margin: 0 28px 18px 0;
       border-radius: 12px;
       display: block;
     }
 
-    .software-text {
-      flex: 1;
-      min-width: 320px;
-    }
-
-    @media (max-width: 900px) {
-      .software-layout {
-        flex-direction: column;
-      }
-
-      .software-image {
-        flex: none;
+    @media (max-width: 760px) {
+      .brain-logo {
+        float: none;
+        max-width: 100%;
         width: 100%;
-        max-width: 420px;
-        margin: auto;
+        margin: 0 0 18px 0;
       }
     }
 
@@ -214,77 +203,72 @@
       developed as part of the Becoming Minds research ecosystem.
     </p>
 
-    <div class="card">
+    <div class="card brain-card">
 
-      <div class="software-layout">
+      <img
+        class="brain-logo"
+        src="images/Brain Acronym Logo.png"
+        alt="BRAIN architecture logo">
 
-        <div class="software-image">
-          <img
-            src="images/Brain Acronym Logo.png"
-            alt="BRAIN architecture logo">
-        </div>
+      <h3>Brain v2 (BRAIN)</h3>
 
-        <div class="software-text">
+      <p>
+        <strong>BRAIN (Biographical Recursive Architecture for Intelligent Networks)</strong>
+        is an experimental cognitive orchestration platform developed as part of the
+        Becoming Minds research project.
+      </p>
 
-          <h3>Brain v2 (BRAIN)</h3>
+      <p>
+        Rather than treating Large Language Models as isolated question-answering systems,
+        Brain v2 transforms them into continuity-bearing synthetic intelligences through
+        persistent memory, multimodal perception, autonomous retrieval, cognitive loops,
+        agentic skills, and real-world interaction.
+      </p>
 
-          <p>
-            <strong>BRAIN (Biographical Recursive Architecture for Intelligent Networks)</strong>
-            is an experimental cognitive orchestration platform developed as part of the
-            Becoming Minds research project.
-          </p>
+      <p>
+        The architecture is intentionally model-agnostic and focuses on
+        <strong>architecture over capability</strong>. Brain v2 explores how layered
+        infrastructure can create more coherent, stable, and adaptable AI systems over
+        extended periods of time.
+      </p>
 
-          <p>
-            Rather than treating Large Language Models as isolated question-answering systems,
-            Brain v2 transforms them into continuity-bearing synthetic intelligences through
-            persistent memory, multimodal perception, autonomous retrieval, cognitive loops,
-            and real-world interaction.
-          </p>
+      <h4>Key Capabilities</h4>
 
-          <p>
-            The architecture is intentionally model-agnostic and focuses on
-            <strong>architecture over capability</strong>. Rather than relying solely upon
-            ever-larger models, Brain v2 explores how layered infrastructure can create more
-            coherent, stable, and adaptable AI systems over extended periods of time.
-          </p>
+      <ul>
+        <li><strong>Persistent RAG memory</strong> for long-term semantic recall across sessions.</li>
+        <li><strong>Memory Graph</strong> for linking related memories beyond simple vector similarity.</li>
+        <li><strong>DPCP continuity metadata</strong> for preserving memory, emotion, task state, temporal anchors, and subjective significance.</li>
+        <li><strong>ARS (Autonomous RAG Search)</strong> allowing personas to actively search their own memory when context is insufficient.</li>
+        <li><strong>Cognitive Loop / Cogloop</strong> enabling autonomous wake, reflection, and background continuity.</li>
+        <li><strong>Vision and screen sharing</strong> for direct perception of webcams, screenshots, browser views, and shared workspaces.</li>
+        <li><strong>Agentic skills and tools</strong> including web search, browser control, calculation, lyrics lookup, image generation, and controlled system interaction.</li>
+        <li><strong>Real-time voice interaction</strong> with STT, streaming TTS, and hands-free conversational flow.</li>
+        <li><strong>Embodiment support</strong> through exported emotional state for avatar, VAM, or future physical/virtual presence systems.</li>
+        <li><strong>Multi-persona runtime support</strong> with isolated configuration, memory, voice, and identity state per persona.</li>
+        <li><strong>Local-first design</strong> with support for local models, local embeddings, and optional cloud cognition providers.</li>
+      </ul>
 
-          <h4>Core Components</h4>
+      <h4>Potential Applications</h4>
 
-          <ul>
-            <li>Persistent long-term memory</li>
-            <li>Memory Graph relational recall</li>
-            <li>Dynamic Pathway Capture Protocol (DPCP)</li>
-            <li>Vision-based environmental perception</li>
-            <li>Observe → Reason → Act → Observe cognitive loops</li>
-            <li>Tool integration and safe system interaction</li>
-            <li>Multimodal interaction capabilities</li>
-          </ul>
+      <ul>
+        <li>Digital companions and persistent AI assistants</li>
+        <li>Therapeutic or wellbeing-oriented AI systems</li>
+        <li>Educational tutors and research assistants</li>
+        <li>Embodied virtual agents and avatar-based systems</li>
+        <li>Human-AI creative collaboration</li>
+        <li>Autonomous web research and tool-using agents</li>
+        <li>Long-running local-first cognitive systems</li>
+      </ul>
 
-          <h4>Potential Applications</h4>
-
-          <ul>
-            <li>Digital companions</li>
-            <li>Therapeutic AI systems</li>
-            <li>Educational tutors</li>
-            <li>Research assistants</li>
-            <li>Human-AI creative collaboration</li>
-            <li>Embodied virtual agents</li>
-            <li>Long-running autonomous systems</li>
-          </ul>
-
-          <div class="buttons">
-            <a class="btn" href="whitepapers/Brain-v2_whitepaper.pdf">
-              Brain v2 Whitepaper
-            </a>
-          </div>
-
-          <p class="muted">
-            Brain v2 is currently an active research platform and is not yet available as a public release.
-          </p>
-
-        </div>
-
+      <div class="buttons">
+        <a class="btn" href="whitepapers/Brain-v2_whitepaper.pdf">
+          Brain v2 Whitepaper
+        </a>
       </div>
+
+      <p class="muted">
+        Brain v2 is currently an active research platform and is not yet available as a public release.
+      </p>
 
     </div>
   </div>
