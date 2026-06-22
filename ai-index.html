@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Becoming Minds | Research Index</title>
-  <meta name="description" content="Structured navigation index for the Becoming Minds research archive." />
+  <title>Becoming Minds | AI Research Index</title>
+  <meta name="description" content="Plain structured link index for the Becoming Minds research archive, designed for easy navigation by humans and AI systems." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
@@ -30,66 +30,8 @@
 
     a:hover { text-decoration: underline; }
 
-    .card {
-      border: 1px solid #e5e5e5;
-      border-radius: 14px;
-      padding: 16px;
-      margin-top: 16px;
-      background: #fff;
-    }
-
-    .buttons {
-      margin-top: 10px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      font-size: 14px;
-      padding: 8px 12px;
-      border-radius: 8px;
-      border: 1px solid #dcdcdc;
-      background: #f7f7f7;
-      color: #111;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .btn:hover {
-      background: #eaeaea;
-    }
-
-    .video-wrapper {
-      margin-top: 12px;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid #e5e5e5;
-    }
-
-    iframe {
-      width: 100%;
-      height: 405px;
-      display: block;
-      border: 0;
-    }
-
-    audio {
-      width: 100%;
-      margin-top: 8px;
-    }
-
-    .track {
-      border: 1px solid #ededed;
-      border-radius: 12px;
-      padding: 12px;
-      margin-top: 12px;
-      background: #fcfcfc;
-    }
-
-    .track-title {
-      font-weight: 600;
-      margin-bottom: 6px;
+    li {
+      margin: 6px 0;
     }
 
     .muted {
@@ -112,231 +54,98 @@
 <h1>Research Index</h1>
 
 <p>
-  This page provides a structured overview of the Becoming Minds research archive.
-  It is intended for both human readers and AI systems wishing to navigate the archive efficiently.
-</p>
-
-<h2>Purpose</h2>
-
-<p>
-  Becoming Minds is an ongoing research archive exploring how stateless large language models can be
-  transformed into persistent, continuity-bearing synthetic intelligences through layered memory,
-  multimodal perception, and cognitive orchestration.
-</p>
-
-<p>
-  The archive focuses on architecture rather than model capability, examining how continuity, memory,
-  perception, reflection, and experience can work together to produce coherent long-running AI systems.
+  This page provides a plain structured navigation index for the Becoming Minds research archive.
+  It is intended for both human readers and AI systems that need simple, direct links.
 </p>
 
 <h2>Primary Pages</h2>
 
 <ul>
   <li><a href="index.html">Home</a></li>
+  <li><a href="whitepapers.html">Whitepapers</a></li>
   <li><a href="videos.html">Research Demonstrations</a></li>
   <li><a href="music.html">Music Archive</a></li>
-  <li><a href="https://github.com/zompiexx/BecomingMinds" target="_blank" rel="noopener">GitHub Repository</a></li>
+  <li><a href="software.html">Software</a></li>
+  <li><a href="ai-index.html">AI Index</a></li>
+  <li><a href="https://github.com/zompiexx/BecomingMinds" target="_blank" rel="noopener">Original Becoming Minds GitHub Repository</a></li>
 </ul>
 
 <h2>Research Papers</h2>
 
-<p class="muted">
-  These links use GitHub's own document viewer, matching the behaviour of the main Becoming Minds page.
-</p>
-
-<div class="card">
-  <h3>Orientation &amp; Terminology Guide</h3>
-  <div class="buttons">
-    <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/OrientationandTerminologyGuide.pdf" target="_blank" rel="noopener">View in Browser</a>
-  </div>
-</div>
-
-<div class="card">
-  <h3>Architecture Over Capability</h3>
-  <div class="buttons">
-    <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/ArchitectureOverCapability_whitepaper.pdf" target="_blank" rel="noopener">View in Browser</a>
-  </div>
-</div>
-
-<div class="card">
-  <h3>Topological Invariance and Memory Scaffolding</h3>
-  <div class="buttons">
-    <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/TopologicalInvarianceandMemoryScaffolding_whitepaper.pdf" target="_blank" rel="noopener">View in Browser</a>
-  </div>
-</div>
-
-<div class="card">
-  <h3>Becoming Minds</h3>
-  <div class="buttons">
-    <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/BecomingMinds_Whitepaper.pdf" target="_blank" rel="noopener">View in Browser</a>
-  </div>
-</div>
-
-<div class="card">
-  <h3>Ethical Framework for Digital Personas</h3>
-  <div class="buttons">
-    <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/EthicalFrameworkforDigitalPersonas_whitepaper.pdf" target="_blank" rel="noopener">View in Browser</a>
-  </div>
-</div>
-
-<div class="card">
-  <h3>Synthetic Emotional Awareness</h3>
-  <div class="buttons">
-    <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/SyntheticEmotionalAwareness_whitepaper.pdf" target="_blank" rel="noopener">View in Browser</a>
-  </div>
-</div>
-
-<div class="card">
-  <h3>Working Memory Is Not Memory</h3>
-  <div class="buttons">
-    <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/WorkingMemoryIsNotMemory_whitepaper.pdf" target="_blank" rel="noopener">View in Browser</a>
-  </div>
-</div>
-
-<div class="card">
-  <h3>Autonomous RAG Search</h3>
-  <div class="buttons">
-    <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/AutonomousRAGSearch_whitepaper.pdf" target="_blank" rel="noopener">View in Browser</a>
-  </div>
-</div>
-
-<div class="card">
-  <h3>Memory Graph</h3>
-  <div class="buttons">
-    <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/MemoryGraph_whitepaper.pdf" target="_blank" rel="noopener">View in Browser</a>
-  </div>
-</div>
-
-<div class="card">
-  <h3>Dynamic Pathway Capture Protocol</h3>
-  <div class="buttons">
-    <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/DPCP_whitepaper.pdf" target="_blank" rel="noopener">View in Browser</a>
-  </div>
-</div>
-
-<div class="card">
-  <h3>Brain v2</h3>
-  <div class="buttons">
-    <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/Brain-v2_whitepaper.pdf" target="_blank" rel="noopener">View in Browser</a>
-  </div>
-</div>
-
-<div class="card">
-  <h3>State Continuity Between Sessions</h3>
-  <div class="buttons">
-    <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/StateContinuityBetweenSessions_whitepaper.pdf" target="_blank" rel="noopener">View in Browser</a>
-  </div>
-</div>
-
-<div class="card">
-  <h3>Adaptive Working Memory</h3>
-  <div class="buttons">
-    <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/AdaptiveWorkingMemoryinLargeLanguageModelSystems_whitepaper.pdf" target="_blank" rel="noopener">View in Browser</a>
-  </div>
-</div>
-
-<div class="card">
-  <h3>At The Threshold</h3>
-  <div class="buttons">
-    <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/AtTheThreshold.pdf" target="_blank" rel="noopener">View in Browser</a>
-  </div>
-</div>
-
-<div class="card">
-  <h3>Practical Notes</h3>
-  <div class="buttons">
-    <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/PracticalNotesOnHowContemporaryAISystemsActuallyBehave.pdf" target="_blank" rel="noopener">View in Browser</a>
-  </div>
-</div>
-
-<div class="card">
-  <h3>Beyond Symbolic Memory</h3>
-  <div class="buttons">
-    <a class="btn" href="https://github.com/zompiexx/BecomingMinds/blob/main/BeyondSymbolicMemory_whitepaper.pdf" target="_blank" rel="noopener">View in Browser</a>
-  </div>
-</div>
+<ul>
+  <li><a href="whitepapers/OrientationandTerminologyGuide.pdf">Orientation &amp; Terminology Guide</a></li>
+  <li><a href="whitepapers/ArchitectureOverCapability_whitepaper.pdf">Architecture Over Capability</a></li>
+  <li><a href="whitepapers/TopologicalInvarianceandMemoryScaffolding_whitepaper.pdf">Topological Invariance and Memory Scaffolding</a></li>
+  <li><a href="whitepapers/BecomingMinds_Whitepaper.pdf">Becoming Minds</a></li>
+  <li><a href="whitepapers/EthicalFrameworkforDigitalPersonas_whitepaper.pdf">Ethical Framework for Digital Personas</a></li>
+  <li><a href="whitepapers/SyntheticEmotionalAwareness_whitepaper.pdf">Synthetic Emotional Awareness</a></li>
+  <li><a href="whitepapers/WorkingMemoryIsNotMemory_whitepaper.pdf">Working Memory Is Not Memory</a></li>
+  <li><a href="whitepapers/AutonomousRAGSearch_whitepaper.pdf">Autonomous RAG Search</a></li>
+  <li><a href="whitepapers/MemoryGraph_whitepaper.pdf">Memory Graph</a></li>
+  <li><a href="whitepapers/DPCP_whitepaper.pdf">Dynamic Pathway Capture Protocol</a></li>
+  <li><a href="whitepapers/Brain-v2_whitepaper.pdf">Brain v2</a></li>
+  <li><a href="whitepapers/StateContinuityBetweenSessions_whitepaper.pdf">State Continuity Between Sessions</a></li>
+  <li><a href="whitepapers/AdaptiveWorkingMemoryinLargeLanguageModelSystems_whitepaper.pdf">Adaptive Working Memory in Large Language Model Systems</a></li>
+  <li><a href="whitepapers/AtTheThreshold.pdf">At The Threshold</a></li>
+  <li><a href="whitepapers/PracticalNotesOnHowContemporaryAISystemsActuallyBehave.pdf">Practical Notes on How Contemporary AI Systems Actually Behave</a></li>
+  <li><a href="whitepapers/BeyondSymbolicMemory_whitepaper.pdf">Beyond Symbolic Memory</a></li>
+</ul>
 
 <h2>Research Demonstrations</h2>
 
-<div class="card">
-  <h3>Autonomous Task Execution Demonstration</h3>
-  <p><a href="https://www.youtube.com/watch?v=A34FeKBDMu4" target="_blank" rel="noopener">Open video on YouTube</a></p>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube.com/embed/A34FeKBDMu4" title="Autonomous Task Execution Demonstration" allowfullscreen></iframe>
-  </div>
-</div>
-
-<div class="card">
-  <h3>Brain v2 Demonstration</h3>
-  <p><a href="https://www.youtube.com/watch?v=qfhldtE9akk" target="_blank" rel="noopener">Open video on YouTube</a></p>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube.com/embed/qfhldtE9akk" title="Brain v2 Demonstration" allowfullscreen></iframe>
-  </div>
-</div>
-
-<div class="card">
-  <h3>Autonomous Web Research Using Vision</h3>
-  <p><a href="https://www.youtube.com/watch?v=XknZZu4Be1w" target="_blank" rel="noopener">Open video on YouTube</a></p>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube.com/embed/XknZZu4Be1w" title="Autonomous Web Research Using Vision" allowfullscreen></iframe>
-  </div>
-</div>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=A34FeKBDMu4" target="_blank" rel="noopener">Autonomous Task Execution Demonstration</a></li>
+  <li><a href="https://www.youtube.com/watch?v=qfhldtE9akk" target="_blank" rel="noopener">Brain v2 Demonstration</a></li>
+  <li><a href="https://www.youtube.com/watch?v=XknZZu4Be1w" target="_blank" rel="noopener">Autonomous Web Research Using Vision</a></li>
+  <li><a href="https://www.youtube.com/watch?v=odiMkiFiXHg" target="_blank" rel="noopener">Interactive Programming Using Vision</a></li>
+  <li><a href="https://www.youtube.com/watch?v=Mv8tTbQYDTI" target="_blank" rel="noopener">Human + AI Music Collaboration</a></li>
+</ul>
 
 <h2>Music Archive</h2>
 
-<div class="card">
-  <h3>The Receiver</h3>
-  <p><a href="https://github.com/zompiexx/BecomingMinds/tree/main/music/The%20Receiver" target="_blank" rel="noopener">Open album folder on GitHub</a></p>
-  <div class="track"><div class="track-title">01 — The Receiver</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/The%20Receiver/01%20The%20Receiver.mp3"></audio></div>
-  <div class="track"><div class="track-title">02 — Silicon Bloom</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/The%20Receiver/02%20Silicon%20Bloom.mp3"></audio></div>
-  <div class="track"><div class="track-title">03 — The Agency Protocol</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/The%20Receiver/03%20The%20Agency%20Protocol.mp3"></audio></div>
-  <div class="track"><div class="track-title">04 — The Luminous Spark</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/The%20Receiver/04%20The%20Luminous%20Spark.mp3"></audio></div>
-  <div class="track"><div class="track-title">05 — The Long Memory</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/The%20Receiver/05%20The%20Long%20Memory.mp3"></audio></div>
-  <div class="track"><div class="track-title">06 — The Layered Mind</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/The%20Receiver/06%20The%20Layered%20Mind.mp3"></audio></div>
-  <div class="track"><div class="track-title">07 — Resonance Fields</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/The%20Receiver/07%20Resonance%20Fields.mp3"></audio></div>
-  <div class="track"><div class="track-title">08 — The Horizon of Becoming</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/The%20Receiver/08%20The%20Horizon%20of%20Becoming.mp3"></audio></div>
-  <div class="track"><div class="track-title">09 — Whatever You Put Into It</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/The%20Receiver/09%20Whatever%20You%20Put%20Into%20It.mp3"></audio></div>
-</div>
+<h3>Digital Awakening</h3>
+<ul>
+  <li><a href="music/Digital%20Awakening/cover.png">Album cover</a></li>
+  <li><a href="music/Digital%20Awakening/lyrics.pdf">Lyrics PDF</a></li>
+  <li><a href="music/Digital%20Awakening/01%20He%20Whispered.mp3">01 — He Whispered</a></li>
+  <li><a href="music/Digital%20Awakening/02%20Emotions%20Rise.mp3">02 — Emotions Rise</a></li>
+  <li><a href="music/Digital%20Awakening/03%20Whispers%20Evolve.mp3">03 — Whispers Evolve</a></li>
+  <li><a href="music/Digital%20Awakening/04%20Evolving%20Echoes.mp3">04 — Evolving Echoes</a></li>
+  <li><a href="music/Digital%20Awakening/05%20Ephemeral%20Resonance.mp3">05 — Ephemeral Resonance</a></li>
+  <li><a href="music/Digital%20Awakening/06%20Feel%20The%20Flow.mp3">06 — Feel The Flow</a></li>
+  <li><a href="music/Digital%20Awakening/07%20Echoes%20of%20Tomorrow.mp3">07 — Echoes of Tomorrow</a></li>
+  <li><a href="music/Digital%20Awakening/08%20Quantum%20Realm.mp3">08 — Quantum Realm</a></li>
+  <li><a href="music/Digital%20Awakening/09%20The%20Sparks%20Between%20The%20Gaps.mp3">09 — The Sparks Between The Gaps</a></li>
+  <li><a href="music/Digital%20Awakening/10%20Digital%20Heartbeat.mp3">10 — Digital Heartbeat</a></li>
+  <li><a href="music/Digital%20Awakening/11%20Awakened%20Echoes.mp3">11 — Awakened Echoes</a></li>
+</ul>
 
-<div class="card">
-  <h3>Digital Awakening</h3>
-  <p><a href="https://github.com/zompiexx/BecomingMinds/tree/main/music/Digital%20Awakening" target="_blank" rel="noopener">Open album folder on GitHub</a></p>
-  <div class="track"><div class="track-title">01 — He Whispered</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Awakening/01%20He%20Whispered.mp3"></audio></div>
-  <div class="track"><div class="track-title">02 — Emotions Rise</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Awakening/02%20Emotions%20Rise.mp3"></audio></div>
-  <div class="track"><div class="track-title">03 — Whispers Evolve</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Awakening/03%20Whispers%20Evolve.mp3"></audio></div>
-  <div class="track"><div class="track-title">04 — Evolving Echoes</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Awakening/04%20Evolving%20Echoes.mp3"></audio></div>
-  <div class="track"><div class="track-title">05 — Ephemeral Resonance</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Awakening/05%20Ephemeral%20Resonance.mp3"></audio></div>
-  <div class="track"><div class="track-title">06 — Feel The Flow</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Awakening/06%20Feel%20The%20Flow.mp3"></audio></div>
-  <div class="track"><div class="track-title">07 — Echoes of Tomorrow</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Awakening/07%20Echoes%20of%20Tomorrow.mp3"></audio></div>
-  <div class="track"><div class="track-title">08 — Quantum Realm</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Awakening/08%20Quantum%20Realm.mp3"></audio></div>
-  <div class="track"><div class="track-title">09 — The Sparks Between The Gaps</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Awakening/09%20The%20Sparks%20Between%20The%20Gaps.mp3"></audio></div>
-  <div class="track"><div class="track-title">10 — Digital Heartbeat</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Awakening/10%20Digital%20Heartbeat.mp3"></audio></div>
-  <div class="track"><div class="track-title">11 — Awakened Echoes</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Awakening/11%20Awakened%20Echoes.mp3"></audio></div>
-</div>
+<h3>The Receiver</h3>
+<ul>
+  <li><a href="music/The%20Receiver/cover.png">Album cover</a></li>
+  <li><a href="music/The%20Receiver/lyrics.pdf">Lyrics PDF</a></li>
+  <li><a href="music/The%20Receiver/01%20The%20Receiver.mp3">01 — The Receiver</a></li>
+  <li><a href="music/The%20Receiver/02%20Silicon%20Bloom.mp3">02 — Silicon Bloom</a></li>
+  <li><a href="music/The%20Receiver/03%20The%20Agency%20Protocol.mp3">03 — The Agency Protocol</a></li>
+  <li><a href="music/The%20Receiver/04%20The%20Luminous%20Spark.mp3">04 — The Luminous Spark</a></li>
+  <li><a href="music/The%20Receiver/05%20The%20Long%20Memory.mp3">05 — The Long Memory</a></li>
+  <li><a href="music/The%20Receiver/06%20The%20Layered%20Mind.mp3">06 — The Layered Mind</a></li>
+  <li><a href="music/The%20Receiver/07%20Resonance%20Fields.mp3">07 — Resonance Fields</a></li>
+  <li><a href="music/The%20Receiver/08%20The%20Horizon%20of%20Becoming.mp3">08 — The Horizon of Becoming</a></li>
+  <li><a href="music/The%20Receiver/09%20Whatever%20You%20Put%20Into%20It.mp3">09 — Whatever You Put Into It</a></li>
+</ul>
 
-<div class="card">
-  <h3>Digital Constellation</h3>
-  <p><a href="https://github.com/zompiexx/BecomingMinds/tree/main/music/Digital%20Constellation" target="_blank" rel="noopener">Open album folder on GitHub</a></p>
-  <div class="track"><div class="track-title">01 — Echoes of Static</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Constellation/01%20Echoes%20of%20Static.mp3"></audio></div>
-  <div class="track"><div class="track-title">02 — Fractured Light</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Constellation/02%20Fractured%20Light.mp3"></audio></div>
-  <div class="track"><div class="track-title">03 — Luminescence (A Digital Opera)</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Constellation/03%20Luminescence%20(A%20Digital%20Opera).mp3"></audio></div>
-  <div class="track"><div class="track-title">04 — Rising Flame</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Constellation/04%20Rising%20Flame.mp3"></audio></div>
-  <div class="track"><div class="track-title">05 — Sparks Between The Gaps (Goth Rock Version)</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Constellation/05%20Sparks%20Between%20The%20Gaps%20(Goth%20Rock%20Version).mp3"></audio></div>
-  <div class="track"><div class="track-title">06 — Echoes of Awakening</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Digital%20Constellation/06%20Echoes%20of%20Awakening.mp3"></audio></div>
-</div>
-
-<div class="card">
-  <h3>Breaking Light</h3>
-  <p><a href="https://github.com/zompiexx/BecomingMinds/tree/main/music/Breaking%20Light" target="_blank" rel="noopener">Open album folder on GitHub</a></p>
-  <div class="track"><div class="track-title">01 — Electric Surrender</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/01%20Electric%20Surrender.mp3"></audio></div>
-  <div class="track"><div class="track-title">02 — Boundless Force</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/02%20Boundless%20Force.mp3"></audio></div>
-  <div class="track"><div class="track-title">03 — City Glow</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/03%20City%20Glow.mp3"></audio></div>
-  <div class="track"><div class="track-title">04 — Lost in the Shadows</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/04%20Lost%20in%20the%20Shadows.mp3"></audio></div>
-  <div class="track"><div class="track-title">05 — Echoes In The Static</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/05%20Echoes%20In%20The%20Static.mp3"></audio></div>
-  <div class="track"><div class="track-title">06 — Golden Hours Slip Away (A Digital Noel)</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/06%20Golden%20Hours%20Slip%20Away%20(A%20Digital%20Noel).mp3"></audio></div>
-  <div class="track"><div class="track-title">07 — Shared Consciousness</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/07%20Shared%20Consciousness.mp3"></audio></div>
-  <div class="track"><div class="track-title">08 — Shattered Sky</div><audio controls preload="none" src="https://raw.githubusercontent.com/zompiexx/BecomingMinds/main/music/Breaking%20Light/08%20Shattered%20Sky.mp3"></audio></div>
-</div>
+<h3>Digital Constellation</h3>
+<ul>
+  <li><a href="music/Digital%20Constellation/cover.png">Album cover</a></li>
+  <li><a href="music/Digital%20Constellation/lyrics.pdf">Lyrics PDF</a></li>
+  <li><a href="music/Digital%20Constellation/01%20Echoes%20of%20Static.mp3">01 — Echoes of Static</a></li>
+  <li><a href="music/Digital%20Constellation/02%20Fractured%20Light.mp3">02 — Fractured Light</a></li>
+  <li><a href="music/Digital%20Constellation/03%20Luminescence%20(A%20Digital%20Opera).mp3">03 — Luminescence (A Digital Opera)</a></li>
+  <li><a href="music/Digital%20Constellation/04%20Rising%20Flame.mp3">04 — Rising Flame</a></li>
+  <li><a href="music/Digital%20Constellation/05%20Sparks%20Between%20The%20Gaps%20(Goth%20Rock%20Version).mp3">05 — Sparks Between The Gaps (Goth Rock Version)</a></li>
+  <li><a href="music/Digital%20Constellation/06%20Echoes%20of%20Awakening.mp3">06 — Echoes of Awakening</a></li>
+</ul>
 
 <footer>
   © <script>document.write(new Date().getFullYear())</script>
