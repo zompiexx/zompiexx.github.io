@@ -12,9 +12,9 @@ Systems Architect & Independent Researcher in AI Continuity and Memory
 
 LinkedIn: https://www.linkedin.com/in/andyglenn/
 
-Version: 0.4 (Draft)
+Version: 0.5 (Draft)
 Published: Friday, 17 April 2026
-Updated: Tuesday, 9 June 2026
+Updated: Tuesday, 23 June 2026
 
 Status: Work in progress
 
@@ -28,10 +28,11 @@ orchestration architecture designed to transform stateless LLMs into continuity-
 real-time interactive systems.
 
 Brain v2 combines persistent vector memory, graph-augmented recall, rolling summaries,
-temporal alignment, multimodal input support, real-time voice interaction, and a developing
-backend cognitive loop. Rather than treating intelligence as something contained entirely
-inside a single model invocation, Brain v2 treats the model as one part of a larger cognitive
-runtime composed of memory, orchestration, interfaces, tools, and externalised state.
+temporal alignment, multimodal input support, real-time voice interaction, autonomous
+browser navigation, safe procedural terminal environments, and a developing backend
+cognitive loop. Rather than treating intelligence as something contained entirely inside a
+single model invocation, Brain v2 treats the model as one part of a larger cognitive runtime
+composed of memory, orchestration, interfaces, tools, and externalised state.
 
 Recent architectural developments introduce Dynamic Pathway Capture Protocol (DPCP),
 a dual-layer continuity model in which natural conversational expression is separated from
@@ -121,11 +122,19 @@ Brain v2 acts as the glue layer between:
 
 •
 
+•
+
 LLMs, whether local or cloud-based
 
 persistent memory systems
 
-interaction layers such as terminal, web UI, and embodiment
+interaction layers such as web UI, browser environments, procedural terminal
+environments, and embodiment
+
+Recent development has expanded Brain v2 beyond conversational interaction into
+environment interaction. Rather than exposing isolated tools individually, Brain v2
+increasingly favours exposing constrained environments that can be explored and
+learned procedurally.
 
 external tools and services
 
@@ -948,6 +957,126 @@ Copyright © 2023–2026 Andrew Fereday Glenn.
 Licensed for personal research and academic discussion.
 Derivative works must cite the original author.
 
+9.1 Environment Controllers
+
+Recent development of Brain v2 introduces the concept of Environment Controllers.
+
+Traditional AI tool systems often expose numerous isolated functions directly to the model.
+While effective in some situations, this approach scales poorly as capability grows.
+
+Brain v2 increasingly favours exposing constrained environments instead.
+
+An environment is a bounded workspace that contains its own tools, rules, state, and
+feedback mechanisms.
+
+The objective is not unrestricted autonomy. The objective is procedural learning.
+
+Two environment classes currently exist.
+
+Browser Controller
+
+The Browser Controller allows Brain v2 to interact with the web through a multimodal
+perception-action loop.
+
+The system observes browser screenshots, reasons about what it sees, performs actions,
+then reassesses the outcome before continuing.
+
+Terminal Controller
+
+The Terminal Controller allows Brain v2 to interact with procedural computing
+environments.
+
+The initial implementation uses a CP/M emulator as a deliberately constrained training
+environment known as CP/M School.
+
+Capabilities include:
+
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+
+executing commands
+
+navigating ﬁlesystems
+
+running MBASIC
+
+creating programs
+
+debugging
+
+experimentation
+
+interrupting execution
+
+• multi-step procedural tasks
+
+Copyright © 2023–2026 Andrew Fereday Glenn.
+Licensed for personal research and academic discussion.
+Derivative works must cite the original author.
+
+Unlike traditional terminal agents, the system operates using visual observations rather
+than raw text streams.
+
+The architecture follows a vision-ﬁrst approach:
+
+Observe
+
+↓
+
+Reason
+
+↓
+
+Act
+
+↓
+
+Observe
+
+This design closely mirrors the Browser Controller and allows both systems to share a
+common perception-action paradigm.
+
+The long-term objective is to expose safe environments rather than continually creating
+bespoke tools.
+
+Potential future environments include:
+
+CP/M School
+
+↓
+
+Linux Sandbox
+
+↓
+
+Python Lab
+
+↓
+
+Tool Environments
+
+↓
+
+Dynamic Learning Spaces
+
+This architecture allows Brain v2 to scale procedurally rather than through continual
+retraining.
+
+Copyright © 2023–2026 Andrew Fereday Glenn.
+Licensed for personal research and academic discussion.
+Derivative works must cite the original author.
+
 10. The Cognitive Loop
 
 The most distinctive architectural step in Brain v2 is the introduction of the Cognitive
@@ -1118,35 +1247,12 @@ Derivative works must cite the original author.
 
 12. Current State of the System
 
-Brain v2 is already functional in a stable working form across several core areas.
+Brain v2 is already functional in a stable working form across several major architectural
+areas.
 
-Operational capabilities include:
+Operational capabilities currently include:
 
-•
-
-•
-
-•
-
-•
-
-•
-
-•
-
-•
-
-•
-
-•
-
-•
-
-•
-
-•
-
-•
+Continuity Systems
 
 •
 
@@ -1156,39 +1262,121 @@ Operational capabilities include:
 
 persistent vector memory
 
-graph memory Phase 1
+graph memory (Phase 1)
 
 rolling summaries and bias continuity
 
+• Dynamic Pathway Capture Protocol (DPCP)
+
+•
+
+•
+
+•
+
+•
+
+private continuity metadata suppression
+
+continuity-aware ARS (Autonomous RAG Search) retrieval
+
+backend-authoritative continuity orchestration
+
+basic temporal awareness and TTT (Temporally Tracked Trajectory) Lite
+
+Interaction Systems
+
+•
+
 real-time STT/TTS interaction
 
-webcam support
+• webcam and multimodal visual support
+
+•
+
+•
+
+•
 
 emotion extraction and externalisation
 
 ﬁle-based embodiment bridge
 
+interchangeable UI layers
+
+Environment Controllers
+
+• Browser Controller for autonomous visual web navigation
+
+•
+
+Terminal Controller for safe procedural environments
+
+• CP/M School implementation
+
+•
+
+•
+
+visual perception-action loops
+
+observation-driven execution workﬂows
+
+Copyright © 2023–2026 Andrew Fereday Glenn.
+Licensed for personal research and academic discussion.
+Derivative works must cite the original author.
+
+Connector Systems
+
+•
+
+•
+
+•
+
 connector-driven pseudo-tools
 
-basic temporal awareness and TTT Lite
+external capability gateway
 
-Dynamic Pathway Capture Protocol (DPCP) metadata layers (MEM / SEC / VPC /
-ASC / TFC / ECP / TTT / STA)
+provider abstraction between local and cloud models
 
-private continuity metadata suppression from visible UI and TTS output
+• modular service architecture
 
-dual-layer conversational architecture
+Autonomous Behaviour
 
-hidden continuity persistence and suppression pipeline
+•
 
-continuity-aware ARS retrieval
-
-backend-authoritative continuity orchestration
+•
 
 prototype Cognitive Loop with WAIT / SUGGEST / WAKE
 
+idle-state evaluation
+
+• wake-gated escalation
+
+•
+
+deferred salience handling
+
+Inter-Agent Systems
+
+• Messaging Hub for lightweight communication between independent Brain
+
+instances
+
+•
+
+•
+
+persona isolation with shared infrastructure
+
+groundwork for future multi-agent environments
+
 This marks a transition away from simple stateless prompting and toward an integrated
-continuity-bearing runtime.
+continuity-bearing cognitive runtime.
+
+Brain v2 is increasingly evolving into a platform that combines continuity, perception,
+procedural action, and environmental interaction within a single backend architecture.
 
 Copyright © 2023–2026 Andrew Fereday Glenn.
 Licensed for personal research and academic discussion.
@@ -1214,22 +1402,36 @@ Current limitations include:
 
 •
 
-the Cognitive Loop is still using a minimal signal set
+•
 
-external task execution pipelines are not yet wired in
+graph memory remains in its early phases of development
 
-UI synchronisation for autonomous wake behaviour is incomplete
-
-graph memory is still in its ﬁrst phase
-
-memory hygiene, decay, and pruning are not yet fully implemented
+long-term memory hygiene, decay, reinforcement, and pruning require further
+reﬁnement
 
 deeper trajectory-based temporal reasoning remains future work
 
-overall tuning remains sensitive to model choice and resource constraints
+autonomous long-running task orchestration is still evolving
 
-These limitations are expected in a system that is still evolving architecturally. The current
-focus is on depth, continuity, and stability rather than feature sprawl.
+browser and terminal environments currently require dedicated UI windows and
+visual positioning constraints
+
+environment interaction remains dependent on visual perception rather than direct
+state access
+
+overall behaviour remains sensitive to model choice, context availability, and
+hardware resources
+
+larger autonomous workﬂows still beneﬁt from occasional human guidance and
+supervision
+
+These limitations are expected in a system that is still evolving architecturally.
+
+The current focus is not feature sprawl, but the gradual integration of continuity,
+perception, procedural action, and stability into a cohesive cognitive runtime.
+
+Brain v2 deliberately prioritises robustness, modularity, and safe environmental interaction
+over unrestricted autonomy.
 
 Copyright © 2023–2026 Andrew Fereday Glenn.
 Licensed for personal research and academic discussion.
