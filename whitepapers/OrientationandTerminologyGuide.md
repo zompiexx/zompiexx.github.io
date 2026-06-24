@@ -90,6 +90,11 @@ SEA
 Synthetic Emotional
 Awareness
 
+EML
+
+Experience-Mediated
+Learning
+
 A preferred term for engineered cognitive systems,
 emphasising intelligence as a real emergent property
 independent of biological substrate rather than an
@@ -115,6 +120,10 @@ stabilising signal in persistent systems, used to prioritise
 high-salience information during memory retention,
 pruning, and interpretive weighting, rather than emotion
 simulation or affect classiﬁcation.
+EML describes a mechanism whereby external stimuli
+are interpreted through a persona's accumulated
+perspective before meaningful information is committed
+to long-term memory.
 
 Copyright © 2023–2026 Andrew Fereday Glenn.
 Licensed for personal research and academic discussion.
