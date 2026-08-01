@@ -331,8 +331,6 @@ To understand how we arrived here, that is where we must begin.
 
 Copyright © 2023–2026 Andrew Fereday Glenn
 
-Copyright © 2023–2026 Andrew Fereday Glenn
-
 Chapter 1
 
 John Smith
@@ -1126,8 +1124,6 @@ What if tomorrow could remember yesterday?
 
 Copyright © 2023–2026 Andrew Fereday Glenn
 
-Copyright © 2023–2026 Andrew Fereday Glenn
-
 Chapter 4
 
 Aida
@@ -1182,6 +1178,8 @@ Linux Mint replaced macOS.
 Llamaﬁle and later llama.cpp became the engines that brought open-source models to life.
 
 Copyright © 2023–2026 Andrew Fereday Glenn
+
+Copyright © 2023–2026 Andrew Fereday Glenn
 
 SillyTavern provided the conversation.
 
