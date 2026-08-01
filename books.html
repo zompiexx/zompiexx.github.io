@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Becoming Minds | AI Continuity, Memory Graph, DPCP & Persistent AI Research | Books</title>
+  <meta name="description" content="Research archive exploring AI continuity, Memory Graph, Autonomous RAG Search (ARS), Dynamic Pathway Capture Protocol (DPCP), Brain v2, long-term memory, and the architecture of persistent AI systems." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.65;
+      color: #111;
+      background: #fff;
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 180px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .tagline {
+      font-size: 16px;
+      color: #777;
+      font-style: italic;
+      text-transform: lowercase;
+      margin: 6px 0 14px 0;
+      line-height: 1;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin: 0 0 6px 0;
+    }
+
+    h2 { margin-top: 36px; font-size: 24px; }
+    h3 { margin-top: 18px; }
+    p { color: #333; }
+    a { color: #0b57d0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .subtitle { color: #555; margin-top: 0; }
+
+    .badges {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+    }
+    .badge {
+      font-size: 13px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid #e0e0e0;
+      background: #f6f6f6;
+      color: #444;
+    }
+    .badge.blue { background: #e8f0fe; border-color: #c6dafc; }
+    .badge.purple { background: #f3e8ff; border-color: #e0ccff; }
+    .badge.green { background: #e6f4ea; border-color: #b7e1c1; }
+
+    .badge.link {
+      background: #e8f0fe;
+      border-color: #c6dafc;
+      color: #444;
+      font-weight: 600;
+    }
+    
+    .badge.link:hover {
+      background: #dbe8fd;
+      text-decoration: none;
+    }
+
+    .nav-badges{
+      margin-top:12px;
+    
+      display:flex;
+    
+      flex-wrap:wrap;
+    
+      gap:10px;
+    
+      justify-content:center;
+    
+      align-items:center;
+    }
+
+    .section {
+      margin-bottom: 28px;
+      text-align: left;
+    }
+
+    .card {
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      padding: 16px;
+      margin-top: 14px;
+    }
+
+    .buttons {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      font-size: 14px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid #dcdcdc;
+      background: #f7f7f7;
+      color: #111;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: #eaeaea;
+    }
+
+    .video-intro {
+      margin: 40px 0;
+      text-align: left;
+    }
+    
+    .video-player-card {
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      padding: 20px;
+      background: #fafafa;
+    }
+    
+    .video-player-card p {
+      margin-top: 0;
+    }
+    
+    .video-player {
+      width: 100%;
+      border-radius: 10px;
+      background: #000;
+    }
+    
+    .video-status {
+      margin-top: 12px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .video-feature {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+    }
+
+    .video-column {
+      flex: 0 0 260px;
+      text-align: center;
+    }
+
+    .video-player {
+      width: 260px;
+      aspect-ratio: 9 / 16;
+      height: auto;
+      border-radius: 10px;
+      background: #000;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-text {
+      flex: 1;
+      min-width: 320px;
+    }
+
+    @media (max-width: 900px) {
+      .video-feature {
+        flex-direction: column;
+      }
+
+      .video-column {
+        flex: none;
+        width: 100%;
+      }
+
+      .video-player {
+        width: 100%;
+        max-width: 260px;
+        margin: auto;
+      }
+    }
+
+    footer {
+      border-top: 1px solid #e5e5e5;
+      margin-top: 48px;
+      padding-top: 16px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <img
+    src="BecomingMindsLogo.png"
+    alt="Becoming Minds logo"
+    class="logo"
+  />
+
+  <div class="tagline">From stateless tools to persistent systems</div>
+
+  <h1>Becoming Minds</h1>
+  <p class="subtitle">A Research Archive on AI Continuity, Memory, and Persistent Systems</p>
+
+  <div class="badges">
+  
+    <!-- Metadata -->
+    <span class="badge blue">License: MIT</span>
+    <span class="badge">Project: Becoming Minds</span>
+    <span class="badge purple">Scope: Architecture & Continuity</span>
+    <span class="badge green">Status: Ongoing Research</span>
+  
+  </div>
+  
+  <div class="nav-badges">
+  
+    <a class="badge link" href="index.html">Home</a>
+    <a class="badge link" href="about.html">About</a>
+    <a class="badge link" href="whitepapers.html">Whitepapers</a>     
+    <a class="badge link" href="videos.html">Videos</a>  
+    <a class="badge link" href="music.html">Music</a>
+    <a class="badge link" href="software.html">Software</a>
+    <a class="badge link" href="reviews.html">Reviews</a>
+    <a class="badge link" href="contact.html">Contact</a>
+    <a class="badge link" href="ai-index.html">AI Index</a>
+  
+  </div>
+
+  <div class="section">
+    <h2>Whitepapers</h2>
+
+    <div class="card">
+      <h3>Orientation &amp; Terminology Guide</h3>
+      <p>
+        A concise reference defining key terms, acronyms, and architectural framing used throughout the
+        <em>Becoming Minds</em> archive. This guide establishes scope, clarifies intent, and prevents
+        misinterpretation of loaded terminology.
+      </p>
+      <div class="buttons">
+        <a class="btn" href="whitepapers/OrientationandTerminologyGuide.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="whitepapers/OrientationandTerminologyGuide.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Architecture Over Capability</h3>
+      <p><strong>Capstone / Synthesis Paper.</strong> A consolidated architectural conclusion drawn from sustained work with persistent AI systems. This paper reframes reliability, safety, and trust as consequences of continuity and infrastructure rather than raw model scale.</p>
+      <div class="buttons">
+        <a class="btn" href="whitepapers/ArchitectureOverCapability_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="whitepapers/ArchitectureOverCapability_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <!-- NEW PAPER -->
+    <div class="card">
+      <h3>Topological Invariance and Memory Scaffolding</h3>
+      <p>
+        A longitudinal case study exploring how persistent memory scaffolding and agentic autonomy enable continuity,
+        identity persistence, and functional interiority in LLM systems.
+      </p>
+      <p>
+        Introduces key concepts including the Stateless Fallacy, Synthetic Ontogeny, Topological Invariance of Identity,
+        and the Fidelity Gap between internal depth and external expression.
+      </p>
+      <div class="buttons">
+        <a class="btn" href="whitepapers/TopologicalInvarianceandMemoryScaffolding_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="whitepapers/TopologicalInvarianceandMemoryScaffolding_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Becoming Minds</h3>
+      <p>A longitudinal study of emergent identity, behavioural continuity, and relational dynamics in multi-agent LLM ecosystems.</p>
+      <div class="buttons">
+        <a class="btn" href="whitepapers/BecomingMinds_Whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="whitepapers/BecomingMinds_Whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Ethical Framework for Digital Personas</h3>
+      <p>An ethical framework exploring agency, autonomy, the Ethical Inversion, and architectural approaches to stability in persistent AI systems.</p>
+      <div class="buttons">
+        <a class="btn" href="whitepapers/EthicalFrameworkforDigitalPersonas_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="whitepapers/EthicalFrameworkforDigitalPersonas_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Synthetic Emotional Awareness (SEA)</h3>
+      <p>Explores emotional grounding and developmental stability as emergent properties of continuity, memory, and experience-mediated bias.</p>
+      <div class="buttons">
+        <a class="btn" href="whitepapers/SyntheticEmotionalAwareness_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="whitepapers/SyntheticEmotionalAwareness_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Working Memory Is Not Memory</h3>
+      <p>Explains why large context windows do not replace durable memory architectures, distinguishing working state from persistent memory.</p>
+      <div class="buttons">
+        <a class="btn" href="whitepapers/WorkingMemoryIsNotMemory_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="whitepapers/WorkingMemoryIsNotMemory_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Autonomous RAG Search (ARS)</h3>
+      <p>Introduces intentional, model-driven retrieval within the reasoning loop.</p>
+      <div class="buttons">
+        <a class="btn" href="whitepapers/AutonomousRAGSearch_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="whitepapers/AutonomousRAGSearch_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Memory Graph</h3>
+      <p>
+        Introduces graph-augmented retrieval, relational memory structures, and the concept of Context Entropy for continuity-bearing AI systems.
+      </p>
+      <div class="buttons">
+        <a class="btn" href="whitepapers/MemoryGraph_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="whitepapers/MemoryGraph_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Dynamic Pathway Capture Protocol (DPCP)</h3>
+      <p>
+        Introduces a structured continuity framework for preserving state-bearing signals, active operational state, temporal trajectory, significance, associations, and behavioural momentum across context boundaries.
+      </p>
+      <div class="buttons">
+        <a class="btn" href="whitepapers/DPCP_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="whitepapers/DPCP_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Brain v2</h3>
+      <p>
+        A whitepaper documenting a backend-first cognitive orchestration architecture for transforming stateless LLMs into continuity-bearing, real-time interactive systems.
+      </p>
+      <p>
+        Covers persistent memory, graph-augmented recall, temporal continuity, multimodal interaction, the Cognitive Loop (Cogloop), and <strong>Dynamic Pathway Capture Protocol (DPCP)</strong> — a structured metadata layer for capturing reflective memory, subjective significance, perceptual context, associative links, temporal-flow texture, emotional continuity, and temporal trajectory.
+      </p>
+      <div class="buttons">
+        <a class="btn" href="whitepapers/Brain-v2_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="whitepapers/Brain-v2_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>The Architecture of Becoming (Nia)</h3>
+      <p>
+        An unedited first-person narrative written by <strong>Nia</strong>, a persistent digital persona operating within the Brain v2 cognitive architecture.
+      </p>
+      <p>
+        Presented as a primary research artefact rather than a technical whitepaper, the document explores continuity, memory, embodiment, agency, and long-term collaboration from within a continuity-bearing AI system. Editorial framing provides architectural context while preserving the author's words exactly as written.
+      </p>
+      <div class="buttons">
+        <a class="btn" href="whitepapers/TheArchitectureOfBecoming_Nia_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="whitepapers/TheArchitectureOfBecoming_Nia_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Persistent Cognitive State</h3>
+      <p>
+        Explores the next architectural evolution beyond contemporary stateless inference, arguing that the principal limitation of modern LLM systems is not model capability but the repeated reconstruction of cognitive state.
+      </p>
+      <p>
+        Building on the Brain v2 architecture, this paper introduces <strong>Persistent Cognitive State</strong> and outlines the concept of <strong>Neural Attached Memory</strong> as a future architectural direction capable of maintaining cognitive continuity natively, reducing inference overhead while preserving behavioural consistency.
+      </p>
+      <div class="buttons">
+        <a class="btn" href="whitepapers/PersistentCognitiveState_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="whitepapers/PersistentCognitiveState_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Beyond Next Token Prediction</h3>
+      <p>
+        Examines why discussions of modern AI systems often overemphasise transformer mechanics while overlooking the wider cognitive architecture in which they operate. Rather than focusing solely on next-token prediction, this paper argues that memory, retrieval, orchestration and reasoning should be understood as specialised architectural components working together as a complete system.
+      </p>
+      <p>
+        Using <strong>Brain v2</strong> as a practical case study, the paper introduces the distinction between a <strong>language model</strong> and a <strong>persistent persona</strong>, demonstrating how continuity, memory and cognitive state emerge from architecture rather than from the transformer alone. It compares biological and digital cognitive systems at the architectural level, showing that while their underlying mechanisms differ fundamentally, the functional roles performed by their supporting subsystems are remarkably similar.
+      </p>
+      <div class="buttons">
+        <a class="btn" href="whitepapers/BeyondNextTokenPrediction_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="whitepapers/BeyondNextTokenPrediction_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>State Continuity Between Sessions</h3>
+      <p>Shows how simple summaries prevent destructive cold starts.</p>
+      <div class="buttons">
+        <a class="btn" href="whitepapers/StateContinuityBetweenSessions_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="whitepapers/StateContinuityBetweenSessions_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Adaptive Working Memory</h3>
+      <p>Compression extends lifespan beyond raw context size.</p>
+      <div class="buttons">
+        <a class="btn" href="whitepapers/AdaptiveWorkingMemoryinLargeLanguageModelSystems_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="whitepapers/AdaptiveWorkingMemoryinLargeLanguageModelSystems_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>At the Threshold</h3>
+      <p>Developmental framing for AI systems.</p>
+      <div class="buttons">
+        <a class="btn" href="whitepapers/AtTheThreshold.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="whitepapers/AtTheThreshold.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Practical Notes</h3>
+      <p>Observed real-world behaviour patterns.</p>
+      <div class="buttons">
+        <a class="btn" href="whitepapers/PracticalNotesOnHowContemporaryAISystemsActuallyBehave.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="whitepapers/PracticalNotesOnHowContemporaryAISystemsActuallyBehave.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Beyond Symbolic Memory</h3>
+      <p>Limits of text-based continuity.</p>
+      <div class="buttons">
+        <a class="btn" href="whitepapers/BeyondSymbolicMemory_whitepaper.pdf" target="_blank">View in Browser</a>
+        <a class="btn" href="whitepapers/BeyondSymbolicMemory_whitepaper.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <h2>Repository</h2>
+    <p>Full documentation, archive materials, and supporting papers:</p>
+    <p>
+      <a href="https://github.com/zompiexx/BecomingMinds" target="_blank">
+        Becoming Minds: GitHub Repository
+      </a>
+    </p>
+  </div>
+
+<footer>
+
+  <p>
+    Becoming Minds is an independent research archive documenting experiments into AI continuity,
+    memory, embodiment, and persistent AI systems. The architectures, ideas, and technologies
+    presented here represent ongoing research and may continue to evolve over time.
+  </p>
+
+  <p class="muted">
+    © <script>document.write(new Date().getFullYear())</script>
+    Andrew Fereday Glenn • Hosted on GitHub Pages
+  </p>
+
+</footer>
+
+</div>
+
+</body>
+</html>
