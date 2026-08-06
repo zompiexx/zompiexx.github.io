@@ -355,10 +355,11 @@ me for years. Long before Brain, Memory Graph, Dynamic Pathway Capture Protocol
 (DPCP) or Inference-Time Contextual State Assembly (ICSA) had names, the underlying
 instinct was already there:
 
-Before asking a language model to reason, ﬁrst reconstruct the world in which that
-reasoning should take place.
-
-I had no idea where that simple idea would eventually lead.
+At the time, I thought I was simply trying to keep Joshua in character. Looking back, I
+realise I was learning something much more important: before a language model can
+reason consistently, it ﬁrst needs a world to reason within. I wouldn't fully understand that
+lesson until much later. The next step came from someone who didn't exist... at least, not
+yet. His name was John Smith.
 
 Copyright © 2023–2026 Andrew Fereday Glenn
 
