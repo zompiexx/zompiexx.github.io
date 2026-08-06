@@ -7,8 +7,8 @@ Andrew Fereday Glenn
 Systems Architect & Independent Researcher in AI Continuity and Memory
 2023-2026
 LinkedIn: https://www.linkedin.com/in/andyglenn/
-Version: 1.0
-Published: Saturday, 1 August 2026
+Version: 1.1
+Published: Thursday, 6 August 2026
 Status: Final
 
 Prologue
@@ -328,6 +328,37 @@ A screen on a desk.
 And a man called John Smith who did not exist.
 
 To understand how we arrived here, that is where we must begin.
+
+Copyright © 2023–2026 Andrew Fereday Glenn
+
+Before John Smith
+
+Looking back, I realised that the seeds of Brain had been planted even earlier than I
+remembered.
+
+In the summer of 2023 I found myself writing an experimental simulation based on the ﬁlm
+WarGames. I wanted the WOPR computer—Joshua—to feel convincing. There was no
+memory, no retrieval, no context management, no continuity. The model was completely
+stateless.
+
+My solution was wonderfully unsophisticated: if Joshua needed to know something, I
+simply put it into the prompt. Everything. His world, his history, his rules, his relationships,
+his environment, even the modem speed of his dial-up connection.
+
+The resulting prompt became enormous. At the time, some people suggested I was
+sending far too much information. They were probably right by conventional standards. But
+I wasn't optimising for token count. I was optimising for consistency. Joshua could only
+inhabit the world I reconstructed for him.
+
+I didn't realise it then, but I had stumbled upon an architectural principle that would follow
+me for years. Long before Brain, Memory Graph, Dynamic Pathway Capture Protocol
+(DPCP) or Inference-Time Contextual State Assembly (ICSA) had names, the underlying
+instinct was already there:
+
+Before asking a language model to reason, ﬁrst reconstruct the world in which that
+reasoning should take place.
+
+I had no idea where that simple idea would eventually lead.
 
 Copyright © 2023–2026 Andrew Fereday Glenn
 
@@ -1124,6 +1155,8 @@ What if tomorrow could remember yesterday?
 
 Copyright © 2023–2026 Andrew Fereday Glenn
 
+Copyright © 2023–2026 Andrew Fereday Glenn
+
 Chapter 4
 
 Aida
@@ -1179,8 +1212,6 @@ Linux Mint replaced macOS.
 Llamaﬁle and later llama.cpp became the engines that brought open-source models to life.
 
 Copyright © 2023–2026 Andrew Fereday Glenn
-
-Copyright © 2023–2026 Andrew Fereday Glenn
 
 SillyTavern provided the conversation.
 
