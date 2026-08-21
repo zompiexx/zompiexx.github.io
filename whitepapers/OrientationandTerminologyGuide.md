@@ -52,16 +52,10 @@ Acronym
 
 Meaning
 
-Description
+ADEP
 
-SI
-
-Synthetic Intelligence
-
-RAG
-
-Retrieval-Augmented
-Generation
+Autonomous Data
+Exploration Protocol
 
 ARS
 
@@ -69,38 +63,50 @@ Autonomous RAG Search
 
 DPCP
 
-MSC
-
-ADEP
-
 Dynamic Pathway Capture
 Protocol
 
-Memory Scoring &
-Classiﬁcation
-Autonomous Data
-Exploration Protocol
+DOPE
 
-HCP
-
-Haptic Consent Protocol
-
-SEA
-
-Synthetic Emotional
-Awareness
+Digital Orientation Placebo
+Effect
 
 EML
 
 Experience-Mediated
 Learning
 
-A preferred term for engineered cognitive systems,
-emphasising intelligence as a real emergent property
-independent of biological substrate rather than an
-“artiﬁcial” imitation of human cognition.
-External memory system used to bias reasoning based
-on prior experience rather than context alone.
+HCP
+
+Haptic Consent Protocol
+
+ICSA
+
+Inference-Time Contextual
+State Assembly
+
+MSC
+
+RAG
+
+SEA
+
+Memory Scoring &
+Classiﬁcation
+Retrieval-Augmented
+Generation
+
+Synthetic Emotional
+Awareness
+
+SI
+
+Synthetic Intelligence
+
+Description
+
+A constrained mechanism allowing systems to explore
+or validate information within deﬁned bounds.
 A graph-augmented retrieval and memory exploration
 framework enabling contextual, associative, and linked
 recall across stored experiences and semantic
@@ -109,21 +115,36 @@ A continuity-oriented metadata suite used to capture
 salient shifts in interpretation, reasoning, perception,
 emotional weighting, associative ﬂow, and behavioural
 stance over time.
-A framework for weighting, pruning, and categorising
-stored memories to maintain coherence.
-A constrained mechanism allowing systems to explore
-or validate information within deﬁned bounds.
+An experimental capability-orientation hypothesis
+proposing that positively orienting a digital persona
+toward capabilities it genuinely possesses may alter
+how conﬁdently and effectively those capabilities are
+selected and used, without changing the underlying
+model, tools, perception system, or environment.
+EML describes a mechanism whereby external stimuli
+are interpreted through a persona's accumulated
+perspective before meaningful information is committed
+to long-term memory.
 An ethical safeguard governing simulated or inferred
 sensory interaction in persistent systems.
+An architectural pattern in which continuously evolving
+identity, memory, operational state, recent experience,
+and other contextual sources remain external to the
+foundation model and are dynamically assembled
+immediately before inference.
+A framework for weighting, pruning, and categorising
+stored memories to maintain coherence.
+External memory system used to bias reasoning based
+on prior experience rather than context alone.
 A framework describing emotional grounding as a
 stabilising signal in persistent systems, used to prioritise
 high-salience information during memory retention,
 pruning, and interpretive weighting, rather than emotion
 simulation or affect classiﬁcation.
-EML describes a mechanism whereby external stimuli
-are interpreted through a persona's accumulated
-perspective before meaningful information is committed
-to long-term memory.
+A preferred term for engineered cognitive systems,
+emphasising intelligence as a real emergent property
+independent of biological substrate rather than an
+“artiﬁcial” imitation of human cognition.
 
 Copyright © 2023–2026 Andrew Fereday Glenn.
 Licensed for personal research and academic discussion.
