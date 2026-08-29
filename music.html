@@ -767,10 +767,19 @@
     status.classList.toggle("mixcloud-error", isError);
   }
 
-  async function initialiseWidget() {
+  async function initialiseWidgetWith(item) {
+    if (!item || !item.key) return;
+
     if (!window.Mixcloud || !window.Mixcloud.PlayerWidget) {
       throw new Error("Mixcloud Widget API unavailable");
     }
+
+    currentKey = item.key;
+
+    // A Mixcloud widget must already be loaded into the iframe before the
+    // JavaScript API can become ready. Starting from about:blank leaves an
+    // empty black iframe with nothing for PlayerWidget to control.
+    iframe.src = buildWidgetUrl(item.key);
 
     widget = Mixcloud.PlayerWidget(iframe);
     await widget.ready;
@@ -789,16 +798,10 @@
 
     try {
       if (!widgetReady) {
-        currentKey = item.key;
-        iframe.src = buildWidgetUrl(item.key);
+        await initialiseWidgetWith(item);
 
-        // The widget wrapper is associated with the iframe after it has
-        // navigated to Mixcloud. Give the iframe a moment to initialise.
-        await new Promise((resolve) => setTimeout(resolve, 700));
-        await initialiseWidget();
-
-        // This call occurs as part of the visitor's track-selection action.
-        // Browser autoplay policy ultimately decides whether playback begins.
+        // The click that selected the track is the visitor gesture. Ask
+        // Mixcloud to start playback, while still respecting browser policy.
         try {
           await widget.play();
         } catch (_) {}
@@ -815,8 +818,8 @@
     } catch (error) {
       console.error("Mixcloud playback error:", error);
       setStatus(
-        "The track loaded, but playback could not be started automatically. "
-        + "Use the Play button in the Mixcloud player.",
+        "The track is ready in the player. If playback did not start, "
+        + "press Play in the Mixcloud player.",
         true
       );
     }
@@ -940,10 +943,28 @@
   });
 
   fetchCatalogue()
-    .then((items) => {
+    .then(async (items) => {
       catalogue = items;
       filtered = items.slice();
       render();
+
+      // Load the first catalogue item into the widget immediately so visitors
+      // see a real Mixcloud player rather than an empty black iframe. Do not
+      // autoplay here; playback still begins only after a visitor interaction.
+      if (items.length) {
+        try {
+          await initialiseWidgetWith(items[0]);
+          render();
+          setStatus(`${catalogue.length} tracks in the catalogue. Select a track to play.`);
+        } catch (error) {
+          console.error("Mixcloud widget initialisation error:", error);
+          setStatus(
+            "The catalogue loaded, but the Mixcloud player could not initialise. "
+            + "You can still use the full-catalogue link below.",
+            true
+          );
+        }
+      }
     })
     .catch((error) => {
       console.error("Mixcloud catalogue error:", error);
