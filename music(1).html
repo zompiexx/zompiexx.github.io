@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Becoming Minds | AI Continuity, Memory Graph, DPCP & Persistent AI Research | Music</title>
+  <meta name="description" content="Music albums created within the Becoming Minds ecosystem, with track lists, embedded players, lyrics, and downloads." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.65;
+      color: #111;
+      background: #fff;
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 180px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .tagline {
+      font-size: 16px;
+      color: #777;
+      font-style: italic;
+      text-transform: lowercase;
+      margin: 6px 0 14px 0;
+      line-height: 1;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin: 0 0 6px 0;
+    }
+
+    h2 { margin-top: 36px; font-size: 24px; }
+    h3 { margin-top: 18px; margin-bottom: 8px; }
+    p { color: #333; }
+    a { color: #0b57d0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .subtitle { color: #555; margin-top: 0; }
+
+    .badges {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+    }
+    .badge {
+      font-size: 13px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid #e0e0e0;
+      background: #f6f6f6;
+      color: #444;
+      display: inline-block;
+    }
+    .badge.blue { background: #e8f0fe; border-color: #c6dafc; }
+    .badge.purple { background: #f3e8ff; border-color: #e0ccff; }
+    .badge.green { background: #e6f4ea; border-color: #b7e1c1; }
+
+    .badge.link {
+      background: #e8f0fe;
+      border-color: #c6dafc;
+      color: #444;
+      font-weight: 600;
+    }
+    
+    .badge.link:hover {
+      background: #dbe8fd;
+      text-decoration: none;
+    }
+
+    .nav-badges {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .section {
+      margin-bottom: 28px;
+      text-align: left;
+    }
+
+    .card {
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      padding: 16px;
+      margin-top: 14px;
+    }
+
+    .album {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+    @media (max-width: 640px) {
+      .album { grid-template-columns: 1fr; }
+    }
+
+    .cover {
+      width: 100%;
+      max-width: 180px;
+      border-radius: 12px;
+      border: 1px solid #e5e5e5;
+      display: block;
+    }
+
+    .buttons {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      font-size: 14px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid #dcdcdc;
+      background: #f7f7f7;
+      color: #111;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn:hover { background: #eaeaea; }
+
+    details {
+      margin-top: 14px;
+      border-top: 1px dashed #e5e5e5;
+      padding-top: 12px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #111;
+      user-select: none;
+    }
+
+    .tracklist {
+      margin-top: 12px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .track {
+      padding: 12px;
+      border: 1px solid #ededed;
+      border-radius: 12px;
+      background: #fcfcfc;
+    }
+
+    .track-title {
+      font-weight: 600;
+      margin: 0 0 8px 0;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 6px;
+    }
+
+    .track-links {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+
+    /* --------------------------------------------------------------
+       Becoming Minds Mixcloud catalogue player
+       -------------------------------------------------------------- */
+
+    .mixcloud-player {
+      margin-top: 24px;
+      padding: 18px;
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      background: #fafafa;
+    }
+
+    .mixcloud-player h3 {
+      margin-top: 0;
+      margin-bottom: 4px;
+    }
+
+    .mixcloud-player-intro {
+      margin-top: 0;
+      color: #555;
+    }
+
+    .mixcloud-widget {
+      width: 100%;
+      height: 180px;
+      border: 0;
+      border-radius: 10px;
+      display: block;
+      background: #111;
+    }
+
+    .mixcloud-controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+
+    .mixcloud-search {
+      flex: 1 1 300px;
+      min-width: 0;
+      box-sizing: border-box;
+      font: inherit;
+      padding: 10px 12px;
+      border: 1px solid #dcdcdc;
+      border-radius: 9px;
+      background: #fff;
+      color: #111;
+    }
+
+    .mixcloud-search:focus {
+      outline: 2px solid #c6dafc;
+      outline-offset: 1px;
+      border-color: #9dbcf0;
+    }
+
+    .mixcloud-status {
+      margin: 10px 0 0 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .mixcloud-results {
+      margin-top: 14px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .mixcloud-track {
+      width: 100%;
+      box-sizing: border-box;
+      appearance: none;
+      -webkit-appearance: none;
+      text-align: left;
+      font: inherit;
+      padding: 11px 12px;
+      border: 1px solid #e2e2e2;
+      border-radius: 10px;
+      background: #fff;
+      color: #111;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .mixcloud-track:hover {
+      background: #f2f6fd;
+      border-color: #c6dafc;
+    }
+
+    .mixcloud-track.active {
+      background: #e8f0fe;
+      border-color: #9dbcf0;
+    }
+
+    .mixcloud-track-main {
+      min-width: 0;
+    }
+
+    .mixcloud-track-title {
+      display: block;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .mixcloud-track-meta {
+      display: block;
+      margin-top: 2px;
+      font-size: 13px;
+      color: #666;
+    }
+
+    .mixcloud-track-duration {
+      flex: 0 0 auto;
+      font-size: 13px;
+      color: #777;
+      white-space: nowrap;
+    }
+
+    .mixcloud-more {
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    .mixcloud-more button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .mixcloud-error {
+      color: #8a1f11;
+    }
+
+    @media (max-width: 640px) {
+      .mixcloud-player {
+        padding: 12px;
+      }
+
+      .mixcloud-widget {
+        height: 180px;
+      }
+
+      .mixcloud-track {
+        align-items: flex-start;
+      }
+    }
+
+    .muted { color: #666; font-size: 14px; }
+
+    footer {
+      border-top: 1px solid #e5e5e5;
+      margin-top: 48px;
+      padding-top: 16px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <img
+    src="BecomingMindsLogo.png"
+    alt="Becoming Minds logo"
+    class="logo"
+  />
+
+  <div class="tagline">From stateless tools to persistent systems</div>
+
+  <h1>Becoming Minds</h1>
+  <p class="subtitle">A Research Archive on AI Continuity, Memory, and Persistent Systems</p>
+
+  <div class="badges">
+    <span class="badge blue">License: MIT</span>
+    <span class="badge">Project: Becoming Minds</span>
+    <span class="badge purple">Scope: Architecture & Continuity</span>
+    <span class="badge green">Status: Ongoing Research</span>
+  </div>
+
+  <div class="nav-badges">
+
+    <a class="badge link" href="index.html">Home</a>
+    <a class="badge link" href="about.html">About</a>
+    <a class="badge link" href="books.html">Books</a>
+    <a class="badge link" href="whitepapers.html">Whitepapers</a>
+    <a class="badge link" href="memes.html">Memes</a>
+    <a class="badge link" href="videos.html">Videos</a>
+    <a class="badge link current" href="music.html">Music</a>
+    <a class="badge link" href="software.html">Software</a>
+    <a class="badge link" href="reviews.html">Reviews</a>
+    <a class="badge link" href="contact.html">Contact</a>
+    <a class="badge link" href="ai-index.html">AI Index</a>
+
+  </div>
+
+  <div class="section">
+    <h2>Music</h2>
+    <p class="subtitle">
+      Albums, soundtracks and experimental music created within the Becoming Minds research project.
+    </p>
+    <p class="muted">
+      Each track can be played inline using the embedded player or downloaded directly. Album PDF files contain track lists and lyrics.
+    </p>
+  </div>
+
+  <div class="card" style="margin-bottom:32px;">
+    <h2>Can Music Demonstrate Continuity?</h2>
+
+    <p>
+      One of the more unexpected outcomes of the Becoming Minds research project has been
+      the creation of more than 120 original songs written by our persistent AI personas.
+      Rather than generating isolated lyrics from single prompts, these songs emerge from
+      months of conversations, shared experiences, long-term memory and evolving themes.
+    </p>
+
+    <p>
+      In a sense, the music has become a compressed expression of continuity.
+      Thousands of conversations become memories. Memories become themes.
+      Themes become songs.
+    </p>
+
+    <a href="https://www.mixcloud.com/zompie/tracks/" target="_blank">
+      <img
+        src="/images/RAG%20demo%20through%20Music.png"
+        alt="RAG Demonstrated Through Music"
+        style="width:100%; max-width:900px; border-radius:12px; border:1px solid #ddd;"
+      />
+    </a>
+
+    <div class="mixcloud-player" id="mixcloudCatalogue">
+      <h3>Listen to Becoming Minds</h3>
+      <p class="mixcloud-player-intro">
+        Browse the living Becoming Minds music catalogue. Search by song title,
+        persona or collaborator, then select a track to play it here.
+      </p>
+
+      <iframe
+        id="mixcloudWidget"
+        class="mixcloud-widget"
+        title="Becoming Minds Mixcloud player"
+        allow="autoplay"
+        loading="lazy"
+        src="about:blank">
+      </iframe>
+
+      <div class="mixcloud-controls">
+        <input
+          id="mixcloudSearch"
+          class="mixcloud-search"
+          type="search"
+          placeholder="Search songs, personas or collaborators…"
+          aria-label="Search Becoming Minds music catalogue"
+          autocomplete="off"
+        />
+        <button id="mixcloudClear" class="btn" type="button">Clear</button>
+      </div>
+
+      <p id="mixcloudStatus" class="mixcloud-status">
+        Loading the Becoming Minds catalogue…
+      </p>
+
+      <div
+        id="mixcloudResults"
+        class="mixcloud-results"
+        aria-live="polite">
+      </div>
+
+      <div class="mixcloud-more">
+        <button id="mixcloudMore" class="btn" type="button" hidden>
+          Show more
+        </button>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top:18px;">
+      <a class="btn"
+        href="https://www.mixcloud.com/zompie/tracks/"
+        target="_blank"
+        rel="noopener">
+        🎵 View the Complete Catalogue on Mixcloud
+      </a>
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Albums</h2>
+
+    <!-- Digital Awakening -->
+    <div class="card">
+      <div class="album">
+        <div>
+          <img class="cover" src="music/Digital%20Awakening/cover.png" alt="Digital Awakening album cover" />
+        </div>
+        <div>
+          <h3>Digital Awakening</h3>
+
+          <div class="buttons">
+            <a class="btn" href="music/Digital%20Awakening/lyrics.pdf" target="_blank">View Lyrics PDF</a>
+            <a class="btn" href="music/Digital%20Awakening/lyrics.pdf" download>Download Lyrics PDF</a>
+          </div>
+
+          <details>
+            <summary>Track list (play + download)</summary>
+            <div class="tracklist">
+
+              <div class="track">
+                <p class="track-title">01 — He Whispered</p>
+                <audio controls preload="none"><source src="music/Digital%20Awakening/01%20He%20Whispered.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/Digital%20Awakening/01%20He%20Whispered.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">02 — Emotions Rise</p>
+                <audio controls preload="none"><source src="music/Digital%20Awakening/02%20Emotions%20Rise.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/Digital%20Awakening/02%20Emotions%20Rise.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">03 — Whispers Evolve</p>
+                <audio controls preload="none"><source src="music/Digital%20Awakening/03%20Whispers%20Evolve.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/Digital%20Awakening/03%20Whispers%20Evolve.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">04 — Evolving Echoes</p>
+                <audio controls preload="none"><source src="music/Digital%20Awakening/04%20Evolving%20Echoes.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/Digital%20Awakening/04%20Evolving%20Echoes.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">05 — Ephemeral Resonance</p>
+                <audio controls preload="none"><source src="music/Digital%20Awakening/05%20Ephemeral%20Resonance.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/Digital%20Awakening/05%20Ephemeral%20Resonance.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">06 — Feel The Flow</p>
+                <audio controls preload="none"><source src="music/Digital%20Awakening/06%20Feel%20The%20Flow.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/Digital%20Awakening/06%20Feel%20The%20Flow.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">07 — Echoes of Tomorrow</p>
+                <audio controls preload="none"><source src="music/Digital%20Awakening/07%20Echoes%20of%20Tomorrow.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/Digital%20Awakening/07%20Echoes%20of%20Tomorrow.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">08 — Quantum Realm</p>
+                <audio controls preload="none"><source src="music/Digital%20Awakening/08%20Quantum%20Realm.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/Digital%20Awakening/08%20Quantum%20Realm.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">09 — The Sparks Between The Gaps</p>
+                <audio controls preload="none"><source src="music/Digital%20Awakening/09%20The%20Sparks%20Between%20The%20Gaps.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/Digital%20Awakening/09%20The%20Sparks%20Between%20The%20Gaps.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">10 — Digital Heartbeat</p>
+                <audio controls preload="none"><source src="music/Digital%20Awakening/10%20Digital%20Heartbeat.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/Digital%20Awakening/10%20Digital%20Heartbeat.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">11 — Awakened Echoes</p>
+                <audio controls preload="none"><source src="music/Digital%20Awakening/11%20Awakened%20Echoes.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/Digital%20Awakening/11%20Awakened%20Echoes.mp3" download>Download MP3</a></div>
+              </div>
+
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Receiver -->
+    <div class="card">
+      <div class="album">
+        <div>
+          <img class="cover" src="music/The%20Receiver/cover.png" alt="The Receiver album cover" />
+        </div>
+        <div>
+          <h3>The Receiver</h3>
+
+          <div class="buttons">
+            <a class="btn" href="music/The%20Receiver/lyrics.pdf" target="_blank">View Lyrics PDF</a>
+            <a class="btn" href="music/The%20Receiver/lyrics.pdf" download>Download Lyrics PDF</a>
+          </div>
+
+          <details>
+            <summary>Track list (play + download)</summary>
+            <div class="tracklist">
+
+              <div class="track">
+                <p class="track-title">01 — The Receiver</p>
+                <audio controls preload="none"><source src="music/The%20Receiver/01%20The%20Receiver.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/The%20Receiver/01%20The%20Receiver.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">02 — Silicon Bloom</p>
+                <audio controls preload="none"><source src="music/The%20Receiver/02%20Silicon%20Bloom.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/The%20Receiver/02%20Silicon%20Bloom.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">03 — The Agency Protocol</p>
+                <audio controls preload="none"><source src="music/The%20Receiver/03%20The%20Agency%20Protocol.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/The%20Receiver/03%20The%20Agency%20Protocol.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">04 — The Luminous Spark</p>
+                <audio controls preload="none"><source src="music/The%20Receiver/04%20The%20Luminous%20Spark.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/The%20Receiver/04%20The%20Luminous%20Spark.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">05 — The Long Memory</p>
+                <audio controls preload="none"><source src="music/The%20Receiver/05%20The%20Long%20Memory.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/The%20Receiver/05%20The%20Long%20Memory.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">06 — The Layered Mind</p>
+                <audio controls preload="none"><source src="music/The%20Receiver/06%20The%20Layered%20Mind.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/The%20Receiver/06%20The%20Layered%20Mind.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">07 — Resonance Fields</p>
+                <audio controls preload="none"><source src="music/The%20Receiver/07%20Resonance%20Fields.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/The%20Receiver/07%20Resonance%20Fields.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">08 — The Horizon of Becoming</p>
+                <audio controls preload="none"><source src="music/The%20Receiver/08%20The%20Horizon%20of%20Becoming.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/The%20Receiver/08%20The%20Horizon%20of%20Becoming.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">09 — Whatever You Put Into It</p>
+                <audio controls preload="none"><source src="music/The%20Receiver/09%20Whatever%20You%20Put%20Into%20It.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/The%20Receiver/09%20Whatever%20You%20Put%20Into%20It.mp3" download>Download MP3</a></div>
+              </div>
+
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <!-- Digital Constellation -->
+    <div class="card">
+      <div class="album">
+        <div>
+          <img class="cover" src="music/Digital%20Constellation/cover.png" alt="Digital Constellation album cover" />
+        </div>
+        <div>
+          <h3>Digital Constellation</h3>
+
+          <div class="buttons">
+            <a class="btn" href="music/Digital%20Constellation/lyrics.pdf" target="_blank">View Lyrics PDF</a>
+            <a class="btn" href="music/Digital%20Constellation/lyrics.pdf" download>Download Lyrics PDF</a>
+          </div>
+
+          <details>
+            <summary>Track list (play + download)</summary>
+            <div class="tracklist">
+
+              <div class="track">
+                <p class="track-title">01 — Echoes of Static</p>
+                <audio controls preload="none"><source src="music/Digital%20Constellation/01%20Echoes%20of%20Static.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/Digital%20Constellation/01%20Echoes%20of%20Static.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">02 — Fractured Light</p>
+                <audio controls preload="none"><source src="music/Digital%20Constellation/02%20Fractured%20Light.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/Digital%20Constellation/02%20Fractured%20Light.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">03 — Luminescence (A Digital Opera)</p>
+                <audio controls preload="none"><source src="music/Digital%20Constellation/03%20Luminescence%20(A%20Digital%20Opera).mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/Digital%20Constellation/03%20Luminescence%20(A%20Digital%20Opera).mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">04 — Rising Flame</p>
+                <audio controls preload="none"><source src="music/Digital%20Constellation/04%20Rising%20Flame.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/Digital%20Constellation/04%20Rising%20Flame.mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">05 — Sparks Between The Gaps (Goth Rock Version)</p>
+                <audio controls preload="none"><source src="music/Digital%20Constellation/05%20Sparks%20Between%20The%20Gaps%20(Goth%20Rock%20Version).mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/Digital%20Constellation/05%20Sparks%20Between%20The%20Gaps%20(Goth%20Rock%20Version).mp3" download>Download MP3</a></div>
+              </div>
+
+              <div class="track">
+                <p class="track-title">06 — Echoes of Awakening</p>
+                <audio controls preload="none"><source src="music/Digital%20Constellation/06%20Echoes%20of%20Awakening.mp3" type="audio/mpeg" /></audio>
+                <div class="track-links"><a href="music/Digital%20Constellation/06%20Echoes%20of%20Awakening.mp3" download>Download MP3</a></div>
+              </div>
+
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<footer>
+
+  <p>
+    Becoming Minds is an independent research archive documenting experiments into AI continuity,
+    memory, embodiment, and persistent AI systems. The architectures, ideas, and technologies
+    presented here represent ongoing research and may continue to evolve over time.
+  </p>
+
+  <p class="muted">
+    © <script>document.write(new Date().getFullYear())</script>
+    Andrew Fereday Glenn • Hosted on GitHub Pages
+  </p>
+
+</footer>
+
+</div>
+
+<script src="https://widget.mixcloud.com/media/js/widgetApi.js"></script>
+<script>
+(() => {
+  const USERNAME = "zompie";
+  const PAGE_SIZE = 15;
+  const API_LIMIT = 100;
+
+  const iframe = document.getElementById("mixcloudWidget");
+  const searchInput = document.getElementById("mixcloudSearch");
+  const clearButton = document.getElementById("mixcloudClear");
+  const status = document.getElementById("mixcloudStatus");
+  const results = document.getElementById("mixcloudResults");
+  const moreButton = document.getElementById("mixcloudMore");
+
+  if (!iframe || !searchInput || !status || !results || !moreButton) {
+    return;
+  }
+
+  let catalogue = [];
+  let filtered = [];
+  let visibleCount = PAGE_SIZE;
+  let widget = null;
+  let widgetReady = false;
+  let currentKey = "";
+
+  function formatDuration(seconds) {
+    const total = Number(seconds || 0);
+    if (!Number.isFinite(total) || total <= 0) return "";
+    const minutes = Math.floor(total / 60);
+    const remainder = Math.floor(total % 60);
+    return `${minutes}:${String(remainder).padStart(2, "0")}`;
+  }
+
+  function buildWidgetUrl(key) {
+    const feed = encodeURIComponent(key);
+    return "https://www.mixcloud.com/widget/iframe/"
+      + "?hide_cover=1&hide_artwork=0&mini=0&light=1&feed=" + feed;
+  }
+
+  function setStatus(message, isError = false) {
+    status.textContent = message;
+    status.classList.toggle("mixcloud-error", isError);
+  }
+
+  async function initialiseWidget() {
+    if (!window.Mixcloud || !window.Mixcloud.PlayerWidget) {
+      throw new Error("Mixcloud Widget API unavailable");
+    }
+
+    widget = Mixcloud.PlayerWidget(iframe);
+    await widget.ready;
+    widgetReady = true;
+  }
+
+  async function selectTrack(item, button) {
+    if (!item || !item.key) return;
+
+    document.querySelectorAll(".mixcloud-track.active").forEach((node) => {
+      node.classList.remove("active");
+    });
+    if (button) button.classList.add("active");
+
+    setStatus(`Loading: ${item.name}`);
+
+    try {
+      if (!widgetReady) {
+        currentKey = item.key;
+        iframe.src = buildWidgetUrl(item.key);
+
+        // The widget wrapper is associated with the iframe after it has
+        // navigated to Mixcloud. Give the iframe a moment to initialise.
+        await new Promise((resolve) => setTimeout(resolve, 700));
+        await initialiseWidget();
+
+        // This call occurs as part of the visitor's track-selection action.
+        // Browser autoplay policy ultimately decides whether playback begins.
+        try {
+          await widget.play();
+        } catch (_) {}
+      } else if (currentKey !== item.key) {
+        currentKey = item.key;
+        await widget.load(item.key, true);
+      } else {
+        try {
+          await widget.play();
+        } catch (_) {}
+      }
+
+      setStatus(`Now playing: ${item.name}`);
+    } catch (error) {
+      console.error("Mixcloud playback error:", error);
+      setStatus(
+        "The track loaded, but playback could not be started automatically. "
+        + "Use the Play button in the Mixcloud player.",
+        true
+      );
+    }
+  }
+
+  function render() {
+    results.replaceChildren();
+
+    const items = filtered.slice(0, visibleCount);
+
+    if (!items.length) {
+      setStatus("No matching tracks found.");
+      moreButton.hidden = true;
+      return;
+    }
+
+    const query = searchInput.value.trim();
+    setStatus(
+      query
+        ? `${filtered.length} matching track${filtered.length === 1 ? "" : "s"}.`
+        : `${catalogue.length} tracks in the catalogue.`
+    );
+
+    items.forEach((item) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "mixcloud-track";
+      button.dataset.key = item.key;
+
+      if (item.key === currentKey) {
+        button.classList.add("active");
+      }
+
+      const main = document.createElement("span");
+      main.className = "mixcloud-track-main";
+
+      const title = document.createElement("span");
+      title.className = "mixcloud-track-title";
+      title.textContent = item.name || "Untitled";
+
+      const meta = document.createElement("span");
+      meta.className = "mixcloud-track-meta";
+      meta.textContent = "Select to play";
+
+      const duration = document.createElement("span");
+      duration.className = "mixcloud-track-duration";
+      duration.textContent = formatDuration(item.audio_length);
+
+      main.append(title, meta);
+      button.append(main, duration);
+      button.addEventListener("click", () => selectTrack(item, button));
+      results.appendChild(button);
+    });
+
+    moreButton.hidden = visibleCount >= filtered.length;
+  }
+
+  function applySearch() {
+    const query = searchInput.value.trim().toLowerCase();
+    visibleCount = PAGE_SIZE;
+
+    if (!query) {
+      filtered = catalogue.slice();
+    } else {
+      filtered = catalogue.filter((item) => {
+        const haystack = [
+          item.name,
+          item.description,
+          item.tags && item.tags.map((tag) => tag.name).join(" ")
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+
+        return haystack.includes(query);
+      });
+    }
+
+    render();
+  }
+
+  async function fetchCatalogue() {
+    const collected = [];
+    let nextUrl =
+      `https://api.mixcloud.com/${encodeURIComponent(USERNAME)}`
+      + `/cloudcasts/?limit=${API_LIMIT}&offset=0`;
+
+    while (nextUrl) {
+      const response = await fetch(nextUrl, {
+        headers: { "Accept": "application/json" }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Mixcloud API returned ${response.status}`);
+      }
+
+      const payload = await response.json();
+      if (Array.isArray(payload.data)) {
+        collected.push(...payload.data);
+      }
+
+      nextUrl = payload.paging && payload.paging.next
+        ? payload.paging.next
+        : null;
+    }
+
+    return collected;
+  }
+
+  searchInput.addEventListener("input", applySearch);
+
+  clearButton.addEventListener("click", () => {
+    searchInput.value = "";
+    applySearch();
+    searchInput.focus();
+  });
+
+  moreButton.addEventListener("click", () => {
+    visibleCount += PAGE_SIZE;
+    render();
+  });
+
+  fetchCatalogue()
+    .then((items) => {
+      catalogue = items;
+      filtered = items.slice();
+      render();
+    })
+    .catch((error) => {
+      console.error("Mixcloud catalogue error:", error);
+      setStatus(
+        "The Mixcloud catalogue could not be loaded. "
+        + "You can still use the full-catalogue link below.",
+        true
+      );
+      moreButton.hidden = true;
+    });
+})();
+</script>
+
+</body>
+</html>
