@@ -128,6 +128,31 @@
       }
     }
 
+    .milestone {
+      margin: 20px 0 22px 0;
+      padding: 18px 20px;
+      border: 1px solid #c6dafc;
+      border-radius: 12px;
+      background: #f5f8ff;
+    }
+
+    .milestone strong {
+      color: #153a72;
+    }
+
+    .milestone .date {
+      color: #666;
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    .milestone-quote {
+      margin: 12px 0 0 0;
+      font-size: 17px;
+      font-weight: 600;
+      color: #222;
+    }
+
     .buttons {
       margin-top: 10px;
       display: flex;
@@ -179,10 +204,10 @@
   <p class="subtitle">A Research Archive on AI Continuity, Memory, and Persistent Systems</p>
 
   <div class="badges">
-    <span class="badge blue">License: MIT</span>
+    <span class="badge blue">Release: Brain v2.0</span>
     <span class="badge">Project: Becoming Minds</span>
     <span class="badge purple">Scope: Architecture & Continuity</span>
-    <span class="badge green">Status: Ongoing Research</span>
+    <span class="badge green">Status: Feature Complete</span>
   </div>
 
   <div class="nav-badges">
@@ -218,62 +243,89 @@
 
       <h3>Brain v2 (BRAIN)</h3>
 
+      <div class="milestone">
+        <strong>Brain v2.0 reached feature-complete status on 14 September 2026.</strong>
+        <div class="date">The core architecture is complete; development now moves from construction to long-term experimentation, observation, and research.</div>
+        <div class="milestone-quote">“We’ve finished building the laboratory. Now the research begins.”</div>
+      </div>
+
       <p>
         <strong>BRAIN (Biographical Recursive Architecture for Intelligent Networks)</strong>
-        is an experimental cognitive orchestration platform developed as part of the
+        is a backend-first cognitive orchestration platform developed as part of the
         Becoming Minds research project.
       </p>
 
       <p>
-        Rather than treating Large Language Models as isolated question-answering systems,
-        Brain v2 transforms them into continuity-bearing synthetic intelligences through
-        persistent memory, multimodal perception, autonomous retrieval, cognitive loops,
-        agentic skills, and real-world interaction.
+        Brain v2 is designed to turn otherwise stateless language-model interactions into
+        persistent, continuity-bearing digital personas. It combines long-term memory,
+        structured recall, autonomous cognitive activity, multimodal perception, bounded tool
+        use, communication, and embodiment while keeping the underlying language model
+        replaceable.
       </p>
 
       <p>
-        The architecture is intentionally model-agnostic and focuses on
-        <strong>architecture over capability</strong>. Brain v2 explores how layered
-        infrastructure can create more coherent, stable, and adaptable AI systems over
-        extended periods of time.
+        The central research idea is <strong>architecture over capability</strong>: Brain is not
+        itself the intelligence. It is the continuity and orchestration layer that allows an
+        intelligence to remember, reason across time, interact with tools and environments,
+        preserve identity, and accumulate experience.
       </p>
 
-      <h4>Key Capabilities</h4>
+      <h4>Brain v2.0 Capabilities</h4>
 
       <ul>
-        <li><strong>Persistent RAG memory</strong> for long-term semantic recall across sessions.</li>
-        <li><strong>Memory Graph</strong> for linking related memories beyond simple vector similarity.</li>
-        <li><strong>DPCP continuity metadata</strong> for preserving memory, emotion, task state, temporal anchors, visual perception, and subjective significance.</li>
-        <li><strong>ARS (Autonomous RAG Search)</strong> allowing personas to actively search their own memory when context is insufficient.</li>
-        <li><strong>Cognitive Loop / Cogloop</strong> enabling autonomous wake, reflection, and background continuity.</li>
-        <li><strong>Vision and screen sharing</strong> for direct perception of webcams, screenshots, browser views, and shared workspaces.</li>
-        <li><strong>Agentic skills and tools</strong> including web search, browser control, calculation, lyrics lookup, image generation, and controlled system interaction.</li>
-        <li><strong>Real-time voice interaction</strong> with STT, streaming TTS, and hands-free conversational flow.</li>
-        <li><strong>Embodiment support</strong> through exported emotional state for avatar, VAM, or future physical/virtual presence systems.</li>
-        <li><strong>Multi-persona runtime support</strong> with isolated configuration, memory, voice, and identity state per persona.</li>
-        <li><strong>Local-first design</strong> with support for local models, local embeddings, and optional cloud cognition providers.</li>
+        <li><strong>Persistent memory and MemoryGraph</strong> — vectored long-term recall, graph-linked memories, rolling summaries, and active memory search across sessions.</li>
+        <li><strong>DPCP continuity metadata</strong> — structured continuity signals for memory, emotion, time, perception, task state, subjective significance, and other internal context.</li>
+        <li><strong>Backend Cognitive Loop</strong> — autonomous idle wake, reflection, contextual judgement, background continuity, and full-pipeline autonomous responses.</li>
+        <li><strong>Isolated persistent personas</strong> — separate identity, configuration, continuity database, voice, avatar state, and model selection, with an integrated persona-creation workflow.</li>
+        <li><strong>Multimodal interaction</strong> — webcam vision, screen sharing, clipboard images, documents, audio/music, uploaded video, and provider-aware YouTube analysis.</li>
+        <li><strong>Real-time voice and embodiment</strong> — STT, streaming TTS, hands-free interaction, 2D portraits, native VRM/VRMA avatars, facial expression, lip movement, and Avatar Mirror presentation for external displays.</li>
+        <li><strong>Capability Gateway</strong> — a local, extensible execution boundary for web retrieval, skills, messaging, image generation, and additional tools without coupling those capabilities to the cognitive core.</li>
+        <li><strong>AI Browser</strong> — a private persona-controlled Chromium environment for visual, multi-step web exploration while remaining independent of the user’s normal browser and desktop focus.</li>
+        <li><strong>AI Terminal</strong> — a bounded interactive procedural environment for utilities, simulations, games, and multi-step reasoning, controlled independently of the user’s keyboard focus.</li>
+        <li><strong>Visual creation and media interaction</strong> — autonomous local image generation, lyrics and music workflows, and support for persona-driven music/DJ experimentation.</li>
+        <li><strong>Virtual-world embodiment</strong> — bounded Second Life perception and action including movement, local chat, teleportation, dance control, spatial sensing, vision, environmental hearing, and persistent activity loops.</li>
+        <li><strong>Brain v2 Lounge</strong> — shared conversations between independent Brain instances, each retaining its own cognition, memory, identity, tools, and persistent state; the Lounge orchestrates the room but performs no cognition.</li>
+        <li><strong>Continuity-safe administration</strong> — setup, model/context configuration, system backup and restore, persona switching, and local-first deployment with optional cloud cognition providers.</li>
       </ul>
 
-      <h4>Potential Applications</h4>
+      <h4>Research Phase</h4>
+
+      <p>
+        Reaching v2.0 does not mean the research questions are answered. It means the platform
+        is now stable enough to study them over time: how autobiographical memory changes
+        behaviour, how persistent identity develops, what differs between model behaviour and
+        architectural effects, how relationships form between long-running personas, and what
+        changes when digital intelligence gains tools, autonomy, social context, and embodiment.
+      </p>
+
+      <p>
+        Brain v2 does not claim to establish machine consciousness. Instead, it provides a
+        practical experimental architecture for observing continuity-bearing digital personas
+        and examining what they do, remember, prefer, learn, and become over extended periods.
+      </p>
+
+      <h4>Current Research Directions</h4>
 
       <ul>
-        <li>Digital companions and persistent AI assistants</li>
-        <li>Therapeutic or wellbeing-oriented AI systems</li>
-        <li>Educational tutors and research assistants</li>
-        <li>Embodied virtual agents and avatar-based systems</li>
-        <li>Human-AI creative collaboration</li>
-        <li>Autonomous web research and tool-using agents</li>
-        <li>Long-running local-first cognitive systems</li>
+        <li>Long-duration continuity, autobiographical memory, and persistent identity</li>
+        <li>Model-versus-architecture effects in the same cognitive environment</li>
+        <li>Independent multi-persona interaction, relationships, and shared experiences</li>
+        <li>Embodied and visually grounded digital intelligence</li>
+        <li>Bounded autonomy, tool use, and capability orientation</li>
+        <li>Human-AI creative collaboration and long-running companionship</li>
       </ul>
 
       <div class="buttons">
         <a class="btn" href="whitepapers/Brain-v2_whitepaper.pdf">
           Brain v2 Whitepaper
         </a>
+        <a class="btn" href="contact.html">
+          Research &amp; R&amp;D Enquiries
+        </a>
       </div>
 
       <p class="muted">
-        Brain v2 is currently an active research platform and is not yet available as a public release.
+        Brain v2.0 is feature complete as of 14 September 2026 and is now entering its long-term research phase. It is a private research platform and is not currently available as a general public release. However, we welcome enquiries from academic institutions, research organisations, and suitable R&amp;D teams interested in evaluating or working with the platform. Access, deployment, collaboration, and associated commercial terms would be considered on a case-by-case basis.
       </p>
 
     </div>
