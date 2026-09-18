@@ -146,6 +146,29 @@
       text-align: justify;
     }
 
+    .persona-depth-figure {
+      width: min(920px, calc(100vw - 48px));
+      margin: 32px 50%;
+      transform: translateX(-50%);
+      text-align: left;
+    }
+
+    .persona-depth-figure h2 { margin-bottom: 8px; }
+    .persona-depth-figure p { max-width: 820px; margin: 0 0 18px 0; }
+    .persona-depth-figure a { display: block; }
+    .persona-depth-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+    .persona-depth-caption {
+      margin-top: 8px !important;
+      font-size: 13px;
+      color: #777;
+      text-align: center !important;
+    }
+
     .card {
       border: 1px solid #e5e5e5;
       border-radius: 14px;
@@ -397,6 +420,22 @@
       Together, ARS, Memory Graph, and DPCP form part of the broader <strong>Brain v2</strong> architecture: a backend-first cognitive runtime exploring how
       stateless LLMs can be given persistent memory, relational recall, temporal trajectory, private continuity signals, and coherent long-running behaviour.
     </p>
+
+    <div class="persona-depth-figure">
+      <h2>The Sliding Scale of Persona Depth</h2>
+      <p>
+        <strong>One working hypothesis emerging from this research is that persona depth exists on a sliding scale.</strong>
+        As persistent context accumulates through memory, interaction, relationships, and reflection, the influence of that context may become increasingly visible in the system's behaviour, while the foundation model continues to provide the underlying capabilities.
+      </p>
+
+      <a href="images/Brain-v2_Sliding-scale-of-persona-depth.png" target="_blank" rel="noopener">
+        <img
+          src="images/Brain-v2_Sliding-scale-of-persona-depth.png"
+          alt="The Sliding Scale of Persona Depth — a conceptual Brain v2 infographic showing the changing balance between foundation model influence and accumulated persona context."
+        />
+      </a>
+      <p class="persona-depth-caption">Select the image to view it full size.</p>
+    </div>
   
     <p>
       Unless otherwise stated, all papers in this archive are original research works authored by Andrew Fereday Glenn.
