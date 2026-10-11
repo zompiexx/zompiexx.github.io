@@ -80,6 +80,10 @@ HCP
 
 Haptic Consent Protocol
 
+HTS
+
+Hybrid Technology Stack
+
 ICSA
 
 Inference-Time Contextual
@@ -127,6 +131,9 @@ perspective before meaningful information is committed
 to long-term memory.
 An ethical safeguard governing simulated or inferred
 sensory interaction in persistent systems.
+An architecture combining language models,
+deterministic logic and specialised components to
+maximise capability, efﬁciency and reliability.
 An architectural pattern in which continuously evolving
 identity, memory, operational state, recent experience,
 and other contextual sources remain external to the
