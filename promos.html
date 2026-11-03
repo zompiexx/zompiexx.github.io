@@ -690,7 +690,7 @@ const templates = ["train", "billboard", "cassette", "cd", "page", "black", "cam
 const grid = document.querySelector(".promo-grid");
 // Fisher-Yates partial shuffle: choose four distinct releases without replacement.
 const pool = releases.slice();
-const count = Math.min(2, pool.length);
+const count = Math.min(4, pool.length);
 for (let i = 0; i < count; i++) {
   const j = i + Math.floor(Math.random() * (pool.length - i));
   [pool[i], pool[j]] = [pool[j], pool[i]];
