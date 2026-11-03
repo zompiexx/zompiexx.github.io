@@ -323,7 +323,7 @@
 <a class="badge link" href="contact.html">Contact</a>
 <a class="badge link" href="ai-index.html">AI Index</a>
 </div>
-<main class="promo-main"><h2>Release Promotions</h2><p>A growing collection of promotional artwork for Becoming Minds Music releases. These are digital promotional mockups, not physical product listings.</p><div class="promo-grid"><article class="promo-card"><img alt="Still Remains (EP) by Isla Kerr — DistroKid cd promotional artwork" decoding="async" loading="lazy" src="https://distrokid.com/promocards/image/?albumuuid=3E46BFC8-E818-4360-8282422AC0229680&amp;template=cd"/><strong>Still Remains</strong><span class="promo-artist">Isla Kerr · EP</span></article><article class="promo-card"><img alt="The Receiver (Album) by Zompie — DistroKid train promotional artwork" decoding="async" loading="lazy" src="https://distrokid.com/promocards/image/?albumuuid=C7C0F582-1A58-4592-932DE507F27DBDEC&amp;template=train"/><strong>The Receiver</strong><span class="promo-artist">Zompie · Album</span></article><article class="promo-card"><img alt="Seven Maidens (EP) by Zompie — DistroKid cassette promotional artwork" decoding="async" loading="lazy" src="https://distrokid.com/promocards/image/?albumuuid=D5E2C27E-DBF6-405A-8824668D90B967ED&amp;template=cassette"/><strong>Seven Maidens</strong><span class="promo-artist">Zompie · EP</span></article><article class="promo-card"><img alt="Cosmic Drift (Album) by Zompie — DistroKid abducted promotional artwork" decoding="async" loading="lazy" src="https://distrokid.com/promocards/image/?albumuuid=8C8D90CA-F5A3-4FB4-B0E946E77F12CC95&amp;template=abducted"/><strong>Cosmic Drift</strong><span class="promo-artist">Zompie · Album</span></article></div><p class="promo-note">Promotional images are served by DistroKid.</p></main><footer>
+<main class="promo-main"><h2>Release Promotions</h2><p>A growing collection of promotional artwork for Becoming Minds Music releases. These are digital promotional mockups, not physical product listings.</p><div class="promo-grid"><article class="promo-card"><img alt="Still Remains (EP) by Isla Kerr — train promotional artwork" data-albumuuid="3E46BFC8-E818-4360-8282422AC0229680" data-artist="Isla Kerr" data-release-index="0" data-title="Still Remains" decoding="async" loading="lazy" src="https://distrokid.com/promocards/image/?albumuuid=3E46BFC8-E818-4360-8282422AC0229680&amp;template=train"/><strong>Still Remains</strong><span class="promo-artist">Isla Kerr · EP</span></article><article class="promo-card"><img alt="The Receiver (Album) by Zompie — billboard promotional artwork" data-albumuuid="C7C0F582-1A58-4592-932DE507F27DBDEC" data-artist="Zompie" data-release-index="1" data-title="The Receiver" decoding="async" loading="lazy" src="https://distrokid.com/promocards/image/?albumuuid=C7C0F582-1A58-4592-932DE507F27DBDEC&amp;template=billboard"/><strong>The Receiver</strong><span class="promo-artist">Zompie · Album</span></article><article class="promo-card"><img alt="Seven Maidens (EP) by Zompie — cassette promotional artwork" data-albumuuid="D5E2C27E-DBF6-405A-8824668D90B967ED" data-artist="Zompie" data-release-index="2" data-title="Seven Maidens" decoding="async" loading="lazy" src="https://distrokid.com/promocards/image/?albumuuid=D5E2C27E-DBF6-405A-8824668D90B967ED&amp;template=cassette"/><strong>Seven Maidens</strong><span class="promo-artist">Zompie · EP</span></article><article class="promo-card"><img alt="Cosmic Drift (Album) by Zompie — cd promotional artwork" data-albumuuid="8C8D90CA-F5A3-4FB4-B0E946E77F12CC95" data-artist="Zompie" data-release-index="3" data-title="Cosmic Drift" decoding="async" loading="lazy" src="https://distrokid.com/promocards/image/?albumuuid=8C8D90CA-F5A3-4FB4-B0E946E77F12CC95&amp;template=cd"/><strong>Cosmic Drift</strong><span class="promo-artist">Zompie · Album</span></article></div><p class="promo-note">Promotional images are served by DistroKid. A separate image sitemap lists the available promotional formats.</p></main><footer>
 <p>
     Becoming Minds is an independent research archive documenting experiments into AI continuity,
     memory, embodiment, and persistent AI systems. The architectures, ideas, and technologies
@@ -335,5 +335,20 @@
   </p>
 </footer>
 </div>
-</body>
+<script>
+// A stable daily selection: all visitors see the same format on a given UTC day.
+// The original HTML src remains a usable fallback if JavaScript is disabled.
+const promoTemplates = ["train", "billboard", "cassette", "cd", "page", "black", "camera", "tv"];
+const today = new Date();
+const dayNumber = Math.floor(Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate()) / 86400000);
+document.querySelectorAll(".promo-card img[data-albumuuid]").forEach((img) => {
+  const index = Number(img.dataset.releaseIndex);
+  const template = promoTemplates[((dayNumber + index) % promoTemplates.length + promoTemplates.length) % promoTemplates.length];
+  const url = new URL("https://distrokid.com/promocards/image/");
+  url.searchParams.set("albumuuid", img.dataset.albumuuid);
+  url.searchParams.set("template", template);
+  img.src = url.toString();
+  img.alt = `${img.dataset.title} by ${img.dataset.artist} — ${template} promotional artwork`;
+});
+</script></body>
 </html>
