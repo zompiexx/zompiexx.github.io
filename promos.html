@@ -341,7 +341,7 @@
   </p>
 </footer>
 </div>
-<script>// Only four image requests are made per visit. The full catalogue is metadata only.
+<script>// Four images are selected per visit; failed image requests may be retried twice. The full catalogue is metadata only.
 const releases = [
   {
     "title": "43 Years",
@@ -702,10 +702,27 @@ for (let i = 0; i < count; i++) {
   const card = document.createElement("article");
   card.className = "promo-card";
   const img = document.createElement("img");
-  img.src = imageURL.toString();
   img.alt = `${release.title} by ${release.artist} — ${template} promotional artwork`;
-  img.loading = "lazy";
   img.decoding = "async";
+  const src = imageURL.toString();
+  const retryDelays = [5000, 10000];
+  let attempt = 0;
+  function loadArtwork(target) {
+    target.onerror = () => {
+      if (attempt >= retryDelays.length) return;
+      const delay = retryDelays[attempt++];
+      setTimeout(() => {
+        const replacement = document.createElement("img");
+        replacement.alt = target.alt;
+        replacement.decoding = "async";
+        loadArtwork(replacement);
+        target.replaceWith(replacement);
+        replacement.src = src;
+      }, delay);
+    };
+  }
+  loadArtwork(img);
+  img.src = src;
   const title = document.createElement("strong");
   title.textContent = release.title;
   const artist = document.createElement("span");
