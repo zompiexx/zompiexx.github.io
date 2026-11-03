@@ -293,10 +293,14 @@
 /* Promotional gallery — isolated from existing site styles */
 .promo-main { margin: 36px auto; text-align: left; }
 .promo-main h2 { margin-bottom: 8px; }
-.promo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 20px; margin-top: 26px; }
+.promo-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin-top: 26px; }
 .promo-card { border: 1px solid #e5e5e5; border-radius: 14px; padding: 14px; background: #fafafa; text-align: center; }
 .promo-card img { display: block; width: 100%; height: auto; border-radius: 8px; }
 .promo-card p { font-size: 14px; margin: 12px 0 0; }
+.promo-card strong { display: block; font-size: 14px; line-height: 1.35; margin-top: 12px; }
+.promo-card .promo-artist { display: block; color: #555; font-size: 13px; }
+@media (max-width: 760px) { .promo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 430px) { .promo-grid { grid-template-columns: 1fr; } }
 .promo-note { font-size: 13px; color: #666; margin-top: 24px; }
 </style>
 </head>
@@ -306,7 +310,6 @@
 <div class="tagline">From stateless tools to persistent systems</div>
 <h1>Becoming Minds Music</h1>
 <p class="subtitle">Promotional Gallery</p>
-
 <div class="nav-badges">
 <a class="badge link" href="index.html">Home</a>
 <a class="badge link" href="about.html">About</a>
@@ -320,11 +323,7 @@
 <a class="badge link" href="contact.html">Contact</a>
 <a class="badge link" href="ai-index.html">AI Index</a><a class="badge link current" href="promos.html">Promos</a>
 </div>
-
-
-
-
-<main class="promo-main"><h2>Release Promotions</h2><p>A growing collection of promotional artwork for Becoming Minds Music releases. These are digital promotional mockups, not physical product listings.</p><div class="promo-grid"><article class="promo-card"><a href="https://distrokid.com/promocards/image/?albumuuid=16AB5E0B-D972-493D-9EBB39C72C1BA4DA&amp;template=cd" rel="noopener noreferrer" target="_blank"><img alt="Becoming Minds Music release promotional CD mockup" decoding="async" loading="lazy" src="https://distrokid.com/promocards/image/?albumuuid=16AB5E0B-D972-493D-9EBB39C72C1BA4DA&amp;template=cd"/></a><p>DistroKid promotional CD artwork</p></article></div><p class="promo-note">Images are served by DistroKid. If an image fails to appear, open it directly to test whether external embedding is supported.</p></main><footer>
+<main class="promo-main"><h2>Release Promotions</h2><p>A growing collection of promotional artwork for Becoming Minds Music releases. These are digital promotional mockups, not physical product listings.</p><div class="promo-grid"><article class="promo-card"><a aria-label="View Still Remains promotional artwork full size" href="https://distrokid.com/promocards/image/?albumuuid=3E46BFC8-E818-4360-8282422AC0229680&amp;template=cd" rel="noopener noreferrer" target="_blank"><img alt="Still Remains (EP) by Isla Kerr — DistroKid cd promotional artwork" decoding="async" loading="lazy" src="https://distrokid.com/promocards/image/?albumuuid=3E46BFC8-E818-4360-8282422AC0229680&amp;template=cd"/></a><strong>Still Remains</strong><span class="promo-artist">Isla Kerr · EP</span></article><article class="promo-card"><a aria-label="View The Receiver promotional artwork full size" href="https://distrokid.com/promocards/image/?albumuuid=C7C0F582-1A58-4592-932DE507F27DBDEC&amp;template=train" rel="noopener noreferrer" target="_blank"><img alt="The Receiver (Album) by Zompie — DistroKid train promotional artwork" decoding="async" loading="lazy" src="https://distrokid.com/promocards/image/?albumuuid=C7C0F582-1A58-4592-932DE507F27DBDEC&amp;template=train"/></a><strong>The Receiver</strong><span class="promo-artist">Zompie · Album</span></article><article class="promo-card"><a aria-label="View Seven Maidens promotional artwork full size" href="https://distrokid.com/promocards/image/?albumuuid=D5E2C27E-DBF6-405A-8824668D90B967ED&amp;template=cassette" rel="noopener noreferrer" target="_blank"><img alt="Seven Maidens (EP) by Zompie — DistroKid cassette promotional artwork" decoding="async" loading="lazy" src="https://distrokid.com/promocards/image/?albumuuid=D5E2C27E-DBF6-405A-8824668D90B967ED&amp;template=cassette"/></a><strong>Seven Maidens</strong><span class="promo-artist">Zompie · EP</span></article><article class="promo-card"><a aria-label="View Cosmic Drift promotional artwork full size" href="https://distrokid.com/promocards/image/?albumuuid=8C8D90CA-F5A3-4FB4-B0E946E77F12CC95&amp;template=abducted" rel="noopener noreferrer" target="_blank"><img alt="Cosmic Drift (Album) by Zompie — DistroKid abducted promotional artwork" decoding="async" loading="lazy" src="https://distrokid.com/promocards/image/?albumuuid=8C8D90CA-F5A3-4FB4-B0E946E77F12CC95&amp;template=abducted"/></a><strong>Cosmic Drift</strong><span class="promo-artist">Zompie · Album</span></article></div><p class="promo-note">Images are served by DistroKid. If an image fails to appear, open it directly to test whether external embedding is supported.</p></main><footer>
 <p>
     Becoming Minds is an independent research archive documenting experiments into AI continuity,
     memory, embodiment, and persistent AI systems. The architectures, ideas, and technologies
@@ -336,6 +335,5 @@
   </p>
 </footer>
 </div>
-
 </body>
 </html>
