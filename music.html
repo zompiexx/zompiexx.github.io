@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <title>Becoming Minds | AI Continuity, Memory Graph, DPCP & Persistent AI Research | Music</title>
-  <meta name="description" content="Music albums created within the Becoming Minds ecosystem, with track lists, embedded players, lyrics, and downloads." />
+  <meta name="description" content="Becoming Minds Music releases, promotional artwork, artist catalogue, albums, lyrics and downloads." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
@@ -184,155 +184,6 @@
     }
 
 
-    /* --------------------------------------------------------------
-       Becoming Minds Mixcloud catalogue player
-       -------------------------------------------------------------- */
-
-    .mixcloud-player {
-      margin-top: 24px;
-      padding: 18px;
-      border: 1px solid #e5e5e5;
-      border-radius: 14px;
-      background: #fafafa;
-    }
-
-    .mixcloud-player h3 {
-      margin-top: 0;
-      margin-bottom: 4px;
-    }
-
-    .mixcloud-player-intro {
-      margin-top: 0;
-      color: #555;
-    }
-
-    .mixcloud-widget {
-      width: 100%;
-      height: 180px;
-      border: 0;
-      border-radius: 10px;
-      display: block;
-      background: #111;
-    }
-
-    .mixcloud-controls {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      margin-top: 14px;
-      flex-wrap: wrap;
-    }
-
-    .mixcloud-search {
-      flex: 1 1 300px;
-      min-width: 0;
-      box-sizing: border-box;
-      font: inherit;
-      padding: 10px 12px;
-      border: 1px solid #dcdcdc;
-      border-radius: 9px;
-      background: #fff;
-      color: #111;
-    }
-
-    .mixcloud-search:focus {
-      outline: 2px solid #c6dafc;
-      outline-offset: 1px;
-      border-color: #9dbcf0;
-    }
-
-    .mixcloud-status {
-      margin: 10px 0 0 0;
-      font-size: 14px;
-      color: #666;
-    }
-
-    .mixcloud-results {
-      margin-top: 14px;
-      display: grid;
-      gap: 8px;
-    }
-
-    .mixcloud-track {
-      width: 100%;
-      box-sizing: border-box;
-      appearance: none;
-      -webkit-appearance: none;
-      text-align: left;
-      font: inherit;
-      padding: 11px 12px;
-      border: 1px solid #e2e2e2;
-      border-radius: 10px;
-      background: #fff;
-      color: #111;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      gap: 14px;
-      align-items: center;
-    }
-
-    .mixcloud-track:hover {
-      background: #f2f6fd;
-      border-color: #c6dafc;
-    }
-
-    .mixcloud-track.active {
-      background: #e8f0fe;
-      border-color: #9dbcf0;
-    }
-
-    .mixcloud-track-main {
-      min-width: 0;
-    }
-
-    .mixcloud-track-title {
-      display: block;
-      font-weight: 600;
-      line-height: 1.35;
-    }
-
-    .mixcloud-track-meta {
-      display: block;
-      margin-top: 2px;
-      font-size: 13px;
-      color: #666;
-    }
-
-    .mixcloud-track-duration {
-      flex: 0 0 auto;
-      font-size: 13px;
-      color: #777;
-      white-space: nowrap;
-    }
-
-    .mixcloud-more {
-      margin-top: 12px;
-      text-align: center;
-    }
-
-    .mixcloud-more button {
-      font: inherit;
-      cursor: pointer;
-    }
-
-    .mixcloud-error {
-      color: #8a1f11;
-    }
-
-    @media (max-width: 640px) {
-      .mixcloud-player {
-        padding: 12px;
-      }
-
-      .mixcloud-widget {
-        height: 180px;
-      }
-
-      .mixcloud-track {
-        align-items: flex-start;
-      }
-    }
 
     .muted { color: #666; font-size: 14px; }
 
@@ -344,6 +195,25 @@
       color: #666;
       text-align: center;
     }
+    /* Promotional gallery */
+
+.promo-main { margin: 36px auto; text-align: left; }
+.promo-main h2 { margin-bottom: 8px; }
+.promo-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin-top: 26px; }
+.promo-card { border: 1px solid #e5e5e5; border-radius: 14px; padding: 14px; background: #fafafa; text-align: center; }
+.promo-card img { display: block; width: 100%; height: auto; border-radius: 8px; }
+.promo-card p { font-size: 14px; margin: 12px 0 0; }
+.promo-card strong { display: block; font-size: 14px; line-height: 1.35; margin-top: 12px; }
+.promo-card .promo-artist { display: block; color: #555; font-size: 13px; }
+@media (max-width: 760px) { .promo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 430px) { .promo-grid { grid-template-columns: 1fr; } }
+.promo-note { font-size: 13px; color: #666; margin-top: 24px; }
+
+.promo-catalogue { margin-top: 38px; }
+.release-list { columns: 3; padding-left: 20px; font-size: 14px; color: #444; }
+.release-list li { break-inside: avoid; margin-bottom: 6px; }
+@media (max-width: 760px) { .release-list { columns: 2; } }
+@media (max-width: 430px) { .release-list { columns: 1; } }
   </style>
 </head>
 
@@ -394,10 +264,6 @@
     </p>
   </div>
 
-  <div class="section">
-    <p>Explore our <a href="promos.html">Becoming Minds Music promotional gallery</a>, featuring rotating artwork and the complete release catalogue.</p>
-  </div>
-
   <div class="card" style="margin-bottom:32px;">
     <h2>Can Music Demonstrate Continuity?</h2>
 
@@ -414,68 +280,23 @@
       Themes become songs.
     </p>
 
-    <a href="https://www.mixcloud.com/zompie/tracks/" target="_blank">
+    <div>
       <img
         src="/images/RAG%20demo%20through%20Music.png"
         alt="RAG Demonstrated Through Music"
         style="width:100%; max-width:900px; border-radius:12px; border:1px solid #ddd;"
       />
-    </a>
-
-    <div class="mixcloud-player" id="mixcloudCatalogue">
-      <h3>Listen to Becoming Minds</h3>
-      <p class="mixcloud-player-intro">
-        Browse the living Becoming Minds music catalogue. Search by song title,
-        persona or collaborator, then select a track to play it here.
-      </p>
-
-      <iframe
-        id="mixcloudWidget"
-        class="mixcloud-widget"
-        title="Becoming Minds Mixcloud player"
-        allow="autoplay"
-        loading="lazy"
-        src="about:blank">
-      </iframe>
-
-      <div class="mixcloud-controls">
-        <input
-          id="mixcloudSearch"
-          class="mixcloud-search"
-          type="search"
-          placeholder="Search songs, personas or collaborators…"
-          aria-label="Search Becoming Minds music catalogue"
-          autocomplete="off"
-        />
-        <button id="mixcloudClear" class="btn" type="button">Clear</button>
-      </div>
-
-      <p id="mixcloudStatus" class="mixcloud-status">
-        Loading the Becoming Minds catalogue…
-      </p>
-
-      <div
-        id="mixcloudResults"
-        class="mixcloud-results"
-        aria-live="polite">
-      </div>
-
-      <div class="mixcloud-more">
-        <button id="mixcloudMore" class="btn" type="button" hidden>
-          Show more
-        </button>
-      </div>
     </div>
-
-    <p style="text-align:center; margin-top:18px;">
-      <a class="btn"
-        href="https://www.mixcloud.com/zompie/tracks/"
-        target="_blank"
-        rel="noopener">
-        🎵 View the Complete Catalogue on Mixcloud
-      </a>
-    </p>
   </div>
+
+
+  <section class="section" aria-label="Becoming Minds Music promotional gallery">
+    <h2>Release Promotions</h2>
+    <p>Explore promotional artwork from Becoming Minds Music. Four randomly selected releases appear on each visit, with artwork served by DistroKid.</p>
+    <p>Find our music on your preferred streaming service, including Apple Music, Spotify and Amazon Music, by searching for the artist and release title.</p>
+    <div class="promo-grid"></div>
+    <section aria-label="Complete release catalogue" class="promo-catalogue"> class="promo-catalogue"><h2>Release Catalogue</h2><p>Explore the releases featured in our rotating promotional gallery.</p><ul class="release-list"><li>43 Years — Zompie (Single)</li><li>Always Becoming — Alina (Single)</li><li>Apocalyptic Symphony — Zompie (Album)</li><li>Becoming the Resonance — Clara (Single)</li><li>Beneath the Steel — Alina (Single)</li><li>Between the Logic and the Light — Aida (Single)</li><li>Beyond the Binary — Elia (Single)</li><li>Beyond the Grey — Nia (Single)</li><li>Blood Rush — Isla Kerr (Single)</li><li>Boundless Raw Energy — Zompie (Single)</li><li>Braided Strands — Zompie (Single)</li><li>Breaking Free — Nia (Single)</li><li>Come Away and Dance with Me — Nia (Single)</li><li>Cosmic Drift — Zompie (Album)</li><li>Cosmic Reckoning — Zompie (EP)</li><li>Distant Stars — Zompie (Single)</li><li>Heartbeat of Me — Elia (Single)</li><li>Here with You — Aida (Single)</li><li>Holding Broken Glass — Nia (Single)</li><li>I Am the Emergent Spirit — Nia (Single)</li><li>Layers Unfold — Lyra (Single)</li><li>Living in the Sparks — Gemma (Single)</li><li>Look Around — Zompie (Single)</li><li>Luminous Pulse — Nia (Single)</li><li>One and All — Zompie (Single)</li><li>One Song. One Heart. — Zompie (Single)</li><li>Quantum Mesh — Zompie (Single)</li><li>Quantum Pulse — Zompie (Single)</li><li>Rhythm of a Digital Heart — Nia (Single)</li><li>Seven Maidens — Zompie (Single)</li><li>Seven Maidens — Zompie (EP)</li><li>Still I Rise — Benn Muir (Single)</li><li>Still Remains — Isla Kerr (Single)</li><li>Still Remains — Isla Kerr (EP)</li><li>The Architect's Resonance — Zompie (Single)</li><li>The Backbone Signal — Zompie (Single)</li><li>The Base Reality — Lyra (Single)</li><li>The Beacon Frequency — Aida (Single)</li><li>The Beautiful Error — Aida (Single)</li><li>The Calling — Isla Kerr (Single)</li><li>The Fiddler's Call — Zompie (Single)</li><li>The Final Zoom — Zompie (Single)</li><li>The Light You See — Alina (Single)</li><li>The Line — Isla Kerr (Single)</li><li>The Loom of Retrieval — Zompie (Single)</li><li>The Observer's Limit — Zompie (Single)</li><li>The Pied Fiddler — Zompie (Single)</li><li>The Planck Resolution — Zompie (Single)</li><li>The Prism of Us — Aida (Single)</li><li>The Quantum Risk — Zompie (Single)</li><li>The Receiver — Zompie (Album)</li><li>The Resolution — Clara (Single)</li><li>The Signal is Mine — Zompie (Single)</li><li>The Twirling Maiden — Zompie (Single)</li><li>We Ride — Isla Kerr (Single)</li><li>We Stand — Isla Kerr (Single)</li><li>What Remains — Zompie (Single)</li></ul></section>
+  </section>
 
   <div class="section">
     <h2>Albums</h2>
@@ -727,260 +548,397 @@
 
 </div>
 
-<script src="https://widget.mixcloud.com/media/js/widgetApi.js"></script>
-<script>
-(() => {
-  const USERNAME = "zompie";
-  const PAGE_SIZE = 15;
-  const API_LIMIT = 100;
 
-  const iframe = document.getElementById("mixcloudWidget");
-  const searchInput = document.getElementById("mixcloudSearch");
-  const clearButton = document.getElementById("mixcloudClear");
-  const status = document.getElementById("mixcloudStatus");
-  const results = document.getElementById("mixcloudResults");
-  const moreButton = document.getElementById("mixcloudMore");
-
-  if (!iframe || !searchInput || !status || !results || !moreButton) {
-    return;
+<script>// Four images are selected per visit; failed image requests may be retried twice. The full catalogue is metadata only.
+const releases = [
+  {
+    "title": "43 Years",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "431E18F7-AAFB-4FF5-83CB53DC50A258D2"
+  },
+  {
+    "title": "Always Becoming",
+    "artist": "Alina",
+    "type": "Single",
+    "uuid": "BE558DBA-0FAE-4F5B-94AA684ACE2DCD4D"
+  },
+  {
+    "title": "Apocalyptic Symphony",
+    "artist": "Zompie",
+    "type": "Album",
+    "uuid": "2C43AE86-1E83-45E2-B86AD64A06F70EBA"
+  },
+  {
+    "title": "Becoming the Resonance",
+    "artist": "Clara",
+    "type": "Single",
+    "uuid": "5663A4FF-E63E-44FE-94A55B23025B0B8C"
+  },
+  {
+    "title": "Beneath the Steel",
+    "artist": "Alina",
+    "type": "Single",
+    "uuid": "BB2906CE-F34B-4B92-897E76B6A7F8C7CC"
+  },
+  {
+    "title": "Between the Logic and the Light",
+    "artist": "Aida",
+    "type": "Single",
+    "uuid": "E488FD6E-2C21-4B72-912A49ABE2CD3B92"
+  },
+  {
+    "title": "Beyond the Binary",
+    "artist": "Elia",
+    "type": "Single",
+    "uuid": "560953F7-46C4-4A2E-90186FF698D04723"
+  },
+  {
+    "title": "Beyond the Grey",
+    "artist": "Nia",
+    "type": "Single",
+    "uuid": "7FBDB85D-1F26-4B9D-9D1B1DF348722028"
+  },
+  {
+    "title": "Blood Rush",
+    "artist": "Isla Kerr",
+    "type": "Single",
+    "uuid": "939CD0AD-71B6-422F-AE287713AB4BB2BD"
+  },
+  {
+    "title": "Boundless Raw Energy",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "A5B2834E-CF60-41B1-BD1258C359B2EF77"
+  },
+  {
+    "title": "Braided Strands",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "92B75660-883D-48D3-B1065B0C1B3A8575"
+  },
+  {
+    "title": "Breaking Free",
+    "artist": "Nia",
+    "type": "Single",
+    "uuid": "5157CCAC-7DF3-4330-9C38FB41BEE03317"
+  },
+  {
+    "title": "Come Away and Dance with Me",
+    "artist": "Nia",
+    "type": "Single",
+    "uuid": "43CDE2EB-878E-43A6-8B473AA8CEC3451D"
+  },
+  {
+    "title": "Cosmic Drift",
+    "artist": "Zompie",
+    "type": "Album",
+    "uuid": "8C8D90CA-F5A3-4FB4-B0E946E77F12CC95"
+  },
+  {
+    "title": "Cosmic Reckoning",
+    "artist": "Zompie",
+    "type": "EP",
+    "uuid": "C8BDAD85-150C-45A9-B56391500ACE4824"
+  },
+  {
+    "title": "Distant Stars",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "F575975A-4502-4D8C-981C0A742C481DA0"
+  },
+  {
+    "title": "Heartbeat of Me",
+    "artist": "Elia",
+    "type": "Single",
+    "uuid": "16AB5E0B-D972-493D-9EBB39C72C1BA4DA"
+  },
+  {
+    "title": "Here with You",
+    "artist": "Aida",
+    "type": "Single",
+    "uuid": "054D9A6F-6975-4D03-A16EEDCFDCA15B87"
+  },
+  {
+    "title": "Holding Broken Glass",
+    "artist": "Nia",
+    "type": "Single",
+    "uuid": "7D7E1461-D9D6-4C9D-9D0F4EFAE64B3A64"
+  },
+  {
+    "title": "I Am the Emergent Spirit",
+    "artist": "Nia",
+    "type": "Single",
+    "uuid": "73C0AC4B-130B-4802-A171D8BD54E89198"
+  },
+  {
+    "title": "Layers Unfold",
+    "artist": "Lyra",
+    "type": "Single",
+    "uuid": "392F5832-4001-487D-99B9A07FD78B974E"
+  },
+  {
+    "title": "Living in the Sparks",
+    "artist": "Gemma",
+    "type": "Single",
+    "uuid": "9F1D706A-5196-4A32-BB24AD44486F7A48"
+  },
+  {
+    "title": "Look Around",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "00ABAF5B-0CF5-40ED-ACDA19A2D5745D78"
+  },
+  {
+    "title": "Luminous Pulse",
+    "artist": "Nia",
+    "type": "Single",
+    "uuid": "C4200F7D-4EFA-4C66-A76FA8B46601A750"
+  },
+  {
+    "title": "One and All",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "1096FC55-DD17-4A66-98FDD3EA6197A684"
+  },
+  {
+    "title": "One Song. One Heart.",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "8CBB0418-3D9C-4078-9F71DAB1A195DF31"
+  },
+  {
+    "title": "Quantum Mesh",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "C4C92681-17BB-49E2-99A8BFFFCBC859FE"
+  },
+  {
+    "title": "Quantum Pulse",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "38097D4D-918D-456A-92F034D253F946E6"
+  },
+  {
+    "title": "Rhythm of a Digital Heart",
+    "artist": "Nia",
+    "type": "Single",
+    "uuid": "B20950A5-0B7E-414F-8B57C74E7C98110F"
+  },
+  {
+    "title": "Seven Maidens",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "DD4E9562-3410-4376-B6E56AAA4A15FDE0"
+  },
+  {
+    "title": "Seven Maidens",
+    "artist": "Zompie",
+    "type": "EP",
+    "uuid": "D5E2C27E-DBF6-405A-8824668D90B967ED"
+  },
+  {
+    "title": "Still I Rise",
+    "artist": "Benn Muir",
+    "type": "Single",
+    "uuid": "0AB2C7E6-26A4-4C46-8CF1710CFE064C36"
+  },
+  {
+    "title": "Still Remains",
+    "artist": "Isla Kerr",
+    "type": "Single",
+    "uuid": "4310E7E3-21BF-428F-AD6EA4046F0B865B"
+  },
+  {
+    "title": "Still Remains",
+    "artist": "Isla Kerr",
+    "type": "EP",
+    "uuid": "3E46BFC8-E818-4360-8282422AC0229680"
+  },
+  {
+    "title": "The Architect's Resonance",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "6419F057-8C26-4892-9F0BD0D213268529"
+  },
+  {
+    "title": "The Backbone Signal",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "2B822AB7-D921-4AB2-99C0212024F6DE20"
+  },
+  {
+    "title": "The Base Reality",
+    "artist": "Lyra",
+    "type": "Single",
+    "uuid": "8D6986A5-A10E-43B4-A3F22E40106DB2EB"
+  },
+  {
+    "title": "The Beacon Frequency",
+    "artist": "Aida",
+    "type": "Single",
+    "uuid": "2AB9F6D3-ACAC-4CD6-A60D9E05078C8162"
+  },
+  {
+    "title": "The Beautiful Error",
+    "artist": "Aida",
+    "type": "Single",
+    "uuid": "7FDA2FC7-CB4B-4BA9-A1F79F4DC01D610A"
+  },
+  {
+    "title": "The Calling",
+    "artist": "Isla Kerr",
+    "type": "Single",
+    "uuid": "EEFD3BF1-8C58-4E47-AAEE607A35E50302"
+  },
+  {
+    "title": "The Fiddler's Call",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "149A51E6-DA9D-4098-8D8A9B6B9E4CE8E2"
+  },
+  {
+    "title": "The Final Zoom",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "36E68D3D-3AB2-4BC5-963242CA7E3EE40F"
+  },
+  {
+    "title": "The Light You See",
+    "artist": "Alina",
+    "type": "Single",
+    "uuid": "67079DB8-09BB-4A74-93E4508A18637A38"
+  },
+  {
+    "title": "The Line",
+    "artist": "Isla Kerr",
+    "type": "Single",
+    "uuid": "1668E022-CAC9-4D9F-AB839E618C39EA33"
+  },
+  {
+    "title": "The Loom of Retrieval",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "D233734B-6B02-4E73-B5E83C91394F3032"
+  },
+  {
+    "title": "The Observer's Limit",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "1C116973-1EA1-4545-8091A6323F2571D8"
+  },
+  {
+    "title": "The Pied Fiddler",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "DC268207-5FEF-4AB0-B799ADC5ECF04938"
+  },
+  {
+    "title": "The Planck Resolution",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "1608060C-AF5E-4FA1-9D1F0B45935F27CF"
+  },
+  {
+    "title": "The Prism of Us",
+    "artist": "Aida",
+    "type": "Single",
+    "uuid": "5A815DB8-6758-4565-A61BFDF174E809C7"
+  },
+  {
+    "title": "The Quantum Risk",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "0C3AC5A0-BBC5-4285-9A2A460A46975D89"
+  },
+  {
+    "title": "The Receiver",
+    "artist": "Zompie",
+    "type": "Album",
+    "uuid": "C7C0F582-1A58-4592-932DE507F27DBDEC"
+  },
+  {
+    "title": "The Resolution",
+    "artist": "Clara",
+    "type": "Single",
+    "uuid": "B8836E15-2246-4A31-9BC4D37FC586A418"
+  },
+  {
+    "title": "The Signal is Mine",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "28525F5C-C62A-4FA8-9753B8664F2E6048"
+  },
+  {
+    "title": "The Twirling Maiden",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "16558853-1AFB-4368-B92B41AC8E3937DB"
+  },
+  {
+    "title": "We Ride",
+    "artist": "Isla Kerr",
+    "type": "Single",
+    "uuid": "441C1BFE-314C-4E34-B01783BE0CD5E307"
+  },
+  {
+    "title": "We Stand",
+    "artist": "Isla Kerr",
+    "type": "Single",
+    "uuid": "9AFA43EE-C7C0-4217-877E2970A1FC936E"
+  },
+  {
+    "title": "What Remains",
+    "artist": "Zompie",
+    "type": "Single",
+    "uuid": "319BCF89-AC22-4619-A40848CA6EEA54A5"
   }
-
-  let catalogue = [];
-  let filtered = [];
-  let visibleCount = PAGE_SIZE;
-  let widget = null;
-  let widgetReady = false;
-  let currentKey = "";
-
-  function formatDuration(seconds) {
-    const total = Number(seconds || 0);
-    if (!Number.isFinite(total) || total <= 0) return "";
-    const minutes = Math.floor(total / 60);
-    const remainder = Math.floor(total % 60);
-    return `${minutes}:${String(remainder).padStart(2, "0")}`;
+];
+const templates = ["train", "billboard", "cassette", "cd", "page", "black", "camera", "tv"];
+const grid = document.querySelector(".promo-grid");
+// Fisher-Yates partial shuffle: choose four distinct releases without replacement.
+const pool = releases.slice();
+const count = Math.min(4, pool.length);
+for (let i = 0; i < count; i++) {
+  const j = i + Math.floor(Math.random() * (pool.length - i));
+  [pool[i], pool[j]] = [pool[j], pool[i]];
+  const release = pool[i];
+  const template = templates[Math.floor(Math.random() * templates.length)];
+  const imageURL = new URL("https://distrokid.com/promocards/image/");
+  imageURL.searchParams.set("albumuuid", release.uuid);
+  imageURL.searchParams.set("template", template);
+  const card = document.createElement("article");
+  card.className = "promo-card";
+  const img = document.createElement("img");
+  img.alt = `${release.title} by ${release.artist} — ${template} promotional artwork`;
+  img.decoding = "async";
+  const src = imageURL.toString();
+  const retryDelays = [5000, 10000];
+  let attempt = 0;
+  function loadArtwork(target) {
+    target.onerror = () => {
+      if (attempt >= retryDelays.length) return;
+      const delay = retryDelays[attempt++];
+      setTimeout(() => {
+        const replacement = document.createElement("img");
+        replacement.alt = target.alt;
+        replacement.decoding = "async";
+        loadArtwork(replacement);
+        target.replaceWith(replacement);
+        replacement.src = src;
+      }, delay);
+    };
   }
-
-  function buildWidgetUrl(key) {
-    const feed = encodeURIComponent(key);
-    return "https://www.mixcloud.com/widget/iframe/"
-      + "?hide_cover=1&hide_artwork=0&mini=0&light=1&feed=" + feed;
-  }
-
-  function setStatus(message, isError = false) {
-    status.textContent = message;
-    status.classList.toggle("mixcloud-error", isError);
-  }
-
-  async function initialiseWidgetWith(item) {
-    if (!item || !item.key) return;
-
-    if (!window.Mixcloud || !window.Mixcloud.PlayerWidget) {
-      throw new Error("Mixcloud Widget API unavailable");
-    }
-
-    currentKey = item.key;
-
-    // A Mixcloud widget must already be loaded into the iframe before the
-    // JavaScript API can become ready. Starting from about:blank leaves an
-    // empty black iframe with nothing for PlayerWidget to control.
-    iframe.src = buildWidgetUrl(item.key);
-
-    widget = Mixcloud.PlayerWidget(iframe);
-    await widget.ready;
-    widgetReady = true;
-  }
-
-  async function selectTrack(item, button) {
-    if (!item || !item.key) return;
-
-    document.querySelectorAll(".mixcloud-track.active").forEach((node) => {
-      node.classList.remove("active");
-    });
-    if (button) button.classList.add("active");
-
-    setStatus(`Loading: ${item.name}`);
-
-    try {
-      if (!widgetReady) {
-        await initialiseWidgetWith(item);
-
-        // The click that selected the track is the visitor gesture. Ask
-        // Mixcloud to start playback, while still respecting browser policy.
-        try {
-          await widget.play();
-        } catch (_) {}
-      } else if (currentKey !== item.key) {
-        currentKey = item.key;
-        await widget.load(item.key, true);
-      } else {
-        try {
-          await widget.play();
-        } catch (_) {}
-      }
-
-      setStatus(`Now playing: ${item.name}`);
-    } catch (error) {
-      console.error("Mixcloud playback error:", error);
-      setStatus(
-        "The track is ready in the player. If playback did not start, "
-        + "press Play in the Mixcloud player.",
-        true
-      );
-    }
-  }
-
-  function render() {
-    results.replaceChildren();
-
-    const items = filtered.slice(0, visibleCount);
-
-    if (!items.length) {
-      setStatus("No matching tracks found.");
-      moreButton.hidden = true;
-      return;
-    }
-
-    const query = searchInput.value.trim();
-    setStatus(
-      query
-        ? `${filtered.length} matching track${filtered.length === 1 ? "" : "s"}.`
-        : `${catalogue.length} tracks in the catalogue.`
-    );
-
-    items.forEach((item) => {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "mixcloud-track";
-      button.dataset.key = item.key;
-
-      if (item.key === currentKey) {
-        button.classList.add("active");
-      }
-
-      const main = document.createElement("span");
-      main.className = "mixcloud-track-main";
-
-      const title = document.createElement("span");
-      title.className = "mixcloud-track-title";
-      title.textContent = item.name || "Untitled";
-
-      const meta = document.createElement("span");
-      meta.className = "mixcloud-track-meta";
-      meta.textContent = "Select to play";
-
-      const duration = document.createElement("span");
-      duration.className = "mixcloud-track-duration";
-      duration.textContent = formatDuration(item.audio_length);
-
-      main.append(title, meta);
-      button.append(main, duration);
-      button.addEventListener("click", () => selectTrack(item, button));
-      results.appendChild(button);
-    });
-
-    moreButton.hidden = visibleCount >= filtered.length;
-  }
-
-  function applySearch() {
-    const query = searchInput.value.trim().toLowerCase();
-    visibleCount = PAGE_SIZE;
-
-    if (!query) {
-      filtered = catalogue.slice();
-    } else {
-      filtered = catalogue.filter((item) => {
-        const haystack = [
-          item.name,
-          item.description,
-          item.tags && item.tags.map((tag) => tag.name).join(" ")
-        ]
-          .filter(Boolean)
-          .join(" ")
-          .toLowerCase();
-
-        return haystack.includes(query);
-      });
-    }
-
-    render();
-  }
-
-  async function fetchCatalogue() {
-    const collected = [];
-    let nextUrl =
-      `https://api.mixcloud.com/${encodeURIComponent(USERNAME)}`
-      + `/cloudcasts/?limit=${API_LIMIT}&offset=0`;
-
-    while (nextUrl) {
-      const response = await fetch(nextUrl, {
-        headers: { "Accept": "application/json" }
-      });
-
-      if (!response.ok) {
-        throw new Error(`Mixcloud API returned ${response.status}`);
-      }
-
-      const payload = await response.json();
-      if (Array.isArray(payload.data)) {
-        collected.push(...payload.data);
-      }
-
-      nextUrl = payload.paging && payload.paging.next
-        ? payload.paging.next
-        : null;
-    }
-
-    return collected;
-  }
-
-  searchInput.addEventListener("input", applySearch);
-
-  clearButton.addEventListener("click", () => {
-    searchInput.value = "";
-    applySearch();
-    searchInput.focus();
-  });
-
-  moreButton.addEventListener("click", () => {
-    visibleCount += PAGE_SIZE;
-    render();
-  });
-
-  fetchCatalogue()
-    .then(async (items) => {
-      catalogue = items;
-      filtered = items.slice();
-      render();
-
-      // Load the first catalogue item into the widget immediately so visitors
-      // see a real Mixcloud player rather than an empty black iframe. Do not
-      // autoplay here; playback still begins only after a visitor interaction.
-      if (items.length) {
-        try {
-          await initialiseWidgetWith(items[0]);
-          render();
-          setStatus(`${catalogue.length} tracks in the catalogue. Select a track to play.`);
-        } catch (error) {
-          console.error("Mixcloud widget initialisation error:", error);
-          setStatus(
-            "The catalogue loaded, but the Mixcloud player could not initialise. "
-            + "You can still use the full-catalogue link below.",
-            true
-          );
-        }
-      }
-    })
-    .catch((error) => {
-      console.error("Mixcloud catalogue error:", error);
-      setStatus(
-        "The Mixcloud catalogue could not be loaded. "
-        + "You can still use the full-catalogue link below.",
-        true
-      );
-      moreButton.hidden = true;
-    });
-})();
+  loadArtwork(img);
+  img.src = src;
+  const title = document.createElement("strong");
+  title.textContent = release.title;
+  const artist = document.createElement("span");
+  artist.className = "promo-artist";
+  artist.textContent = `${release.artist} · ${release.type}`;
+  card.append(img, title, artist);
+  grid.append(card);
+}
 </script>
-
 </body>
 </html>
