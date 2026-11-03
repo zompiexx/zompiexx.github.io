@@ -679,28 +679,33 @@ for (let i = 0; i < count; i++) {
   imageURL.searchParams.set("template", template);
   const card = document.createElement("article");
   card.className = "promo-card";
+  // Show the local placeholder immediately; never expose a broken image.
   const img = document.createElement("img");
-  img.alt = `${release.title} by ${release.artist} — ${template} promotional artwork`;
+  img.src = "images/music-promo-placeholder.png";
+  img.alt = `Becoming Minds Music placeholder for ${release.title} by ${release.artist}`;
   img.decoding = "async";
+
   const src = imageURL.toString();
   const retryDelays = [5000, 10000];
   let attempt = 0;
-  function loadArtwork(target) {
-    target.onerror = () => {
-      if (attempt >= retryDelays.length) return;
-      const delay = retryDelays[attempt++];
-      setTimeout(() => {
-        const replacement = document.createElement("img");
-        replacement.alt = target.alt;
-        replacement.decoding = "async";
-        loadArtwork(replacement);
-        target.replaceWith(replacement);
-        replacement.src = src;
-      }, delay);
+
+  function requestArtwork() {
+    // Load off-screen; only replace the placeholder after a successful load.
+    const candidate = new Image();
+    candidate.onload = () => {
+      img.alt = `${release.title} by ${release.artist} — ${template} promotional artwork`;
+      img.src = src;
     };
+    candidate.onerror = () => {
+      if (attempt < retryDelays.length) {
+        const delay = retryDelays[attempt++];
+        setTimeout(requestArtwork, delay);
+      }
+      // Otherwise leave the local placeholder in place.
+    };
+    candidate.src = src;
   }
-  loadArtwork(img);
-  img.src = src;
+  requestArtwork();
   const title = document.createElement("strong");
   title.textContent = release.title;
   const artist = document.createElement("span");
