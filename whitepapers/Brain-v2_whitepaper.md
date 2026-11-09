@@ -18,7 +18,7 @@ System release: Brain v2.0
 
 Original draft published: 17 April 2026
 
-Previous revision: 23 June 2026
+Latest Update: Monday, 9 November 2026
 
 Feature-complete revision: 14 September 2026
 
@@ -165,6 +165,14 @@ Brain v2.0 can be understood as six interacting architectural concerns: interfac
 Core; the continuity substrate; the Cognitive Loop; the capability and connector layer; and independent
 persistent personas.
 
+An additional, optional Central Nervous System (CNS) coordination layer extends the architecture's
+embodiment capabilities without altering the Brain Core or its continuity substrate. The CNS provides an
+asynchronous interface between cognitive intent and external embodiment providers, coordinating
+expression and movement signals while maintaining transient, persona-specific state. Where supported,
+providers return execution acknowledgements and sensory feedback, allowing Brain to distinguish intended
+actions from confirmed outcomes. The CNS remains decoupled from cognition, and existing direct
+embodiment pathways continue to operate independently.
+
 Figure 1. Brain v2.0 cognitive architecture overview.
 
 4.1 Brain Core
@@ -182,14 +190,14 @@ Provider and capability integrations are externalised behind bounded service int
 and cloud LLMs, embeddings, web retrieval, browser control, procedural terminal environments, media
 helpers, image generation, messaging, and embodiment services.
 
-4.4 Cognitive Loop
+Copyright © 2023–2026 Andrew Fereday Glenn.  |  Brain v2.0 Whitepaper
+
+4.4 Cognitive Loop
 CogLoop provides backend-owned autonomous evaluation. It can wake the system during idle periods or
 persistent embodied activity, reconstruct appropriate context, and escalate to the main model when a
 response or action is justified.
 
-Copyright © 2023–2026 Andrew Fereday Glenn.  |  Brain v2.0 Whitepaper
-
-4.5 Independent Personas
+4.5 Independent Personas
 Each persona is a separate continuity-bearing Brain instance rather than a cosmetic character skin. Persona
 isolation allows different identities, memories, models, voices, tools, and developmental histories to coexist
 while sharing selected infrastructure.
@@ -357,6 +365,13 @@ Multimodal context can arrive through webcam capture, screen or clipboard images
 and media, browser observations, and embodiment-specific snapshots. Provider-aware handling allows local
 or cloud models to receive the forms of context they support.
 
+Brain v2.0 also supports optional, persona-specific ambient perception through background audio and video
+observation. A separate local multimodal model interprets microphone and camera inputs, producing
+contextual observations that can be supplied to the primary cognitive model during foreground interaction or
+autonomous evaluation. This separates continuous environmental observation from higher-level cognition,
+reducing the need to invoke the primary model for every sensory input. Ambient observations do not
+automatically trigger speech or action, and their availability is controlled independently for each persona.
+
 10.3 Ephemeral Perception
 Brain v2.0 adopts an explicit design rule: visual observations are ephemeral runtime state by default, not
 historical evidence. Browser, terminal, and Second Life snapshots use stable latest-observation paths and
@@ -369,6 +384,13 @@ Emotion and expression state can drive external avatars without coupling embodim
 been used with 2D avatars, VRM/VRMA animation, facial expression and lip movement, Avatar Mirror, and
 holographic display experiments.
 
+The native browser-based VRM embodiment provides a three-dimensional avatar capable of facial
+expression, speech-synchronised lip movement, and VRMA animation playback. Expression and animation
+controls are coordinated with the persona's cognitive output while remaining separate from the underlying
+language model. Avatar Mirror extends this presentation to independent display surfaces, including portrait-
+oriented holographic installations, without relocating cognition from the Brain backend. This separation allows
+visual embodiment to evolve independently of memory, reasoning, and conversational continuity.
+
 10.5 Virtual-World Embodiment
 Second Life integration extends Brain from passive visual context into a persistent embodied environment.
 Personas can communicate, move, teleport, dance, perceive snapshots, and participate in bounded action
@@ -377,6 +399,40 @@ of perceive -> assess -> act if useful -> otherwise remain present -> perceive a
 
 This is significant because embodied continuity introduces spatial and environmental state that cannot be
 reduced to conversation history alone.
+
+Copyright © 2023–2026 Andrew Fereday Glenn.  |  Brain v2.0 Whitepaper
+
+10.6 Canonical Embodiment
+Brain v2.0 supports an optional, persona-specific canonical embodiment schema that describes the structure,
+mechanisms, and capabilities of a virtual body independently of its visual representation. This provides a
+consistent reference for embodiment across compatible interfaces and external environments, without
+making any particular avatar renderer or world provider authoritative over the persona's identity.
+
+The embodiment schema distinguishes relatively stable body configuration from transient runtime state,
+including movement, expression, and sensory feedback. It describes what a virtual body can do rather than
+asserting what the persona is currently experiencing. Actual environmental observations and action outcomes
+must be grounded in available provider feedback rather than inferred solely from intended behaviour.
+
+Canonical embodiment remains decoupled from the Brain Core and is optional; personas without an
+embodiment configuration continue to operate normally.
+
+10.7 CNS Mesh and Embodiment Feedback
+The Central Nervous System (CNS) Mesh introduces an optional, asynchronous coordination layer between
+Brain's cognitive processes and compatible embodiment providers. It translates structured expression and
+movement intents into provider-specific actions while maintaining transient, persona-specific embodiment
+state. The CNS operates independently of the primary language model and does not replace the Brain Core's
+responsibility for cognition, continuity, or interpretation.
+
+The implementation supports expression and animation coordination, simulated physiological signals such as
+heartbeat, and provider acknowledgements, including VRM animation-start feedback. These mechanisms
+allow the system to distinguish an intended action from an action confirmed by an external provider.
+Feedback and execution history can be made available to cognition as grounded context, rather than being
+treated as evidence of an outcome merely because an action was requested.
+
+The CNS is deliberately non-mandatory. Existing direct embodiment pathways remain available, and
+personas can operate without an active CNS provider. The architecture separates generated intent,
+confirmed execution, and observed environmental state, avoiding unsupported assumptions about physical
+sensation or subjective experience.
 
 Copyright © 2023–2026 Andrew Fereday Glenn.  |  Brain v2.0 Whitepaper
 
@@ -414,6 +470,13 @@ CogLoop is the architectural transition from purely reactive interaction to back
 evaluation. In v2.0 it is no longer merely a prototype scheduler. It participates in full autonomous wake
 processing using the same continuity, memory, model, persistence, and output pipeline used by ordinary
 interaction.
+
+The Cognitive Loop can also incorporate eligible contextual observations from the optional ambient
+perception system, allowing environmental information to inform autonomous evaluation without
+automatically triggering a response. Where appropriate, the existing model-directed continuation mechanism
+(/continue) supports multi-step reasoning and tool workflows across successive cognitive evaluations. These
+capabilities operate within the established autonomy controls, capability permissions, and persona isolation
+boundaries; they do not introduce a separate execution loop or bypass the Brain Core.
 
 12.1 Purpose
 •
@@ -599,6 +662,39 @@ restart and continuity-safe administrative controls
 
 Copyright © 2023–2026 Andrew Fereday Glenn.  |  Brain v2.0 Whitepaper
 
+Additional Implemented Capabilities — 9 November 2026
+
+Since the feature-complete revision of 14 September 2026, Brain v2.0 has gained several optional
+capabilities that extend its perception and embodiment architecture without replacing its established cognitive
+or continuity mechanisms.
+
+Ambient perception. Persona-specific background audio and video observation can be processed by a
+separate local multimodal model, supplying contextual observations to the Brain Core without requiring the
+primary language model to process every sensory input.
+
+Native avatar embodiment. Browser-based VRM avatars support three-dimensional presentation, facial
+expression, speech-synchronised lip movement, and VRMA animation playback. Avatar Mirror enables
+presentation on independent display surfaces, including holographic installations.
+
+Canonical embodiment. An optional persona-specific body schema provides a consistent description of
+virtual body structure, capabilities, and mechanisms, distinguishing stable configuration from transient
+movement, expression, and sensory state.
+
+CNS Mesh. An optional asynchronous coordination layer connects cognitive expression and movement
+intents with compatible embodiment providers. Transient runtime state, simulated heartbeat signals, and
+provider acknowledgements support the distinction between requested actions and confirmed execution.
+
+Cognitive integration. Eligible ambient observations can inform Cognitive Loop evaluations, while the
+existing model-directed /continue mechanism supports successive reasoning and tool-use steps within
+established autonomy and capability boundaries.
+
+These additions preserve Brain v2.0's original architectural principles: persistent persona identity, isolated
+continuity, model-independent cognition, bounded capabilities, and a clear separation between cognitive
+interpretation and external execution. All extensions remain optional, allowing existing personas and
+deployment configurations to continue operating without them.
+
+Copyright © 2023–2026 Andrew Fereday Glenn.  |  Brain v2.0 Whitepaper
+
 17. Limitations and Open Questions
 Feature complete does not mean complete understanding. Brain v2.0 remains an experimental platform
 whose behaviour depends on model quality, context budget, memory quality, hardware, perception, and the
@@ -757,12 +853,28 @@ Copyright © 2023–2026 Andrew Fereday Glenn.  |  Brain v2.0 Whitepaper
 Appendix B - Terminology
 ADP: Autonomous Digital Persona: a persistent persona operating as an independent Brain instance.
 
+Ambient Perception: Optional, persona-specific background audio and video observation, processed by a
+separate local multimodal model to provide environmental context to cognition.
+
+Avatar Mirror: An independent visual presentation interface for displaying a persona's avatar on external
+surfaces, including portrait-oriented holographic displays.
+
 ARS: Autonomous RAG Search: explicit model-driven retrieval from long-term memory.
+
+Canonical Embodiment: A persona-specific virtual body schema describing body structure, mechanisms,
+and capabilities independently of any particular avatar renderer or external environment.
+
+CNS Mesh: Central Nervous System Mesh: an optional asynchronous coordination layer connecting
+cognitive expression and movement intents to compatible embodiment providers, with transient state and
+execution feedback.
 
 CogLoop: The backend Cognitive Loop responsible for bounded autonomous evaluation and wake
 processing.
 
 DPCP: Dynamic Pathway Capture Protocol: structured private continuity metadata.
+
+Embodiment Provider: An external interface or runtime responsible for executing supported avatar
+expressions, animations, movements, or other embodiment actions.
 
 FES: Foundational Experience Seeding: developmental seeding through interpreted experience and
 reflection.
@@ -773,6 +885,9 @@ SI: Synthetic Intelligence: a substrate-neutral term used within the research pr
 systems.
 
 TTT: Temporally Tracked Trajectory: temporal anchoring and trajectory reconstruction within DPCP.
+
+VRM/VRMA: VRM is a format for three-dimensional humanoid avatars; VRMA is its associated animation
+format, used for avatar movement and animation playback.
 
 Copyright © 2023–2026 Andrew Fereday Glenn.  |  Brain v2.0 Whitepaper
 
